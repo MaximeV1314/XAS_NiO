@@ -27,32 +27,9 @@ if not mpi.is_master_node():
 ###########################             Functions           ###############################
 ###########################################################################################
 
-def comm(A,B): return A*B - B*A
-def anticomm(A,B): return A*B + B*A
-
-def compute_sigma_hf(h_int, rho):
-    """
-    Computes the Hartree-Fock part of the self-energy
-    using the density
-
-    Parameters :
-    ------------
-        - rho : dict of matrices
-            The density matrix
-    """
-
-    sigma_hf = {k:np.zeros_like(m) for k, m in rho.items()}
-
-    for ((_,(s1,o1)),(_,(s2,o2)),(_,(s3,o3)),(_,(s4,o4))), coef in h_int:
-        if s1 == s4 and s2 == s3:
-            sigma_hf[s1][o1,o4] += coef * rho[s2][o2,o3]
-            sigma_hf[s2][o2,o3] += coef * rho[s1][o1,o4]
-
-    return sigma_hf
-
 def DMFT(beta : float, U : float, J : float, mix : float, mix_vary:bool, n_l : int, n_iw : int, n_tau : int, \
          n_cycles : int, n_warmup : int, length_cycles : int, n_loops : int, threshold : float,\
-         fit : bool, fit_min_w : float, fit_max_w : float, \
+         fit : bool, fit_min_n : float, fit_max_n : float, \
          file_name : str, folder : str = "", measure_density : bool = False, \
          file_app = False, mu_init = 0, mu_dc = 0):
 
@@ -63,6 +40,8 @@ def DMFT(beta : float, U : float, J : float, mix : float, mix_vary:bool, n_l : i
     beta         : temperature           [float]
     U            : interaction term      [float]
     J            : hund term             [float]
+    mix          : mix of self and G     [float 0-1]
+    mix_vary     : vary mixing during lo [bool]
     n_l          : # polynomes Legendre  [int]
     n_iw         : # Matsubara freq      [int]
     n_tau        : # imaginary time      [int]
@@ -75,9 +54,9 @@ def DMFT(beta : float, U : float, J : float, mix : float, mix_vary:bool, n_l : i
                    erreur atteint sur les fct de Green
 
     fit          : fit Sigma or no       [bool]
-    fit_min_w    : left window for       [float]
+    fit_min_n    : left window for       [integer]
                     fiting Sigma_iw
-    fit_max_w    : right window for      [float]
+    fit_max_n    : right window for      [integer]
                     fiting Sigma_iw
 
    file_name    : name of the output file   [str]
@@ -89,9 +68,14 @@ def DMFT(beta : float, U : float, J : float, mix : float, mix_vary:bool, n_l : i
     """
 
     # parameters for cthyb solve
-    p = {"n_cycles":n_cycles, "n_warmup_cycles":n_warmup, "length_cycle":length_cycles, "random_seed":2132 * mpi.rank + 121, "measure_G_l":False, \
-         "measure_density_matrix" : measure_density, "use_norm_as_weight" : measure_density, "perform_post_proc" : False}
-    
+    if fit :
+        p = {"n_cycles":n_cycles, "n_warmup_cycles":n_warmup, "length_cycle":length_cycles, "random_seed":2132 * mpi.rank + 121, \
+         "measure_density_matrix" : measure_density, "use_norm_as_weight" : measure_density, \
+         "perform_tail_fit":fit, "fit_max_moment":4, "fit_min_n":fit_min_n, "fit_max_n":fit_max_n}
+    else :
+        p = {"n_cycles":n_cycles, "n_warmup_cycles":n_warmup, "length_cycle":length_cycles, "random_seed":2132 * mpi.rank + 121, \
+         "measure_density_matrix" : measure_density, "use_norm_as_weight" : measure_density, \
+         "perform_tail_fit":fit}
     # creation of h5
     if not file_app :
         it = -1      # new DMFT calculation --> start at iteration 0
@@ -113,12 +97,12 @@ def DMFT(beta : float, U : float, J : float, mix : float, mix_vary:bool, n_l : i
             # fill h5 with dmft parameters + create pandas df to print convergence parameters
             with HDFArchive("DMFT_data/%s/%s.h5"%(folder, file_name_), "w") as A:
                 A.create_group("parameters")
-                A["parameters"]["loop_1"] = {"beta" : beta, "U" : U, "J" : J, "mu_dc" : mu_dc, "n_iw" : n_iw, "n_tau" : n_tau, "fit_min_w" : fit_min_w, "fit_max_w" : fit_max_w, "n_max_loops" : n_loops, "mix" : mix,  **p}
+                A["parameters"]["loop_1"] = {"beta" : beta, "U" : U, "J" : J, "mu_dc" : mu_dc, "n_iw" : n_iw, "n_tau" : n_tau, "n_max_loops" : n_loops, "mix" : mix,  **p}
 
                 # panda array for the global convergence informations
-                columns = ["μ", "Gt2g(b/2)", "Geg(b/2)", "n_t2gR", "n_egR", "n_t2gG", "n_egG", "n_totG", "hf_t2g", "hf_eg", "ΔG/G", "av._sign", "av._order", "ACT", "mix", "time", "full_time"]
+                columns = ["μ", "Gt2g(b/2)", "Geg(b/2)", "n_t2gG", "n_egG", "n_totG", "hf_t2g", "hf_eg", "ΔG/G", "av._sign", "av._order", "ACT", "mix", "time", "full_time"]
                 df = pa.DataFrame(columns=columns)
-    
+
     else :
         # if the file already exists, load the parameters
         with HDFArchive("DMFT_data/%s/%s.h5"%(folder, file_name), "r") as A:
@@ -139,7 +123,7 @@ def DMFT(beta : float, U : float, J : float, mix : float, mix_vary:bool, n_l : i
             print("------------------------------------------------\nDMFT Calculation from file %s"%(folder + file_name))
             print("!!! Took the parameters U=%.2f, beta=%.2f, n_iw=%d, n_tau=%d, mu_init=%.4f, dc_imp from the latter file !!!\n"%(U, beta, n_iw, n_tau, mu_init))
             with HDFArchive("DMFT_data/%s/%s.h5"%(folder, file_name), "a") as A:
-                A["parameters"][f"loop_{len(A['parameters'])+1}"] = {"beta" : beta, "U" : U, "J" : J, "mu_dc" : mu_dc, "n_iw" : n_iw, "n_tau" : n_tau, "fit_min_w" : fit_min_w, "fit_max_w" : fit_max_w, "n_max_loops" : n_loops, "mix_init" : mix,  **p}
+                A["parameters"][f"loop_{len(A['parameters'])+1}"] = {"beta" : beta, "U" : U, "J" : J, "mu_dc" : mu_dc, "n_iw" : n_iw, "n_tau" : n_tau, "n_max_loops" : n_loops, "mix_init" : mix,  **p}
             df = pa.read_csv("DMFT_data/%s/convergence_%s.txt" % (folder, file_name), sep="|", index_col=0)
             print("Reading file...\n", df, "\n")
             file_name_ = file_name
@@ -151,22 +135,18 @@ def DMFT(beta : float, U : float, J : float, mix : float, mix_vary:bool, n_l : i
     gf_struct  = list(SK.gf_struct_solver[0].items())
     n_orbitals = SK.corr_shells[0]['dim'] # number of orbtials
 
-    # initializing solver and interacting hamiltonian
-    S = Solver(beta = beta, n_iw = n_iw, n_tau = n_tau, n_l = n_l, gf_struct = gf_struct)
-
-    # U_matrix = (np.ones((n_orbitals, n_orbitals)) - np.eye(n_orbitals)) * (U-3*J)                           # different spin signs interaction
-    # Up_matrix = (np.ones((n_orbitals, n_orbitals)) - np.eye(n_orbitals)) * (U-2*J) + np.eye(n_orbitals) * U # same spin signs interaction
-    # rot_basis = spherical_to_cubic(2, convention='wannier90')
-    # Uijkl = U_matrix_slater(2, U_int=U, J_hund=J, basis='other', T=rot_basis)
-
-    Uijkl = U_matrix_slater(2, U_int=U, J_hund=J)
+     # initializing solver and interacting hamiltonian
+    rot_basis = spherical_to_cubic(2, convention='wannier90')
+    Uijkl = U_matrix_slater(2, U_int=U, J_hund=J, basis='other', T=rot_basis)
     Umat, Upmat = reduce_4index_to_2index(Uijkl)
+    h_int = h_int_density(["up", "down"], n_orbitals, U=Umat, Uprime=Upmat, map_operator_structure=SK.sumk_to_solver[0])
 
-    h_int = h_int_density(spin_names=["up", "down"], n_orb=n_orbitals, U=Umat, Uprime=Upmat, map_operator_structure=SK.sumk_to_solver[0]) # density-density h
-    print("\n\n", SK.eff_atomic_levels()[0], "\n\n")
-    print("\n\n", SK.corr_shells, "\n\n")
+    print(h_int)
+    print(print("\n\n", SK.eff_atomic_levels(), "\n\n"))
 
-    # initialization of Sigma (metallic)
+    S = Solver(beta = beta, n_iw = n_iw, n_tau = n_tau, gf_struct = gf_struct)
+
+    # initialization of Sigma
     S.Sigma_iw.zero()
 
     if not file_app:
@@ -194,8 +174,9 @@ def DMFT(beta : float, U : float, J : float, mix : float, mix_vary:bool, n_l : i
         start = time.time()
 
         # calculation of the chemical potential
+        SK.symm_deg_gf(S.Sigma_iw, ish=0)
         SK.set_Sigma([S.Sigma_iw])
-        mu = SK.calc_mu(precision=1e-5, max_loops=300)
+        mu = SK.calc_mu(precision=1e-2)
 
         # Green's function of the lattice
         S.G_iw << SK.extract_G_loc()[0]
@@ -212,43 +193,6 @@ def DMFT(beta : float, U : float, J : float, mix : float, mix_vary:bool, n_l : i
         # Solve the impurity problem
         S.solve(h_int = h_int, **p)
 
-        ### Double-counting correction
-        dm = S.G_iw.density()
-        # dc_value = dc_energy / S.G_iw.total_density().real
-        SK.calc_dc(dm, orb=0, use_dc_value=mu_dc)
-
-        # fitting by calculating the hatree self-energy
-        G_iw = S.G_iw.copy()
-        for bl, g in S.G_tau:
-            bl_size = g.target_shape[0]
-            known_moments = make_zero_tail(g, 4)
-            known_moments[1,...] = np.eye(bl_size)
-            G_iw[bl].set_from_fourier(g, known_moments)
-
-        Sigma_iw = dyson(G0_iw=S.G0_iw, G_iw=G_iw)
-        Sigma_iw_nofit = Sigma_iw.copy()
-
-        # fit self energy for large frequency
-        rho = {name:np.eye(g.target_shape[0])+g(0) for name, g in S.G_tau}
-        if fit :
-            hf = compute_sigma_hf(h_int, rho)
-            for name, sigma in Sigma_iw:
-                sigma << make_hermitian(sigma)
-                km = np.array([hf[name]])
-                tail, _ = fit_hermitian_tail_on_window(
-                        sigma,
-                        n_min = int(1/2 * (beta*fit_min_w/np.pi - 1)),
-                        n_max = int(1/2 * (beta*fit_max_w/np.pi - 1)),
-                        known_moments = km,
-                        n_tail_max = 10*len(sigma.mesh),
-                        expansion_order = 5
-                        )
-                replace_by_tail(sigma, tail, n_min=int(1/2 * (beta*fit_min_w/np.pi - 1)))
-
-        # new green functions with fitted (or not fitted) sigma
-        S.G_iw << dyson(G0_iw=S.G0_iw, Sigma_iw=Sigma_iw)
-        S.Sigma_iw << Sigma_iw
-
         # mixing
         if i>0:
             if mpi.is_master_node(): print("MIX")
@@ -257,11 +201,9 @@ def DMFT(beta : float, U : float, J : float, mix : float, mix_vary:bool, n_l : i
         Giw_old = S.G_iw.copy()
         Sigma_iw_old = S.Sigma_iw.copy()
 
-        # symmetrize the self-energy wrt spins
-        for j in range(n_orbitals):
-            S.Sigma_iw['up_{}'.format(j)] += S.Sigma_iw['down_{}'.format(j)]
-            S.Sigma_iw['up_{}'.format(j)] *= 0.5
-            S.Sigma_iw['down_{}'.format(j)] << S.Sigma_iw['up_{}'.format(j)]
+        ### Double-counting correction
+        dm = S.G_iw.density()
+        SK.calc_dc(dm, orb=0, use_dc_value=mu_dc)
 
         # save
         end = time.time()
@@ -273,9 +215,9 @@ def DMFT(beta : float, U : float, J : float, mix : float, mix_vary:bool, n_l : i
                                 np.sqrt(np.sum(np.abs(S.G_iw['up_{}'.format(j)].data)**2 + np.abs(S.G_iw['down_{}'.format(j)].data)**2 ))
 
         if mpi.is_master_node():
-
-                Gb2_eg = S.G_tau["up_3"].data.real.flatten()[int(n_tau/2)]
+                
                 Gb2_t2g = S.G_tau["up_0"].data.real.flatten()[int(n_tau/2)]
+                Gb2_eg = S.G_tau["up_3"].data.real.flatten()[int(n_tau/2)]
 
                 print("\n\nIteration = %i / %i Finished." % (i+1, it+1+n_loops))
                 with HDFArchive("DMFT_data/%s/%s.h5"%(folder, file_name_), "a") as A:
@@ -284,14 +226,12 @@ def DMFT(beta : float, U : float, J : float, mix : float, mix_vary:bool, n_l : i
                     A[f"iteration_{i}"]["G_tau"] = S.G_tau
                     A[f"iteration_{i}"]["G0_iw"] = S.G0_iw
                     A[f"iteration_{i}"]["Sigma_iw"] = S.Sigma_iw
-                    A[f"iteration_{i}"]["Sigma_iw_nofit"] = Sigma_iw_nofit
                     A[f"iteration_{i}"]["Delta_tau"] = S.Delta_tau
 
                     A[f"iteration_{i}"]["mu"] = mu
                     A[f"iteration_{i}"]['dc_imp'] = SK.dc_imp
                     A[f"iteration_{i}"]['dc_energ'] = SK.dc_energ
 
-                    A[f"iteration_{i}"]["density_from_gtau"] = rho
                     A[f"iteration_{i}"]["density_from_giw"] = S.G_iw.density()
                     A[f"iteration_{i}"]["Z"] = [1 / (1 - ((S.Sigma_iw['up_%d'%j](0).imag)[0,0] * beta / (np.pi))) for j in range(n_orbitals)]
                     A[f"iteration_{i}"]["Gb2"] = [S.G_tau["up_%d"%j].data.real.flatten()[int(n_tau/2)] for j in range(n_orbitals)]
@@ -308,8 +248,8 @@ def DMFT(beta : float, U : float, J : float, mix : float, mix_vary:bool, n_l : i
                     else :
                         A[f"iteration_{i}"]["full_time"] = end - start + A[f"iteration_{i-1}"]["full_time"]
 
-                    df.loc[len(df)] = [mu, Gb2_t2g, Gb2_eg, rho["up_0"][0,0].real, rho["up_3"][0,0].real,\
-                                       A[f"iteration_{i}"]["density_from_giw"]["up_0"][0,0].real, A[f"iteration_{i}"]["density_from_giw"]["up_3"][0,0].real, S.G_iw.total_density().real, hf["up_0"][0,0].real, hf["up_3"][0,0].real, \
+                    df.loc[len(df)] = [mu, Gb2_t2g, Gb2_eg, A[f"iteration_{i}"]["density_from_giw"]["up_0"][0,0].real, A[f"iteration_{i}"]["density_from_giw"]["up_3"][0,0].real,\
+                                       S.G_iw.total_density().real, S.Sigma_moments["up_0"][0,0,0].real, S.Sigma_moments["up_3"][0,0,0].real, \
                                        Glat_minus_Gimp, S.average_sign, S.average_order, S.auto_corr_time, mix, end - start, A[f"iteration_{i}"]["full_time"]]
 
                     if measure_density :
@@ -362,7 +302,7 @@ def DMFT(beta : float, U : float, J : float, mix : float, mix_vary:bool, n_l : i
 beta = 40.           # eV-1
 U = 7.0             # eV
 J = 1.1             # eV
-mu_init = 0.        # eV  # -52
+mu_init = -1.150475        # eV
 mu_dc   = 52.        # eV
 
 n_l   = 30
@@ -370,38 +310,41 @@ n_iw  = 1024
 n_tau = 10001
 
 ######## MC & DMFT loop #######
-n_cycles         = 50000                      # 50000
-length_cycle     = 1000                     # 1000
-n_warmup         = 500000/length_cycle     # 400000
-n_loops          = 4
+n_cycles         = 10000                      # 50000
+length_cycle     = 300                     # 1000
+n_warmup         = 5000     # 400000
+n_loops          = 1
 threshold        = 1e-3
 
 mix_init = 0.6
 mix_vary = False
 
-measure_density = False
+measure_density = True
 
 ######## fitting #######
-fit       = True
-fit_min_w = 10.0    # eV
-fit_max_w = 20.0    # eV
+fit       = False
+fit_min_w = 8.0    # eV
+fit_max_w = 15.0    # eV
 
 ######## save #######
-folder    = "test3"
-file_name = "DMFT_50000"
+folder    = "test_tail"
+file_name = "DMFT"
 
 ########  initialisation  ###########
-file_app = False    # continuer un calcul
+file_app = True    # continuer un calcul
 
 ###########################################################################################
 ##############################           Main            ##################################
 ###########################################################################################
 
+fit_min_n = int(1/2 * (beta*fit_min_w/np.pi - 1))
+fit_max_n = int(1/2 * (beta*fit_max_w/np.pi - 1))
+
 break_var = False
 
 _, _, break_var, Glat_minus_Gimp = DMFT(beta, U, J, mix_init, mix_vary, n_l, n_iw, n_tau, \
     n_cycles, int(n_warmup), length_cycle, n_loops, threshold,\
-    fit, fit_min_w, fit_max_w,
+    fit, fit_min_n, fit_max_n,
         file_name + "_U%.2f_beta%.2f"%(U, beta), folder, measure_density, \
         file_app, mu_init, mu_dc)
 
