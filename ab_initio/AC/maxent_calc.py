@@ -116,8 +116,8 @@ def G_continuation(Sigma_w, dc_imp, dc_energ, mu, n_iw, path):
 # maxent parameters
 error_se = 0.01
 
-alpha_min_se = 1e-6
-alpha_max_se = 1e-1
+alpha_min_se = 1e-8
+alpha_max_se = 1e-3
 
 n_alpha = 40
 n_w = 500

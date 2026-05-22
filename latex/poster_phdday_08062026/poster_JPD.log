@@ -1,0 +1,1604 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.1) (preloaded format=pdflatex 2026.2.5)  22 MAY 2026 16:42
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**./poster_JPD.tex
+(poster_JPD.tex
+LaTeX2e <2025-11-01>
+L3 programming layer <2026-01-19>
+(/home/mvinteler/.miktex/texmfs/install/tex/latex/beamer/beamer.cls
+Document Class: beamer 2026/01/22 v3.77 A class for typesetting presentations
+(/home/mvinteler/.miktex/texmfs/install/tex/latex/beamer/beamerbasemodes.sty
+(/home/mvinteler/.miktex/texmfs/install/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2025/10/02 v2.5m e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count275
+)
+\beamer@tempbox=\box53
+\beamer@tempcount=\count276
+\c@beamerpauses=\count277
+
+(/home/mvinteler/.miktex/texmfs/install/tex/latex/beamer/beamerbasedecode.sty
+\beamer@slideinframe=\count278
+\beamer@minimum=\count279
+\beamer@decode@box=\box54
+)
+\beamer@commentbox=\box55
+\beamer@modecount=\count280
+) (/home/mvinteler/.miktex/texmfs/install/tex/generic/iftex/iftex.sty
+Package: iftex 2024/12/12 v1.0g TeX engine tests
+)
+\headdp=\dimen148
+\footheight=\dimen149
+\sidebarheight=\dimen150
+\beamer@tempdim=\dimen151
+\beamer@finalheight=\dimen152
+\beamer@animht=\dimen153
+\beamer@animdp=\dimen154
+\beamer@animwd=\dimen155
+\beamer@leftmargin=\dimen156
+\beamer@rightmargin=\dimen157
+\beamer@leftsidebar=\dimen158
+\beamer@rightsidebar=\dimen159
+\beamer@boxsize=\dimen160
+\beamer@vboxoffset=\dimen161
+\beamer@descdefault=\dimen162
+\beamer@descriptionwidth=\dimen163
+\beamer@lastskip=\skip49
+\beamer@areabox=\box56
+\beamer@animcurrent=\box57
+\beamer@animshowbox=\box58
+\beamer@sectionbox=\box59
+\beamer@logobox=\box60
+\beamer@linebox=\box61
+\beamer@sectioncount=\count281
+\beamer@subsubsectionmax=\count282
+\beamer@subsectionmax=\count283
+\beamer@sectionmax=\count284
+\beamer@totalheads=\count285
+\beamer@headcounter=\count286
+\beamer@partstartpage=\count287
+\beamer@sectionstartpage=\count288
+\beamer@subsectionstartpage=\count289
+\beamer@animationtempa=\count290
+\beamer@animationtempb=\count291
+\beamer@xpos=\count292
+\beamer@ypos=\count293
+\beamer@ypos@offset=\count294
+\beamer@showpartnumber=\count295
+\beamer@currentsubsection=\count296
+\beamer@coveringdepth=\count297
+\beamer@sectionadjust=\count298
+\beamer@toclastsection=\count299
+\beamer@tocsectionnumber=\count300
+
+(/home/mvinteler/.miktex/texmfs/install/tex/latex/beamer/beamerbaseoptions.sty
+(/home/mvinteler/.miktex/texmfs/install/tex/latex/graphics/keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks17
+))
+\beamer@paperwidth=\skip50
+\beamer@paperheight=\skip51
+
+(/home/mvinteler/.miktex/texmfs/install/tex/latex/geometry/geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+
+(/home/mvinteler/.miktex/texmfs/install/tex/generic/iftex/ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+)
+\Gm@cnth=\count301
+\Gm@cntv=\count302
+\c@Gm@tempcnt=\count303
+\Gm@bindingoffset=\dimen164
+\Gm@wd@mp=\dimen165
+\Gm@odd@mp=\dimen166
+\Gm@even@mp=\dimen167
+\Gm@layoutwidth=\dimen168
+\Gm@layoutheight=\dimen169
+\Gm@layouthoffset=\dimen170
+\Gm@layoutvoffset=\dimen171
+\Gm@dimlist=\toks18
+
+(/home/mvinteler/.miktex/texmfs/install/tex/latex/geometry/geometry.cfg))
+(/home/mvinteler/.miktex/texmfs/install/tex/latex/pgf/math/pgfmath.sty
+(/home/mvinteler/.miktex/texmfs/install/tex/latex/pgf/utilities/pgfrcs.sty
+(/home/mvinteler/.miktex/texmfs/install/tex/generic/pgf/utilities/pgfutil-commo
+n.tex
+\pgfutil@everybye=\toks19
+\pgfutil@tempdima=\dimen172
+\pgfutil@tempdimb=\dimen173
+)
+(/home/mvinteler/.miktex/texmfs/install/tex/generic/pgf/utilities/pgfutil-latex
+.def
+\pgfutil@abb=\box62
+)
+(/home/mvinteler/.miktex/texmfs/install/tex/generic/pgf/utilities/pgfrcs.code.t
+ex (/home/mvinteler/.miktex/texmfs/install/tex/generic/pgf/pgf.revision.tex)
+Package: pgfrcs 2025-08-29 v3.1.11a (3.1.11a)
+))
+(/home/mvinteler/.miktex/texmfs/install/tex/latex/pgf/utilities/pgfkeys.sty
+(/home/mvinteler/.miktex/texmfs/install/tex/generic/pgf/utilities/pgfkeys.code.
+tex
+\pgfkeys@pathtoks=\toks20
+\pgfkeys@temptoks=\toks21
+
+(/home/mvinteler/.miktex/texmfs/install/tex/generic/pgf/utilities/pgfkeyslibrar
+yfiltered.code.tex
+\pgfkeys@tmptoks=\toks22
+)))
+(/home/mvinteler/.miktex/texmfs/install/tex/generic/pgf/math/pgfmath.code.tex
+(/home/mvinteler/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathutil.code.t
+ex
+\pgf@x=\dimen174
+\pgf@xa=\dimen175
+\pgf@xb=\dimen176
+\pgf@xc=\dimen177
+\pgf@y=\dimen178
+\pgf@ya=\dimen179
+\pgf@yb=\dimen180
+\pgf@yc=\dimen181
+\c@pgf@counta=\count304
+\c@pgf@countb=\count305
+\c@pgf@countc=\count306
+\c@pgf@countd=\count307
+)
+(/home/mvinteler/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathparser.code
+.tex
+\pgfmath@dimen=\dimen182
+\pgfmath@count=\count308
+\pgfmath@box=\box63
+\pgfmath@toks=\toks23
+\pgfmath@stack@operand=\toks24
+\pgfmath@stack@operation=\toks25
+)
+(/home/mvinteler/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathfunctions.c
+ode.tex)
+(/home/mvinteler/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathfunctions.b
+asic.code.tex)
+(/home/mvinteler/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathfunctions.t
+rigonometric.code.tex)
+(/home/mvinteler/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathfunctions.r
+andom.code.tex)
+(/home/mvinteler/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathfunctions.c
+omparison.code.tex)
+(/home/mvinteler/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathfunctions.b
+ase.code.tex)
+(/home/mvinteler/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathfunctions.r
+ound.code.tex)
+(/home/mvinteler/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathfunctions.m
+isc.code.tex)
+(/home/mvinteler/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathfunctions.i
+ntegerarithmetics.code.tex)
+(/home/mvinteler/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathcalc.code.t
+ex)
+(/home/mvinteler/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathfloat.code.
+tex
+\c@pgfmathroundto@lastzeros=\count309
+))) (/home/mvinteler/.miktex/texmfs/install/tex/latex/base/size11.clo
+File: size11.clo 2025/01/22 v1.4n Standard LaTeX file (size option)
+)
+(/home/mvinteler/.miktex/texmfs/install/tex/latex/pgf/basiclayer/pgfcore.sty
+(/home/mvinteler/.miktex/texmfs/install/tex/latex/graphics/graphicx.sty
+Package: graphicx 2024/12/31 v1.2e Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/home/mvinteler/.miktex/texmfs/install/tex/latex/graphics/graphics.sty
+Package: graphics 2024/08/06 v1.4g Standard LaTeX Graphics (DPC,SPQR)
+
+(/home/mvinteler/.miktex/texmfs/install/tex/latex/graphics/trig.sty
+Package: trig 2023/12/02 v1.11 sin cos tan (DPC)
+)
+(/home/mvinteler/.miktex/texmfs/install/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 106.
+
+(/home/mvinteler/.miktex/texmfs/install/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2025/09/29 v1.2d Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen183
+\Gin@req@width=\dimen184
+)
+(/home/mvinteler/.miktex/texmfs/install/tex/latex/pgf/systemlayer/pgfsys.sty
+(/home/mvinteler/.miktex/texmfs/install/tex/generic/pgf/systemlayer/pgfsys.code
+.tex
+Package: pgfsys 2025-08-29 v3.1.11a (3.1.11a)
+\pgf@x=\dimen185
+\pgf@y=\dimen186
+\pgf@xa=\dimen187
+\pgf@ya=\dimen188
+\pgf@xb=\dimen189
+\pgf@yb=\dimen190
+\pgf@xc=\dimen191
+\pgf@yc=\dimen192
+\pgf@xd=\dimen193
+\pgf@yd=\dimen194
+\w@pgf@writea=\write3
+\r@pgf@reada=\read2
+\c@pgf@counta=\count310
+\c@pgf@countb=\count311
+\c@pgf@countc=\count312
+\c@pgf@countd=\count313
+\t@pgf@toka=\toks26
+\t@pgf@tokb=\toks27
+\t@pgf@tokc=\toks28
+\pgf@sys@id@count=\count314
+
+(/home/mvinteler/.miktex/texmfs/install/tex/generic/pgf/systemlayer/pgf.cfg
+File: pgf.cfg 2025-08-29 v3.1.11a (3.1.11a)
+)
+Driver file for pgf: pgfsys-pdftex.def
+
+(/home/mvinteler/.miktex/texmfs/install/tex/generic/pgf/systemlayer/pgfsys-pdft
+ex.def
+File: pgfsys-pdftex.def 2025-08-29 v3.1.11a (3.1.11a)
+
+(/home/mvinteler/.miktex/texmfs/install/tex/generic/pgf/systemlayer/pgfsys-comm
+on-pdf.def
+File: pgfsys-common-pdf.def 2025-08-29 v3.1.11a (3.1.11a)
+)))
+(/home/mvinteler/.miktex/texmfs/install/tex/generic/pgf/systemlayer/pgfsyssoftp
+ath.code.tex
+File: pgfsyssoftpath.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgfsyssoftpath@smallbuffer@items=\count315
+\pgfsyssoftpath@bigbuffer@items=\count316
+)
+(/home/mvinteler/.miktex/texmfs/install/tex/generic/pgf/systemlayer/pgfsysproto
+col.code.tex
+File: pgfsysprotocol.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+))
+(/home/mvinteler/.miktex/texmfs/install/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2024/09/29 v3.02 LaTeX color extensions (UK)
+
+(/home/mvinteler/.miktex/texmfs/install/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+
+Package xcolor Warning: Package option `hyperref' is obsolete and ignored on in
+put line 265.
+
+Package xcolor Info: Driver file: pdftex.def on input line 274.
+(/home/mvinteler/.miktex/texmfs/install/tex/latex/graphics/mathcolor.ltx)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1349.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1353.
+Package xcolor Info: Model `RGB' extended on input line 1365.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1367.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1370.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1371.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1372.
+)
+(/home/mvinteler/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcore.code
+.tex
+Package: pgfcore 2025-08-29 v3.1.11a (3.1.11a)
+
+(/home/mvinteler/.miktex/texmfs/install/tex/generic/pgf/math/pgfint.code.tex)
+(/home/mvinteler/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcorepoint
+s.code.tex
+File: pgfcorepoints.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgf@picminx=\dimen195
+\pgf@picmaxx=\dimen196
+\pgf@picminy=\dimen197
+\pgf@picmaxy=\dimen198
+\pgf@pathminx=\dimen199
+\pgf@pathmaxx=\dimen256
+\pgf@pathminy=\dimen257
+\pgf@pathmaxy=\dimen258
+\pgf@xx=\dimen259
+\pgf@xy=\dimen260
+\pgf@yx=\dimen261
+\pgf@yy=\dimen262
+\pgf@zx=\dimen263
+\pgf@zy=\dimen264
+)
+(/home/mvinteler/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcorepathc
+onstruct.code.tex
+File: pgfcorepathconstruct.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgf@path@lastx=\dimen265
+\pgf@path@lasty=\dimen266
+)
+(/home/mvinteler/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcorepathu
+sage.code.tex
+File: pgfcorepathusage.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgf@shorten@end@additional=\dimen267
+\pgf@shorten@start@additional=\dimen268
+)
+(/home/mvinteler/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcorescope
+s.code.tex
+File: pgfcorescopes.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgfpic=\box64
+\pgf@hbox=\box65
+\pgf@layerbox@main=\box66
+\pgf@picture@serial@count=\count317
+)
+(/home/mvinteler/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcoregraph
+icstate.code.tex
+File: pgfcoregraphicstate.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgflinewidth=\dimen269
+)
+(/home/mvinteler/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcoretrans
+formations.code.tex
+File: pgfcoretransformations.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgf@pt@x=\dimen270
+\pgf@pt@y=\dimen271
+\pgf@pt@temp=\dimen272
+)
+(/home/mvinteler/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcorequick
+.code.tex
+File: pgfcorequick.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+)
+(/home/mvinteler/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcoreobjec
+ts.code.tex
+File: pgfcoreobjects.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+)
+(/home/mvinteler/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcorepathp
+rocessing.code.tex
+File: pgfcorepathprocessing.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+)
+(/home/mvinteler/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcorearrow
+s.code.tex
+File: pgfcorearrows.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgfarrowsep=\dimen273
+)
+(/home/mvinteler/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcoreshade
+.code.tex
+File: pgfcoreshade.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgf@max=\dimen274
+\pgf@sys@shading@range@num=\count318
+\pgf@shadingcount=\count319
+)
+(/home/mvinteler/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcoreimage
+.code.tex
+File: pgfcoreimage.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+)
+(/home/mvinteler/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcoreexter
+nal.code.tex
+File: pgfcoreexternal.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgfexternal@startupbox=\box67
+)
+(/home/mvinteler/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcorelayer
+s.code.tex
+File: pgfcorelayers.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+)
+(/home/mvinteler/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcoretrans
+parency.code.tex
+File: pgfcoretransparency.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+)
+(/home/mvinteler/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcorepatte
+rns.code.tex
+File: pgfcorepatterns.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+)
+(/home/mvinteler/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcorerdf.c
+ode.tex
+File: pgfcorerdf.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+)))
+(/home/mvinteler/.miktex/texmfs/install/tex/latex/pgf/utilities/xxcolor.sty
+Package: xxcolor 2003/10/24 ver 0.1
+\XC@nummixins=\count320
+\XC@countmixins=\count321
+)
+(/home/mvinteler/.miktex/texmfs/install/tex/latex/base/atbegshi-ltx.sty
+Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
+package with kernel methods
+)
+(/home/mvinteler/.miktex/texmfs/install/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2026-01-29 v7.01p Hypertext links for LaTeX
+
+(/home/mvinteler/.miktex/texmfs/install/tex/latex/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
+)
+(/home/mvinteler/.miktex/texmfs/install/tex/generic/kvdefinekeys/kvdefinekeys.s
+ty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+) (/home/mvinteler/.miktex/texmfs/install/tex/generic/pdfescape/pdfescape.sty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+(/home/mvinteler/.miktex/texmfs/install/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
+)
+(/home/mvinteler/.miktex/texmfs/install/tex/generic/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/home/mvinteler/.miktex/texmfs/install/tex/generic/infwarerr/infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+))
+(/home/mvinteler/.miktex/texmfs/install/tex/latex/hycolor/hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+)
+(/home/mvinteler/.miktex/texmfs/install/tex/latex/hyperref/nameref.sty
+Package: nameref 2026-01-29 v2.58 Cross-referencing by name of section
+
+(/home/mvinteler/.miktex/texmfs/install/tex/latex/refcount/refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+)
+(/home/mvinteler/.miktex/texmfs/install/tex/generic/gettitlestring/gettitlestri
+ng.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+
+(/home/mvinteler/.miktex/texmfs/install/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
+))
+\c@section@level=\count322
+)
+(/home/mvinteler/.miktex/texmfs/install/tex/generic/stringenc/stringenc.sty
+Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
+)
+)
+\@linkdim=\dimen275
+\Hy@linkcounter=\count323
+\Hy@pagecounter=\count324
+
+(/home/mvinteler/.miktex/texmfs/install/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2026-01-29 v7.01p Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+)
+(/home/mvinteler/.miktex/texmfs/install/tex/generic/intcalc/intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+)
+\Hy@SavedSpaceFactor=\count325
+
+(/home/mvinteler/.miktex/texmfs/install/tex/latex/hyperref/puenc.def
+File: puenc.def 2026-01-29 v7.01p Hyperref: PDF Unicode definition (HO)
+Now handling font encoding PU ...
+... no UTF-8 mapping file for font encoding PU
+)
+Package hyperref Info: Option `final' set `true' on input line 4072.
+Package hyperref Info: Option `bookmarks' set `true' on input line 4072.
+Package hyperref Info: Option `bookmarksopen' set `true' on input line 4072.
+Package hyperref Info: Option `pdfpagelabels' set `false' on input line 4072.
+Package hyperref Info: Option `implicit' set `false' on input line 4072.
+Package hyperref Info: Hyper figures OFF on input line 4201.
+Package hyperref Info: Link nesting OFF on input line 4206.
+Package hyperref Info: Hyper index ON on input line 4209.
+Package hyperref Info: Plain pages OFF on input line 4216.
+Package hyperref Info: Backreferencing OFF on input line 4221.
+Package hyperref Info: Implicit mode OFF; no redefinition of LaTeX internals.
+Package hyperref Info: Bookmarks ON on input line 4468.
+\c@Hy@tempcnt=\count326
+
+(/home/mvinteler/.miktex/texmfs/install/tex/latex/url/url.sty
+\Urlmuskip=\muskip17
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 4807.
+\XeTeXLinkMargin=\dimen276
+
+(/home/mvinteler/.miktex/texmfs/install/tex/generic/bitset/bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+
+(/home/mvinteler/.miktex/texmfs/install/tex/generic/bigintcalc/bigintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
+)
+))
+\Fld@menulength=\count327
+\Field@Width=\dimen277
+\Fld@charsize=\dimen278
+Package hyperref Info: Hyper figures OFF on input line 6084.
+Package hyperref Info: Link nesting OFF on input line 6089.
+Package hyperref Info: Hyper index ON on input line 6092.
+Package hyperref Info: backreferencing OFF on input line 6099.
+Package hyperref Info: Link coloring OFF on input line 6104.
+Package hyperref Info: Link coloring with OCG OFF on input line 6109.
+Package hyperref Info: PDF/A mode OFF on input line 6114.
+
+Package hyperref Message: Stopped early.
+
+)
+Package hyperref Info: Driver (autodetected): hpdftex.
+ (/home/mvinteler/.miktex/texmfs/install/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2026-01-29 v7.01p Hyperref driver for pdfTeX
+\Fld@listcount=\count328
+\c@bookmark@seq@number=\count329
+
+(/home/mvinteler/.miktex/texmfs/install/tex/latex/rerunfilecheck/rerunfilecheck
+.sty
+Package: rerunfilecheck 2025-06-21 v1.11 Rerun checks for auxiliary files (HO)
+
+(/home/mvinteler/.miktex/texmfs/install/tex/generic/uniquecounter/uniquecounter
+.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+84.
+))
+(/home/mvinteler/.miktex/texmfs/install/tex/latex/beamer/beamerbaserequires.sty
+
+(/home/mvinteler/.miktex/texmfs/install/tex/latex/beamer/beamerbasecompatibilit
+y.sty)
+(/home/mvinteler/.miktex/texmfs/install/tex/latex/beamer/beamerbasefont.sty
+(/home/mvinteler/.miktex/texmfs/install/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+(/home/mvinteler/.miktex/texmfs/install/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\@emptytoks=\toks29
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+(/home/mvinteler/.miktex/texmfs/install/tex/latex/sansmathaccent/sansmathaccent
+.sty
+Package: sansmathaccent 2020/01/31
+ (/home/mvinteler/.miktex/texmfs/install/tex/latex/koma-script/scrlfile.sty
+Package: scrlfile 2026/02/02 v3.49.2 KOMA-Script package (file load hooks)
+
+(/home/mvinteler/.miktex/texmfs/install/tex/latex/koma-script/scrlfile-hook.sty
+Package: scrlfile-hook 2026/02/02 v3.49.2 KOMA-Script package (using LaTeX hook
+s)
+(/home/mvinteler/.miktex/texmfs/install/tex/latex/koma-script/scrlogo.sty
+Package: scrlogo 2026/02/02 v3.49.2 KOMA-Script package (logo)
+)))))
+(/home/mvinteler/.miktex/texmfs/install/tex/latex/beamer/beamerbasetranslator.s
+ty (/home/mvinteler/.miktex/texmfs/install/tex/latex/translator/translator.sty
+Package: translator 2021-05-31 v1.12d Easy translation of strings in LaTeX
+)) (/home/mvinteler/.miktex/texmfs/install/tex/latex/beamer/beamerbasemisc.sty)
+
+(/home/mvinteler/.miktex/texmfs/install/tex/latex/beamer/beamerbasetwoscreens.s
+ty)
+(/home/mvinteler/.miktex/texmfs/install/tex/latex/beamer/beamerbaseoverlay.sty
+\beamer@argscount=\count330
+\beamer@lastskipcover=\skip52
+\beamer@trivlistdepth=\count331
+) (/home/mvinteler/.miktex/texmfs/install/tex/latex/beamer/beamerbasetitle.sty)
+
+(/home/mvinteler/.miktex/texmfs/install/tex/latex/beamer/beamerbasesection.sty
+\c@lecture=\count332
+\c@part=\count333
+\c@section=\count334
+\c@subsection=\count335
+\c@subsubsection=\count336
+) (/home/mvinteler/.miktex/texmfs/install/tex/latex/beamer/beamerbaseframe.sty
+\beamer@framebox=\box68
+\beamer@frametitlebox=\box69
+\beamer@zoombox=\box70
+\beamer@zoomcount=\count337
+\beamer@zoomframecount=\count338
+\beamer@frametextheight=\dimen279
+\c@subsectionslide=\count339
+\beamer@frametopskip=\skip53
+\beamer@framebottomskip=\skip54
+\beamer@frametopskipautobreak=\skip55
+\beamer@framebottomskipautobreak=\skip56
+\beamer@envbody=\toks30
+\framewidth=\dimen280
+\c@framenumber=\count340
+)
+(/home/mvinteler/.miktex/texmfs/install/tex/latex/beamer/beamerbaseverbatim.sty
+\beamer@verbatimfileout=\write4
+)
+(/home/mvinteler/.miktex/texmfs/install/tex/latex/beamer/beamerbaseframesize.st
+y
+\beamer@splitbox=\box71
+\beamer@autobreakcount=\count341
+\beamer@autobreaklastheight=\dimen281
+\beamer@frametitletoks=\toks31
+\beamer@framesubtitletoks=\toks32
+)
+(/home/mvinteler/.miktex/texmfs/install/tex/latex/beamer/beamerbaseframecompone
+nts.sty
+\beamer@colheight=\skip57
+\beamer@footins=\box72
+)
+(/home/mvinteler/.miktex/texmfs/install/tex/latex/beamer/beamerbasecolor.sty)
+(/home/mvinteler/.miktex/texmfs/install/tex/latex/beamer/beamerbasenotes.sty
+\beamer@frameboxcopy=\box73
+)
+(/home/mvinteler/.miktex/texmfs/install/tex/latex/beamer/beamerbasetoc.sty)
+(/home/mvinteler/.miktex/texmfs/install/tex/latex/beamer/beamerbasetemplates.st
+y
+\beamer@sbttoks=\toks33
+
+(/home/mvinteler/.miktex/texmfs/install/tex/latex/beamer/beamerbaseauxtemplates
+.sty
+(/home/mvinteler/.miktex/texmfs/install/tex/latex/beamer/beamerbaseboxes.sty
+\bmb@box=\box74
+\bmb@colorbox=\box75
+\bmb@boxwidth=\dimen282
+\bmb@boxheight=\dimen283
+\bmb@prevheight=\dimen284
+\bmb@temp=\dimen285
+\bmb@dima=\dimen286
+\bmb@dimb=\dimen287
+\bmb@prevheight=\dimen288
+)
+\beamer@blockheadheight=\dimen289
+))
+(/home/mvinteler/.miktex/texmfs/install/tex/latex/beamer/beamerbaselocalstructu
+re.sty (/home/mvinteler/.miktex/texmfs/install/tex/latex/tools/enumerate.sty
+Package: enumerate 2023/07/04 v3.00 enumerate extensions (DPC)
+\@enLab=\toks34
+)
+\beamer@bibiconwidth=\skip58
+\c@figure=\count342
+\c@table=\count343
+\abovecaptionskip=\skip59
+\belowcaptionskip=\skip60
+)
+(/home/mvinteler/.miktex/texmfs/install/tex/latex/beamer/beamerbasenavigation.s
+ty
+(/home/mvinteler/.miktex/texmfs/install/tex/latex/beamer/beamerbasenavigationsy
+mbols.tex)
+\beamer@section@min@dim=\dimen290
+)
+(/home/mvinteler/.miktex/texmfs/install/tex/latex/beamer/beamerbasetheorems.sty
+(/home/mvinteler/.miktex/texmfs/install/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2025/07/09 v2.17z AMS math features
+\@mathmargin=\skip61
+
+For additional information on amsmath, use the `?' option.
+(/home/mvinteler/.miktex/texmfs/install/tex/latex/amsmath/amstext.sty
+Package: amstext 2024/11/17 v2.01 AMS text
+
+(/home/mvinteler/.miktex/texmfs/install/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks35
+\ex@=\dimen291
+))
+(/home/mvinteler/.miktex/texmfs/install/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen292
+)
+(/home/mvinteler/.miktex/texmfs/install/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2022/04/08 v2.04 operator names
+)
+\inf@bad=\count344
+LaTeX Info: Redefining \frac on input line 233.
+\uproot@=\count345
+\leftroot@=\count346
+LaTeX Info: Redefining \overline on input line 398.
+LaTeX Info: Redefining \colon on input line 409.
+\classnum@=\count347
+\DOTSCASE@=\count348
+LaTeX Info: Redefining \ldots on input line 495.
+LaTeX Info: Redefining \dots on input line 498.
+LaTeX Info: Redefining \cdots on input line 619.
+\Mathstrutbox@=\box76
+\strutbox@=\box77
+LaTeX Info: Redefining \big on input line 721.
+LaTeX Info: Redefining \Big on input line 722.
+LaTeX Info: Redefining \bigg on input line 723.
+LaTeX Info: Redefining \Bigg on input line 724.
+\big@size=\dimen293
+LaTeX Font Info:    Redeclaring font encoding OML on input line 742.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 743.
+\macc@depth=\count349
+LaTeX Info: Redefining \bmod on input line 904.
+LaTeX Info: Redefining \pmod on input line 909.
+LaTeX Info: Redefining \smash on input line 939.
+LaTeX Info: Redefining \relbar on input line 969.
+LaTeX Info: Redefining \Relbar on input line 970.
+\c@MaxMatrixCols=\count350
+\dotsspace@=\muskip18
+\c@parentequation=\count351
+\dspbrk@lvl=\count352
+\tag@help=\toks36
+\row@=\count353
+\column@=\count354
+\maxfields@=\count355
+\andhelp@=\toks37
+\eqnshift@=\dimen294
+\alignsep@=\dimen295
+\tagshift@=\dimen296
+\tagwidth@=\dimen297
+\totwidth@=\dimen298
+\lineht@=\dimen299
+\@envbody=\toks38
+\multlinegap=\skip62
+\multlinetaggap=\skip63
+\mathdisplay@stack=\toks39
+LaTeX Info: Redefining \[ on input line 2950.
+LaTeX Info: Redefining \] on input line 2951.
+)
+(/home/mvinteler/.miktex/texmfs/install/tex/latex/amscls/amsthm.sty
+Package: amsthm 2020/05/29 v2.20.6
+\thm@style=\toks40
+\thm@bodyfont=\toks41
+\thm@headfont=\toks42
+\thm@notefont=\toks43
+\thm@headpunct=\toks44
+\thm@preskip=\skip64
+\thm@postskip=\skip65
+\thm@headsep=\skip66
+\dth@everypar=\toks45
+)
+\c@theorem=\count356
+)
+(/home/mvinteler/.miktex/texmfs/install/tex/latex/beamer/beamerbasethemes.sty))
+
+(/home/mvinteler/.miktex/texmfs/install/tex/latex/beamer/beamerthemedefault.sty
+
+(/home/mvinteler/.miktex/texmfs/install/tex/latex/beamer/beamerfontthemedefault
+.sty)
+(/home/mvinteler/.miktex/texmfs/install/tex/latex/beamer/beamercolorthemedefaul
+t.sty)
+(/home/mvinteler/.miktex/texmfs/install/tex/latex/beamer/beamerinnerthemedefaul
+t.sty
+\beamer@dima=\dimen300
+\beamer@dimb=\dimen301
+)
+(/home/mvinteler/.miktex/texmfs/install/tex/latex/beamer/beamerouterthemedefaul
+t.sty))) (beamerposter-v2.sty
+Package: beamerposter-v2 2009/10/21 v.1.11 latex-beamer poster extension
+
+(/home/mvinteler/.miktex/texmfs/install/tex/latex/xkeyval/xkeyval.sty
+Package: xkeyval 2022/06/16 v2.9 package option processing (HA)
+
+(/home/mvinteler/.miktex/texmfs/install/tex/generic/xkeyval/xkeyval.tex
+(/home/mvinteler/.miktex/texmfs/install/tex/generic/xkeyval/xkvutils.tex
+\XKV@toks=\toks46
+\XKV@tempa@toks=\toks47
+)
+\XKV@depth=\count357
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+))
+(/home/mvinteler/.miktex/texmfs/install/tex/latex/type1cm/type1cm.sty
+Package: type1cm 2002/09/05 v0.04 BlueSky/Y&Y Type1 CM font definitions (DPC, p
+atched RF)
+)
+(/home/mvinteler/.miktex/texmfs/install/tex/latex/fp/fp.sty
+Package: fp 1995/04/02
+
+`Fixed Point Package', Version 0.8, April 2, 1995 (C) Michael Mehlich
+(/home/mvinteler/.miktex/texmfs/install/tex/latex/fp/defpattern.sty
+Package: defpattern 1994/10/12
+\actioncount=\count358
+)
+(/home/mvinteler/.miktex/texmfs/install/tex/latex/fp/fp-basic.sty
+Package: fp-basic 1996/05/13
+\FP@xs=\count359
+\FP@xia=\count360
+\FP@xib=\count361
+\FP@xfa=\count362
+\FP@xfb=\count363
+\FP@rega=\count364
+\FP@regb=\count365
+\FP@regs=\count366
+\FP@times=\count367
+)
+(/home/mvinteler/.miktex/texmfs/install/tex/latex/fp/fp-addons.sty
+Package: fp-addons 1995/03/15
+)
+(/home/mvinteler/.miktex/texmfs/install/tex/latex/fp/fp-snap.sty
+Package: fp-snap 1995/04/05
+)
+(/home/mvinteler/.miktex/texmfs/install/tex/latex/fp/fp-exp.sty
+Package: fp-exp 1995/04/03
+)
+(/home/mvinteler/.miktex/texmfs/install/tex/latex/fp/fp-trigo.sty
+Package: fp-trigo 1995/04/14
+)
+(/home/mvinteler/.miktex/texmfs/install/tex/latex/fp/fp-pas.sty
+Package: fp-pas 1994/08/29
+)
+(/home/mvinteler/.miktex/texmfs/install/tex/latex/fp/fp-random.sty
+Package: fp-random 1995/02/23
+\FPseed=\count368
+)
+(/home/mvinteler/.miktex/texmfs/install/tex/latex/fp/fp-eqn.sty
+Package: fp-eqn 1995/04/03
+)
+(/home/mvinteler/.miktex/texmfs/install/tex/latex/fp/fp-upn.sty
+Package: fp-upn 1996/10/21
+)
+(/home/mvinteler/.miktex/texmfs/install/tex/latex/fp/fp-eval.sty
+Package: fp-eval 1995/04/03
+))
+Package beamerposter-v2 Info: checking size input, please wait. on input line 1
+28.
+Package beamerposter-v2 Info: the input a0\ 1\ was correct, we proceed. on inpu
+t line 128.
+Package beamerposter-v2 Info: finished size input check. on input line 128.
+Package beamerposter-v2 Info: myfontscale=1.0 on input line 128.
+Package beamerposter-v2 Info: checking orientation input, please wait. on input
+ line 129.
+Package beamerposter-v2 Info: the input portrait\ 0\ was correct, we proceed. o
+n input line 129.
+Package beamerposter-v2 Info: finished orientation check. on input line 129.
+Package beamerposter-v2 Info: checking size input, please wait. on input line 1
+29.
+Package beamerposter-v2 Info: the input a0\ 1\ was correct, we proceed. on inpu
+t line 129.
+Package beamerposter-v2 Info: finished size input check. on input line 129.
+Package beamerposter-v2 Info: myfontscale=1.4 on input line 129.
+ ( FP-UPN
+( FP-MUL ) ( FP-ROUND ) )
+\tmp=\dimen302
+Package beamerposter-v2 Info: paperwidth=2388.89357pt, paperheight=3380.75665pt
+ on input line 172.
+Package beamerposter-v2 Info: textwidth=2360.44081pt, textwidth=3352.3039pt on 
+input line 173.
+Package beamerposter-v2 Info: fontscale=1.0, myfontscale=1.40 on input line 174
+.
+ ( FP-UPN ( FP-MUL ) ( FP-ROUND ) ) ( FP-UPN ( FP-MUL
+) ( FP-ROUND ) ) ( FP-UPN ( FP-MUL ) ( FP-ROUND ) ) ( FP-UPN ( FP-MUL )
+( FP-ROUND ) ) ( FP-UPN ( FP-MUL ) ( FP-ROUND ) ) ( FP-UPN ( FP-MUL )
+( FP-ROUND ) ) ( FP-UPN ( FP-MUL ) ( FP-ROUND ) ) ( FP-UPN ( FP-MUL )
+( FP-ROUND ) ) ( FP-UPN ( FP-MUL ) ( FP-ROUND ) ) ( FP-UPN ( FP-MUL )
+( FP-ROUND ) ) ( FP-UPN ( FP-MUL ) ( FP-ROUND ) ) ( FP-UPN ( FP-MUL )
+( FP-ROUND ) ) ( FP-UPN ( FP-MUL ) ( FP-ROUND ) ) ( FP-UPN ( FP-MUL )
+( FP-ROUND ) ) ( FP-UPN ( FP-MUL ) ( FP-ROUND ) ) ( FP-UPN ( FP-MUL )
+( FP-ROUND ) ) ( FP-UPN ( FP-MUL ) ( FP-ROUND ) ) ( FP-UPN ( FP-MUL )
+( FP-ROUND ) ) ( FP-UPN ( FP-MUL ) ( FP-ROUND ) ) ( FP-UPN ( FP-MUL )
+( FP-ROUND ) ) ( FP-UPN ( FP-MUL ) ( FP-ROUND ) ) ( FP-UPN ( FP-MUL )
+( FP-ROUND ) ) ( FP-UPN ( FP-MUL ) ( FP-ROUND ) ) ( FP-UPN ( FP-MUL )
+( FP-ROUND ) ) ( FP-UPN ( FP-MUL ) ( FP-ROUND ) ) ( FP-UPN ( FP-MUL )
+( FP-ROUND ) ) ( FP-UPN ( FP-MUL ) ( FP-ROUND ) ) ( FP-UPN ( FP-MUL )
+( FP-ROUND ) ) ( FP-UPN ( FP-MUL ) ( FP-ROUND ) ) ( FP-UPN ( FP-MUL )
+( FP-ROUND ) ) ( FP-UPN ( FP-MUL ) ( FP-ROUND ) )) (beamerthemeI6pd2-v2.sty
+Package: beamerthemeI6pd2-v2 
+
+(tangocolors.sty))
+(/home/mvinteler/.miktex/texmfs/install/tex/latex/booktabs/booktabs.sty
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen303
+\lightrulewidth=\dimen304
+\cmidrulewidth=\dimen305
+\belowrulesep=\dimen306
+\belowbottomsep=\dimen307
+\aboverulesep=\dimen308
+\abovetopsep=\dimen309
+\cmidrulesep=\dimen310
+\cmidrulekern=\dimen311
+\defaultaddspace=\dimen312
+\@cmidla=\count369
+\@cmidlb=\count370
+\@aboverulesep=\dimen313
+\@belowrulesep=\dimen314
+\@thisruleclass=\count371
+\@lastruleclass=\count372
+\@thisrulewidth=\dimen315
+)
+(/home/mvinteler/.miktex/texmfs/install/tex/generic/babel/babel.sty
+Package: babel 2026/01/26 v26.2 The multilingual framework for LuaLaTeX, pdfLaT
+eX and XeLaTeX
+\babel@savecnt=\count373
+LaTeX Encoding Info:    Redeclaring text command \ij (encoding OT1) on input li
+ne 2078.
+LaTeX Encoding Info:    Redeclaring text command \IJ (encoding OT1) on input li
+ne 2080.
+LaTeX Encoding Info:    Redeclaring text command \ij (encoding T1) on input lin
+e 2082.
+LaTeX Encoding Info:    Redeclaring text command \IJ (encoding T1) on input lin
+e 2083.
+LaTeX Encoding Info:    Ignoring declaration for text command \ij (encoding ?) 
+on input line 2084.
+LaTeX Encoding Info:    Ignoring declaration for text command \IJ (encoding ?) 
+on input line 2086.
+LaTeX Encoding Info:    Ignoring declaration for text command \SS (encoding ?) 
+on input line 2111.
+\U@D=\dimen316
+\l@unhyphenated=\language1
+
+(/home/mvinteler/.miktex/texmfs/install/tex/generic/babel/txtbabel.def)
+\bbl@readstream=\read3
+LaTeX Info: Redefining \textlatin on input line 3974.
+\bbl@dirlevel=\count374
+Package babel Info: Configuration files are deprecated, as
+(babel)             they can break document portability.
+(babel)             Reported on input line 4206.
+
+*************************************
+* Local config file bblopts.cfg used
+*
+(/home/mvinteler/.miktex/texmfs/install/tex/latex/arabi/bblopts.cfg
+File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of
+ babel
+)
+(/home/mvinteler/.miktex/texmfs/install/tex/generic/babel/locale/en/babel-engli
+sh.tex)
+Package babel Info: Importing font and identification data for english
+(babel)             from babel-en.ini. Reported on input line 4330.
+
+(/home/mvinteler/.miktex/texmfs/install/tex/latex/babel-english/english.ldf
+Language: english 2017/06/06 v3.3r English support from the babel system
+))
+(/home/mvinteler/.miktex/texmfs/install/tex/latex/tools/verbatim.sty
+Package: verbatim 2024-01-22 v1.5x LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks48
+\verbatim@line=\toks49
+\verbatim@in@stream=\read4
+)
+(/home/mvinteler/.miktex/texmfs/install/tex/latex/setspace/setspace.sty
+Package: setspace 2022/12/04 v6.7b set line spacing
+)
+(/home/mvinteler/.miktex/texmfs/install/tex/latex/base/latexsym.sty
+Package: latexsym 1998/08/17 v2.2e Standard LaTeX package (lasy symbols)
+\symlasy=\mathgroup6
+LaTeX Font Info:    Overwriting symbol font `lasy' in version `bold'
+(Font)                  U/lasy/m/n --> U/lasy/b/n on input line 52.
+)
+(/home/mvinteler/.miktex/texmfs/install/tex/latex/pgf/frontendlayer/tikz.sty
+(/home/mvinteler/.miktex/texmfs/install/tex/latex/pgf/basiclayer/pgf.sty
+Package: pgf 2025-08-29 v3.1.11a (3.1.11a)
+
+(/home/mvinteler/.miktex/texmfs/install/tex/generic/pgf/modules/pgfmoduleshapes
+.code.tex
+File: pgfmoduleshapes.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgfnodeparttextbox=\box78
+)
+(/home/mvinteler/.miktex/texmfs/install/tex/generic/pgf/modules/pgfmoduleplot.c
+ode.tex
+File: pgfmoduleplot.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+)
+(/home/mvinteler/.miktex/texmfs/install/tex/latex/pgf/compatibility/pgfcomp-ver
+sion-0-65.sty
+Package: pgfcomp-version-0-65 2025-08-29 v3.1.11a (3.1.11a)
+\pgf@nodesepstart=\dimen317
+\pgf@nodesepend=\dimen318
+)
+(/home/mvinteler/.miktex/texmfs/install/tex/latex/pgf/compatibility/pgfcomp-ver
+sion-1-18.sty
+Package: pgfcomp-version-1-18 2025-08-29 v3.1.11a (3.1.11a)
+))
+(/home/mvinteler/.miktex/texmfs/install/tex/latex/pgf/utilities/pgffor.sty
+(/home/mvinteler/.miktex/texmfs/install/tex/generic/pgf/utilities/pgffor.code.t
+ex
+Package: pgffor 2025-08-29 v3.1.11a (3.1.11a)
+\pgffor@iter=\dimen319
+\pgffor@skip=\dimen320
+\pgffor@stack=\toks50
+\pgffor@toks=\toks51
+))
+(/home/mvinteler/.miktex/texmfs/install/tex/generic/pgf/frontendlayer/tikz/tikz
+.code.tex
+Package: tikz 2025-08-29 v3.1.11a (3.1.11a)
+
+(/home/mvinteler/.miktex/texmfs/install/tex/generic/pgf/libraries/pgflibraryplo
+thandlers.code.tex
+File: pgflibraryplothandlers.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgf@plot@mark@count=\count375
+\pgfplotmarksize=\dimen321
+)
+\tikz@lastx=\dimen322
+\tikz@lasty=\dimen323
+\tikz@lastxsaved=\dimen324
+\tikz@lastysaved=\dimen325
+\tikz@lastmovetox=\dimen326
+\tikz@lastmovetoy=\dimen327
+\tikzleveldistance=\dimen328
+\tikzsiblingdistance=\dimen329
+\tikz@figbox=\box79
+\tikz@figbox@bg=\box80
+\tikz@tempbox=\box81
+\tikz@tempbox@bg=\box82
+\tikztreelevel=\count376
+\tikznumberofchildren=\count377
+\tikznumberofcurrentchild=\count378
+\tikz@fig@count=\count379
+
+(/home/mvinteler/.miktex/texmfs/install/tex/generic/pgf/modules/pgfmodulematrix
+.code.tex
+File: pgfmodulematrix.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgfmatrixcurrentrow=\count380
+\pgfmatrixcurrentcolumn=\count381
+\pgf@matrix@numberofcolumns=\count382
+)
+\tikz@expandcount=\count383
+
+(/home/mvinteler/.miktex/texmfs/install/tex/generic/pgf/frontendlayer/tikz/libr
+aries/tikzlibrarytopaths.code.tex
+File: tikzlibrarytopaths.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+))) (gnuplot-lua-tikz.sty
+Package: gnuplot-lua-tikz 2019/06/10 03:12:00 (rev. 108) GNUPLOT Lua terminal s
+tyle
+
+(/home/mvinteler/.miktex/texmfs/install/tex/generic/pgf/frontendlayer/tikz/libr
+aries/tikzlibraryarrows.code.tex
+File: tikzlibraryarrows.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+
+(/home/mvinteler/.miktex/texmfs/install/tex/generic/pgf/libraries/pgflibraryarr
+ows.code.tex
+File: pgflibraryarrows.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\arrowsize=\dimen330
+))
+(/home/mvinteler/.miktex/texmfs/install/tex/generic/pgf/frontendlayer/tikz/libr
+aries/tikzlibrarypatterns.code.tex
+File: tikzlibrarypatterns.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+
+(/home/mvinteler/.miktex/texmfs/install/tex/generic/pgf/libraries/pgflibrarypat
+terns.code.tex
+File: pgflibrarypatterns.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+))
+(/home/mvinteler/.miktex/texmfs/install/tex/generic/pgf/frontendlayer/tikz/libr
+aries/tikzlibraryplotmarks.code.tex
+File: tikzlibraryplotmarks.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+
+(/home/mvinteler/.miktex/texmfs/install/tex/generic/pgf/libraries/pgflibraryplo
+tmarks.code.tex
+File: pgflibraryplotmarks.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+))
+(/home/mvinteler/.miktex/texmfs/install/tex/generic/pgf/frontendlayer/tikz/libr
+aries/tikzlibrarybackgrounds.code.tex
+File: tikzlibrarybackgrounds.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgf@layerbox@background=\box83
+\pgf@layerboxsaved@background=\box84
+)
+(/home/mvinteler/.miktex/texmfs/install/tex/generic/pgf/frontendlayer/tikz/libr
+aries/tikzlibraryfit.code.tex
+File: tikzlibraryfit.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+) (gnuplot-lua-tikz-common.tex
+\gpvcharsize=\dimen331
+\gphcharsize=\dimen332
+\gpbasems=\dimen333
+\gpbaselw=\dimen334
+))
+(/home/mvinteler/.miktex/texmfs/install/tex/generic/pgf/frontendlayer/tikz/libr
+aries/tikzlibrarydecorations.pathmorphing.code.tex
+(/home/mvinteler/.miktex/texmfs/install/tex/generic/pgf/frontendlayer/tikz/libr
+aries/tikzlibrarydecorations.code.tex
+(/home/mvinteler/.miktex/texmfs/install/tex/generic/pgf/modules/pgfmoduledecora
+tions.code.tex
+\pgfdecoratedcompleteddistance=\dimen335
+\pgfdecoratedremainingdistance=\dimen336
+\pgfdecoratedinputsegmentcompleteddistance=\dimen337
+\pgfdecoratedinputsegmentremainingdistance=\dimen338
+\pgf@decorate@distancetomove=\dimen339
+\pgf@decorate@repeatstate=\count384
+\pgfdecorationsegmentamplitude=\dimen340
+\pgfdecorationsegmentlength=\dimen341
+)
+\tikz@lib@dec@box=\box85
+)
+(/home/mvinteler/.miktex/texmfs/install/tex/generic/pgf/libraries/decorations/p
+gflibrarydecorations.pathmorphing.code.tex))
+(/home/mvinteler/.miktex/texmfs/install/tex/generic/pgf/frontendlayer/tikz/libr
+aries/tikzlibrarydecorations.pathreplacing.code.tex
+(/home/mvinteler/.miktex/texmfs/install/tex/generic/pgf/libraries/decorations/p
+gflibrarydecorations.pathreplacing.code.tex))
+(/home/mvinteler/.miktex/texmfs/install/tex/generic/pgf/frontendlayer/tikz/libr
+aries/tikzlibrarydecorations.text.code.tex
+(/home/mvinteler/.miktex/texmfs/install/tex/generic/pgf/libraries/decorations/p
+gflibrarydecorations.text.code.tex
+\pgf@lib@dec@text@box=\box86
+)
+\tikz@lib@dec@te@box=\box87
+)
+(/home/mvinteler/.miktex/texmfs/install/tex/generic/pgf/libraries/pgflibraryarr
+ows.meta.code.tex
+File: pgflibraryarrows.meta.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgfarrowinset=\dimen342
+\pgfarrowlength=\dimen343
+\pgfarrowwidth=\dimen344
+\pgfarrowlinewidth=\dimen345
+)
+(/home/mvinteler/.miktex/texmfs/install/tex/generic/pgf/frontendlayer/tikz/libr
+aries/tikzlibraryshapes.code.tex
+File: tikzlibraryshapes.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+
+(/home/mvinteler/.miktex/texmfs/install/tex/generic/pgf/frontendlayer/tikz/libr
+aries/tikzlibraryshapes.geometric.code.tex
+File: tikzlibraryshapes.geometric.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+
+(/home/mvinteler/.miktex/texmfs/install/tex/generic/pgf/libraries/shapes/pgflib
+raryshapes.geometric.code.tex
+File: pgflibraryshapes.geometric.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+))
+(/home/mvinteler/.miktex/texmfs/install/tex/generic/pgf/frontendlayer/tikz/libr
+aries/tikzlibraryshapes.misc.code.tex
+File: tikzlibraryshapes.misc.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+
+(/home/mvinteler/.miktex/texmfs/install/tex/generic/pgf/libraries/shapes/pgflib
+raryshapes.misc.code.tex
+File: pgflibraryshapes.misc.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+))
+(/home/mvinteler/.miktex/texmfs/install/tex/generic/pgf/frontendlayer/tikz/libr
+aries/tikzlibraryshapes.symbols.code.tex
+File: tikzlibraryshapes.symbols.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+
+(/home/mvinteler/.miktex/texmfs/install/tex/generic/pgf/libraries/shapes/pgflib
+raryshapes.symbols.code.tex
+File: pgflibraryshapes.symbols.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+))
+(/home/mvinteler/.miktex/texmfs/install/tex/generic/pgf/frontendlayer/tikz/libr
+aries/tikzlibraryshapes.arrows.code.tex
+File: tikzlibraryshapes.arrows.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+
+(/home/mvinteler/.miktex/texmfs/install/tex/generic/pgf/libraries/shapes/pgflib
+raryshapes.arrows.code.tex
+File: pgflibraryshapes.arrows.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+))
+(/home/mvinteler/.miktex/texmfs/install/tex/generic/pgf/frontendlayer/tikz/libr
+aries/tikzlibraryshapes.callouts.code.tex
+(/home/mvinteler/.miktex/texmfs/install/tex/generic/pgf/libraries/shapes/pgflib
+raryshapes.callouts.code.tex))
+(/home/mvinteler/.miktex/texmfs/install/tex/generic/pgf/frontendlayer/tikz/libr
+aries/tikzlibraryshapes.multipart.code.tex
+File: tikzlibraryshapes.multipart.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+
+(/home/mvinteler/.miktex/texmfs/install/tex/generic/pgf/libraries/shapes/pgflib
+raryshapes.multipart.code.tex
+File: pgflibraryshapes.multipart.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgfnodepartlowerbox=\box88
+\pgfnodeparttwobox=\box89
+\pgfnodepartthreebox=\box90
+\pgfnodepartfourbox=\box91
+\pgfnodeparttwentybox=\box92
+\pgfnodepartnineteenbox=\box93
+\pgfnodeparteighteenbox=\box94
+\pgfnodepartseventeenbox=\box95
+\pgfnodepartsixteenbox=\box96
+\pgfnodepartfifteenbox=\box97
+\pgfnodepartfourteenbox=\box98
+\pgfnodepartthirteenbox=\box99
+\pgfnodeparttwelvebox=\box100
+\pgfnodepartelevenbox=\box101
+\pgfnodeparttenbox=\box102
+\pgfnodepartninebox=\box103
+\pgfnodeparteightbox=\box104
+\pgfnodepartsevenbox=\box105
+\pgfnodepartsixbox=\box106
+\pgfnodepartfivebox=\box107
+)))
+(/home/mvinteler/.miktex/texmfs/install/tex/generic/pgf/frontendlayer/tikz/libr
+aries/tikzlibraryautomata.code.tex
+File: tikzlibraryautomata.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+)
+(/home/mvinteler/.miktex/texmfs/install/tex/generic/pgf/frontendlayer/tikz/libr
+aries/tikzlibrarypositioning.code.tex
+File: tikzlibrarypositioning.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+)
+(/home/mvinteler/.miktex/texmfs/install/tex/generic/pgf/frontendlayer/tikz/libr
+aries/tikzlibrarycalc.code.tex
+File: tikzlibrarycalc.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+)
+(/home/mvinteler/.miktex/texmfs/install/tex/generic/pgf/frontendlayer/tikz/libr
+aries/tikzlibrarybending.code.tex
+File: tikzlibrarybending.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+
+(/home/mvinteler/.miktex/texmfs/install/tex/generic/pgf/modules/pgfmodulebendin
+g.code.tex
+File: pgfmodulebending.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+
+(/home/mvinteler/.miktex/texmfs/install/tex/generic/pgf/modules/pgfmodulenonlin
+eartransformations.code.tex
+File: pgfmodulenonlineartransformations.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgftransformnonlinearflatness=\dimen346
+)
+(/home/mvinteler/.miktex/texmfs/install/tex/generic/pgf/libraries/pgflibrarycur
+vilinear.code.tex
+File: pgflibrarycurvilinear.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgf@curvilinear@time@a=\dimen347
+\pgf@curvilinear@length@a=\dimen348
+\pgf@curvilinear@length@b=\dimen349
+\pgf@curvilinear@length@c=\dimen350
+\pgf@curvilinear@length@d=\dimen351
+)
+\pgf@arrows@the@rigidity=\dimen352
+))
+(/home/mvinteler/.miktex/texmfs/install/tex/generic/pgf/frontendlayer/tikz/libr
+aries/tikzlibrarymatrix.code.tex
+File: tikzlibrarymatrix.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+)
+(/home/mvinteler/.miktex/texmfs/install/tex/latex/l3backend/l3backend-pdftex.de
+f
+File: l3backend-pdftex.def 2025-10-09 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count385
+) (poster_JPD.aux)
+\openout1 = `poster_JPD.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: custom
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: includehead includefoot 
+* h-part:(L,W,R)=(28.45274pt, 2331.98808pt, 28.45274pt)
+* v-part:(T,H,B)=(0.0pt, 3380.75665pt, 0.0pt)
+* \paperwidth=2388.89357pt
+* \paperheight=3380.75665pt
+* \textwidth=2331.98808pt
+* \textheight=3352.30392pt
+* \oddsidemargin=-43.81725pt
+* \evensidemargin=-43.81725pt
+* \topmargin=-72.26999pt
+* \headheight=14.22636pt
+* \headsep=0.0pt
+* \topskip=11.0pt
+* \footskip=14.22636pt
+* \marginparwidth=4.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+(/home/mvinteler/.miktex/texmfs/install/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count386
+\scratchdimen=\dimen353
+\scratchbox=\box108
+\nofMPsegments=\count387
+\nofMParguments=\count388
+\everyMPshowfont=\toks52
+\MPscratchCnt=\count389
+\MPscratchDim=\dimen354
+\MPnumerator=\count390
+\makeMPintoPDFobject=\count391
+\everyMPtoPDFconversion=\toks53
+)
+(/home/mvinteler/.miktex/texmfs/install/tex/latex/epstopdf-pkg/epstopdf-base.st
+y
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+ (/home/mvinteler/.miktex/texmfs/install/tex/latex/00miktex/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
+))
+Package hyperref Info: Link coloring OFF on input line 84.
+(poster_JPD.out) (poster_JPD.out)
+\@outlinefile=\write5
+\openout5 = `poster_JPD.out'.
+
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 84.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/cmss/b/n on input line 84.
+\symnumbers=\mathgroup7
+\sympureletters=\mathgroup8
+LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
+(Font)                  OT1/cmss/m/n --> OT1/cmr/m/n on input line 84.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 84.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> OT1/cmss/b/n on input line 84.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/cmss/b/n on input line 84.
+LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 84.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
+(Font)                  OT1/cmss/m/n --> OT1/cmss/m/n on input line 84.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/cmss/bx/n --> OT1/cmss/m/n on input line 84.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 84.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> OT1/cmss/m/it on input line 84.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmr/bx/it --> OT1/cmss/m/it on input line 84.
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 84.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
+(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 84.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 84.
+LaTeX Font Info:    Overwriting symbol font `numbers' in version `bold'
+(Font)                  OT1/cmss/m/n --> OT1/cmss/b/n on input line 84.
+LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
+(Font)                  OT1/cmss/m/it --> OT1/cmss/b/it on input line 84.
+LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `bold'
+(Font)                  OT1/cmss/b/n --> OT1/cmr/b/n on input line 84.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
+(Font)                  OT1/cmss/b/n --> OT1/cmss/b/n on input line 84.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/cmss/m/n --> OT1/cmss/b/n on input line 84.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmss/m/it --> OT1/cmss/b/it on input line 84.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/cmtt/m/n --> OT1/cmtt/b/n on input line 84.
+LaTeX Font Info:    Redeclaring symbol font `pureletters' on input line 84.
+LaTeX Font Info:    Overwriting symbol font `pureletters' in version `normal'
+(Font)                  OT1/cmss/m/it --> OT1/mathkerncmss/m/sl on input line 8
+4.
+LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
+(Font)                  OT1/cmss/b/it --> OT1/mathkerncmss/m/sl on input line 8
+4.
+LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
+(Font)                  OT1/mathkerncmss/m/sl --> OT1/mathkerncmss/bx/sl on inp
+ut line 84.
+
+(/home/mvinteler/.miktex/texmfs/install/tex/latex/translator/translator-basic-d
+ictionary-English.dict
+Dictionary: translator-basic-dictionary, Language: English 
+)
+(/home/mvinteler/.miktex/texmfs/install/tex/latex/translator/translator-bibliog
+raphy-dictionary-English.dict
+Dictionary: translator-bibliography-dictionary, Language: English 
+)
+(/home/mvinteler/.miktex/texmfs/install/tex/latex/translator/translator-environ
+ment-dictionary-English.dict
+Dictionary: translator-environment-dictionary, Language: English 
+)
+(/home/mvinteler/.miktex/texmfs/install/tex/latex/translator/translator-months-
+dictionary-English.dict
+Dictionary: translator-months-dictionary, Language: English 
+)
+(/home/mvinteler/.miktex/texmfs/install/tex/latex/translator/translator-numbers
+-dictionary-English.dict
+Dictionary: translator-numbers-dictionary, Language: English 
+)
+(/home/mvinteler/.miktex/texmfs/install/tex/latex/translator/translator-theorem
+-dictionary-English.dict
+Dictionary: translator-theorem-dictionary, Language: English 
+) (poster_JPD.nav)
+LaTeX Font Info:    Calculating math sizes for size <50.16> on input line 84.
+LaTeX Font Info:    Trying to load font information for OT1+mathkerncmss on inp
+ut line 84.
+
+(/home/mvinteler/.miktex/texmfs/install/tex/latex/sansmathaccent/ot1mathkerncms
+s.fd
+File: ot1mathkerncmss.fd 2020/01/31 Fontinst v1.933 font definitions for OT1/ma
+thkerncmss.
+)
+LaTeX Font Info:    Calculating math sizes for size <34.83> on input line 84.
+<logos/icfp.png, id=13, 533.74406pt x 269.50688pt>
+File: logos/icfp.png Graphic file (type png)
+<use logos/icfp.png>
+Package pdftex.def Info: logos/icfp.png  used on input line 84.
+(pdftex.def)             Requested size: 286.66576pt x 144.7543pt.
+<logos/MNHN-logo.jpg, id=15, 665.48625pt x 773.89125pt>
+File: logos/MNHN-logo.jpg Graphic file (type jpg)
+<use logos/MNHN-logo.jpg>
+Package pdftex.def Info: logos/MNHN-logo.jpg  used on input line 84.
+(pdftex.def)             Requested size: 157.66544pt x 183.34055pt.
+<logos/sorbonne-universite.jpeg, id=16, 376.40625pt x 376.40625pt>
+File: logos/sorbonne-universite.jpeg Graphic file (type jpg)
+<use logos/sorbonne-universite.jpeg>
+Package pdftex.def Info: logos/sorbonne-universite.jpeg  used on input line 84.
+
+(pdftex.def)             Requested size: 214.99568pt x 215.00177pt.
+<logos/impmc_logo_2014.jpg, id=17, 903.375pt x 636.87938pt>
+File: logos/impmc_logo_2014.jpg Graphic file (type jpg)
+<use logos/impmc_logo_2014.jpg>
+Package pdftex.def Info: logos/impmc_logo_2014.jpg  used on input line 84.
+(pdftex.def)             Requested size: 238.88571pt x 168.41266pt.
+LaTeX Font Info:    Calculating math sizes for size <16.8> on input line 84.
+
+Overfull \hbox (11.48328pt too wide) in paragraph at lines 84--84
+[][][][][][][]  
+ []
+
+File: logos/icfp.png Graphic file (type png)
+<use logos/icfp.png>
+Package pdftex.def Info: logos/icfp.png  used on input line 420.
+(pdftex.def)             Requested size: 286.66576pt x 144.7543pt.
+File: logos/MNHN-logo.jpg Graphic file (type jpg)
+<use logos/MNHN-logo.jpg>
+Package pdftex.def Info: logos/MNHN-logo.jpg  used on input line 420.
+(pdftex.def)             Requested size: 157.66544pt x 183.34055pt.
+File: logos/sorbonne-universite.jpeg Graphic file (type jpg)
+<use logos/sorbonne-universite.jpeg>
+Package pdftex.def Info: logos/sorbonne-universite.jpeg  used on input line 420
+.
+(pdftex.def)             Requested size: 214.99568pt x 215.00177pt.
+File: logos/impmc_logo_2014.jpg Graphic file (type jpg)
+<use logos/impmc_logo_2014.jpg>
+Package pdftex.def Info: logos/impmc_logo_2014.jpg  used on input line 420.
+(pdftex.def)             Requested size: 238.88571pt x 168.41266pt.
+
+Overfull \hbox (11.48328pt too wide) in paragraph at lines 420--420
+[][][][][][][]  
+ []
+
+
+LaTeX Font Warning: Font shape `OT1/cmss/m/it' in size <34.83> not available
+(Font)              Font shape `OT1/cmss/m/sl' tried instead on input line 420.
+
+
+<imgs/CuO_v2.png, id=21, 398.23781pt x 423.08063pt>
+File: imgs/CuO_v2.png Graphic file (type png)
+<use imgs/CuO_v2.png>
+Package pdftex.def Info: imgs/CuO_v2.png  used on input line 420.
+(pdftex.def)             Requested size: 293.83519pt x 312.17741pt.
+<imgs/NRIXS_NiO_spectra.png, id=22, 987.69pt x 649.42625pt>
+File: imgs/NRIXS_NiO_spectra.png Graphic file (type png)
+<use imgs/NRIXS_NiO_spectra.png>
+Package pdftex.def Info: imgs/NRIXS_NiO_spectra.png  used on input line 420.
+(pdftex.def)             Requested size: 545.69757pt x 358.80078pt.
+
+Overfull \hbox (125.93118pt too wide) in paragraph at lines 420--420
+[][] 
+ []
+
+<imgs/victor_results.png, id=23, 763.35187pt x 728.7225pt>
+File: imgs/victor_results.png Graphic file (type png)
+<use imgs/victor_results.png>
+Package pdftex.def Info: imgs/victor_results.png  used on input line 420.
+(pdftex.def)             Requested size: 346.30566pt x 330.59074pt.
+<imgs/dos_vs_bands_v1.pdf, id=24, 740.77963pt x 491.71861pt>
+File: imgs/dos_vs_bands_v1.pdf Graphic file (type pdf)
+<use imgs/dos_vs_bands_v1.pdf>
+Package pdftex.def Info: imgs/dos_vs_bands_v1.pdf  used on input line 420.
+(pdftex.def)             Requested size: 674.82777pt x 447.95232pt.
+
+Overfull \hbox (155.7307pt too wide) in paragraph at lines 420--420
+ [][] 
+ []
+
+LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <34.83> not available
+(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 420.
+
+LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <24.38089> not available
+(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 420.
+
+LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <17.415> not available
+(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 420.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 420--420
+[]\OT1/cmss/m/n/34.83 Near the Fermi level: \OT1/cmss/bx/n/34.83 four
+ []
+
+
+Underfull \hbox (badness 2913) in paragraph at lines 420--420
+[]\OT1/cmss/m/n/34.83 Bands partially filled, yet CuO is
+ []
+
+<imgs/hopping_terms_v4.png, id=25, 601.12079pt x 597.73312pt>
+File: imgs/hopping_terms_v4.png Graphic file (type png)
+<use imgs/hopping_terms_v4.png>
+Package pdftex.def Info: imgs/hopping_terms_v4.png  used on input line 420.
+(pdftex.def)             Requested size: 486.95747pt x 484.22502pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 420--420
+[]\OT1/cmss/m/n/34.83 Combination with the
+ []
+
+<imgs/cRPA_conv.pdf, id=26, 417.66188pt x 566.6787pt>
+File: imgs/cRPA_conv.pdf Graphic file (type pdf)
+<use imgs/cRPA_conv.pdf>
+Package pdftex.def Info: imgs/cRPA_conv.pdf  used on input line 420.
+(pdftex.def)             Requested size: 373.81989pt x 507.19589pt.
+
+Overfull \hbox (47.34085pt too wide) in paragraph at lines 420--420
+[][] 
+ []
+
+
+LaTeX Font Warning: Font shape `OT1/cmss/m/sc' in size <34.83> not available
+(Font)              Font shape `OT1/cmr/m/sc' tried instead on input line 420.
+
+<imgs/self_spec.pdf, id=29, 868.4382pt x 509.4988pt>
+File: imgs/self_spec.pdf Graphic file (type pdf)
+<use imgs/self_spec.pdf>
+Package pdftex.def Info: imgs/self_spec.pdf  used on input line 420.
+(pdftex.def)             Requested size: 792.0639pt x 464.71748pt.
+
+Underfull \hbox (badness 1546) in paragraph at lines 420--420
+[]\OT1/cmss/bx/n/34.83 Non zero Spectral weight at
+ []
+
+<imgs/phase_diag_para.pdf, id=31, 570.49698pt x 374.8386pt>
+File: imgs/phase_diag_para.pdf Graphic file (type pdf)
+<use imgs/phase_diag_para.pdf>
+Package pdftex.def Info: imgs/phase_diag_para.pdf  used on input line 420.
+(pdftex.def)             Requested size: 557.82426pt x 366.54428pt.
+<imgs/phase_diagram_CuO_A0_AF.pdf, id=32, 570.49698pt x 374.8386pt>
+File: imgs/phase_diagram_CuO_A0_AF.pdf Graphic file (type pdf)
+<use imgs/phase_diagram_CuO_A0_AF.pdf>
+Package pdftex.def Info: imgs/phase_diagram_CuO_A0_AF.pdf  used on input line 4
+20.
+(pdftex.def)             Requested size: 557.82426pt x 366.54428pt.
+
+LaTeX Font Warning: Font shape `OT1/cmss/m/it' in size <24.19> not available
+(Font)              Font shape `OT1/cmss/m/sl' tried instead on input line 420.
+
+
+LaTeX Font Info:    Calculating math sizes for size <24.19> on input line 420.
+LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <24.19> not available
+(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 420.
+
+LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <16.93292> not available
+(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 420.
+
+LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <12.095> not available
+(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 420.
+
+
+Overfull \vbox (36.25854pt too high) detected at line 420
+ []
+
+LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <50.16> not available
+(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 420.
+
+LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <35.11185> not available
+(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 420.
+
+LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <25.08> not available
+(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 420.
+
+File: logos/icfp.png Graphic file (type png)
+<use logos/icfp.png>
+Package pdftex.def Info: logos/icfp.png  used on input line 420.
+(pdftex.def)             Requested size: 286.66576pt x 144.7543pt.
+File: logos/MNHN-logo.jpg Graphic file (type jpg)
+<use logos/MNHN-logo.jpg>
+Package pdftex.def Info: logos/MNHN-logo.jpg  used on input line 420.
+(pdftex.def)             Requested size: 157.66544pt x 183.34055pt.
+File: logos/sorbonne-universite.jpeg Graphic file (type jpg)
+<use logos/sorbonne-universite.jpeg>
+Package pdftex.def Info: logos/sorbonne-universite.jpeg  used on input line 420
+.
+(pdftex.def)             Requested size: 214.99568pt x 215.00177pt.
+File: logos/impmc_logo_2014.jpg Graphic file (type jpg)
+<use logos/impmc_logo_2014.jpg>
+Package pdftex.def Info: logos/impmc_logo_2014.jpg  used on input line 420.
+(pdftex.def)             Requested size: 238.88571pt x 168.41266pt.
+LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <16.8> not available
+(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 420.
+
+LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <11.75995> not available
+(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 420.
+
+LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <8.4> not available
+(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 420.
+
+
+Overfull \hbox (11.48328pt too wide) has occurred while \output is active
+[][][][][][][]  
+ []
+
+[1{/home/mvinteler/.miktex/texmfs/data/fonts/map/pdftex/pdftex.map}
+
+ <./logos/icfp.png> <./logos/MNHN-logo.jpg> <./logos/sorbonne-universite.jpeg> 
+<./logos/impmc_logo_2014.jpg> <./imgs/CuO_v2.png> <./imgs/NRIXS_NiO_spectra.png
+> <./imgs/victor_results.png> <./imgs/dos_vs_bands_v1.pdf> <./imgs/hopping_term
+s_v4.png> <./imgs/cRPA_conv.pdf> <./imgs/self_spec.pdf> <./imgs/phase_diag_para
+.pdf> <./imgs/phase_diagram_CuO_A0_AF.pdf>]
+\tf@nav=\write6
+\openout6 = `poster_JPD.nav'.
+
+\tf@toc=\write7
+\openout7 = `poster_JPD.toc'.
+
+\tf@snm=\write8
+\openout8 = `poster_JPD.snm'.
+
+ (poster_JPD.aux)
+ ***********
+LaTeX2e <2025-11-01>
+L3 programming layer <2026-01-19>
+ ***********
+Package rerunfilecheck Info: File `poster_JPD.out' has not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+ ) 
+Here is how much of TeX's memory you used:
+ 31603 strings out of 469803
+ 670255 string characters out of 5470006
+ 1202476 words of memory out of 5000000
+ 59551 multiletter control sequences out of 15000+600000
+ 659567 words of font info for 160 fonts, out of 8000000 for 9000
+ 0 hyphenation exceptions out of 8191
+ 128i,28n,123p,426b,1151s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</home/mvinteler/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmcsc1
+0.pfb></home/mvinteler/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cm
+ex10.pfb></home/mvinteler/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm
+/cmmi12.pfb></home/mvinteler/.miktex/texmfs/install/fonts/type1/public/amsfonts
+/cm/cmss17.pfb></home/mvinteler/.miktex/texmfs/install/fonts/type1/public/amsfo
+nts/cm/cmssbx10.pfb></home/mvinteler/.miktex/texmfs/install/fonts/type1/public/
+amsfonts/cm/cmssi17.pfb></home/mvinteler/.miktex/texmfs/install/fonts/type1/pub
+lic/amsfonts/cm/cmsy10.pfb>
+Output written on poster_JPD.pdf (1 page, 2215388 bytes).
+PDF statistics:
+ 338 PDF objects out of 1000 (max. 8388607)
+ 8 named destinations out of 1000 (max. 500000)
+ 108 words of extra memory for PDF output out of 10000 (max. 10000000)
+
