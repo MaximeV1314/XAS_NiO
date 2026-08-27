@@ -1,4 +1,4 @@
-This is BibTeX, Version 0.99e
+This is BibTeX, Version 0.99d
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: natural_orbitals.aux
 Reallocating 'name_of_file' (item size: 1) to 6 items.
@@ -9,45 +9,45 @@ Warning--empty journal in lu_natural-orbital_2019
 Warning--empty year in lu_natural-orbital_2019
 Warning--empty journal in lu_efficient_2014
 Warning--empty year in lu_efficient_2014
-You've used 3 entries,
+You've used 4 entries,
             1791 wiz_defined-function locations,
-            460 strings with 4002 characters,
-and the built_in function-call counts, 679 in all, are:
-= -- 42
-> -- 45
+            468 strings with 4166 characters,
+and the built_in function-call counts, 912 in all, are:
+= -- 61
+> -- 56
 < -- 0
-+ -- 16
-- -- 13
-* -- 59
-:= -- 115
-add.period$ -- 8
-call.type$ -- 3
-change.case$ -- 3
++ -- 20
+- -- 16
+* -- 81
+:= -- 153
+add.period$ -- 11
+call.type$ -- 4
+change.case$ -- 4
 chr.to.int$ -- 0
-cite$ -- 7
-duplicate$ -- 23
-empty$ -- 65
-format.name$ -- 13
-if$ -- 138
+cite$ -- 8
+duplicate$ -- 32
+empty$ -- 88
+format.name$ -- 16
+if$ -- 188
 int.to.chr$ -- 0
-int.to.str$ -- 3
-missing$ -- 2
-newline$ -- 17
-num.names$ -- 3
-pop$ -- 13
+int.to.str$ -- 4
+missing$ -- 3
+newline$ -- 22
+num.names$ -- 4
+pop$ -- 14
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 13
+skip$ -- 16
 stack$ -- 0
-substring$ -- 36
-swap$ -- 1
+substring$ -- 54
+swap$ -- 2
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 4
-while$ -- 5
-width$ -- 4
-write$ -- 27
+while$ -- 7
+width$ -- 5
+write$ -- 38
 (There were 4 warnings)

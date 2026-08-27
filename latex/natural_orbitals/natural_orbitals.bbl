@@ -16,4 +16,9 @@ Y.~Lu, M.~Höppner, O.~Gunnarsson, and M.~W. Haverkort.
 \newblock Efficient real-frequency solver for dynamical mean-field theory.
 \newblock 90(8):085102.
 
+\bibitem{de_vega_how_2015}
+Inés De~Vega, Ulrich Schollwöck, and F.~Alexander Wolf.
+\newblock How to discretize a quantum bath for real-time evolution.
+\newblock {\em Physical Review B}, 92(15):155126, October 2015.
+
 \end{thebibliography}
