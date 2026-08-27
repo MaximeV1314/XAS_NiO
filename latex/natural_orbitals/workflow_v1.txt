@@ -1,0 +1,80 @@
+\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+
+\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+%uncomment if require: \path (0,252); %set diagram left start at 0, and has height of 252
+
+%Shape: Rectangle [id:dp0014612729539766889] 
+\draw   (0,71) -- (126,71) -- (126,127) -- (0,127) -- cycle ;
+%Shape: Rectangle [id:dp7277851166357192] 
+\draw   (149.38,63.13) -- (405.38,63.13) -- (405.38,134.13) -- (149.38,134.13) -- cycle ;
+%Shape: Rectangle [id:dp6909610461590362] 
+\draw   (430.38,73.13) -- (655,73.13) -- (655,126.13) -- (430.38,126.13) -- cycle ;
+%Shape: Rectangle [id:dp5474632956376636] 
+\draw   (427.38,162.13) -- (642.38,162.13) -- (642.38,212.13) -- (427.38,212.13) -- cycle ;
+%Straight Lines [id:da6646816878028362] 
+\draw    (405.38,99.13) -- (426.38,99.13) ;
+\draw [shift={(426.38,99.13)}, rotate = 180] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+%Straight Lines [id:da2067329687791185] 
+\draw    (125.38,99.13) -- (145.38,99.13) ;
+\draw [shift={(146.38,99.13)}, rotate = 180] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+%Shape: Rectangle [id:dp6775746951504829] 
+\draw  [line width=2.25]  (3.38,158.13) -- (211.38,158.13) -- (211.38,216.13) -- (3.38,216.13) -- cycle ;
+%Straight Lines [id:da26937628275972647] 
+\draw    (538.38,126.13) -- (538.38,159.13) ;
+\draw [shift={(538.38,158.13)}, rotate = 270] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+%Shape: Rectangle [id:dp4373663743532854] 
+\draw   (238.38,162) -- (402.38,162) -- (402.38,212.13) -- (238.38,212.13) -- cycle ;
+%Straight Lines [id:da843583731030628] 
+\draw    (427.38,190.13) -- (404.38,190.13) ;
+\draw [shift={(405.38,190.13)}, rotate = 360] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+%Straight Lines [id:da9033224078105236] 
+\draw [line width=1.5]    (238.38,190.13) -- (216.38,190.13) ;
+\draw [shift={(219.38,190.13)}, rotate = 360] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=1.5]    (14.21,-4.28) .. controls (9.04,-1.82) and (4.3,-0.39) .. (0,0) .. controls (4.3,0.39) and (9.04,1.82) .. (14.21,4.28)   ;
+
+% Text Node
+\draw (2,81) node [anchor=north west][inner sep=0.75pt]   [align=left] {\begin{minipage}[lt]{89.81pt}\setlength\topsep{0pt}
+\begin{center}
+\textbf{DFT calculation}\\$\displaystyle \psi _{im\mathbf{k}}$, DOS, $\displaystyle V(\mathbf{r})$
+\end{center}
+
+\end{minipage}};
+% Text Node
+\draw (150,71) node [anchor=north west][inner sep=0.75pt]   [align=left] {\begin{minipage}[lt]{190.5pt}\setlength\topsep{0pt}
+\begin{center}
+\textbf{Wannierization and hopp. terms}\\$\displaystyle  \begin{array}{{>{\displaystyle}l}}
+\varphi _{im}(\mathbf{r}) =\Sigma _{\mathbf{k}} e^{i\mathbf{kr}} \ \Sigma _{i'm'}\mathcal{U}_{im,i'm'}^{\mathbf{k}} \psi _{i'm'\mathbf{k}}\\
+t_{ij}^{mm'} =\bra{im} -1/2\nabla ^{2} +V(\mathbf{r}) \ket{jm'} 
+\end{array}$
+\end{center}
+
+\end{minipage}};
+% Text Node
+\draw (432,82) node [anchor=north west][inner sep=0.75pt]   [align=left] {\begin{minipage}[lt]{162.83pt}\setlength\topsep{0pt}
+\begin{center}
+\textbf{Single-body transition matrix}\\$\displaystyle M_{im\sigma }^{\mathbf{q}} =\bra{ im\sigma} e^{i\mathbf{qr}}\ket{ic\sigma} $
+\end{center}
+
+\end{minipage}};
+% Text Node
+\draw (430,170) node [anchor=north west][inner sep=0.75pt]   [align=left] {\begin{minipage}[lt]{154.49pt}\setlength\topsep{0pt}
+\begin{center}
+\textbf{Screened Coulomb tensor} $\displaystyle \mathbf{U}$\\By cRPA, cDFT, litterature, ...
+\end{center}
+
+\end{minipage}};
+% Text Node
+\draw (7,167) node [anchor=north west][inner sep=0.75pt]   [align=left] {\begin{minipage}[lt]{148.06pt}\setlength\topsep{0pt}
+\begin{center}
+\textbf{NRIXS Intensity}\\$\displaystyle I(\mathbf{q}) =\Sigma _{i\sigma }\mathbf{M}_{\mathbf{q} i\sigma }^{\dagger }(\mathbf{1} -\mathbf{n}_{i\sigma })\mathbf{M}_{\mathbf{q} i\sigma }$
+\end{center}
+
+\end{minipage}};
+% Text Node
+\draw (243,169) node [anchor=north west][inner sep=0.75pt]   [align=left] {\begin{minipage}[lt]{110.17pt}\setlength\topsep{0pt}
+\begin{center}
+\textbf{DMFT calculation}\\$\displaystyle (\mathbf{n}_{i\sigma })_{kl} =\left< \hat{c}_{im_{k} \sigma }^{\dagger }\hat{c}_{im_{l} \sigma }^{\phantom{\dagger}}\right> $
+\end{center}
+
+\end{minipage}};
+
+\end{tikzpicture}

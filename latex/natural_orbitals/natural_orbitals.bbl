@@ -1,0 +1,19 @@
+\begin{thebibliography}{1}
+
+\bibitem{kaye_natural_nodate}
+Jason Kaye, Coraline Letouzé, Olivier Parcollet, Marc Ritter, and
+  Miles~Stoudenmire E.
+\newblock Natural orbital basis notes.
+
+\bibitem{lu_natural-orbital_2019}
+Y.~Lu, X.~Cao, P.~Hansmann, and M.~W. Haverkort.
+\newblock Natural-orbital impurity solver and projection approach for green's
+  functions.
+\newblock 100(11):115134.
+
+\bibitem{lu_efficient_2014}
+Y.~Lu, M.~Höppner, O.~Gunnarsson, and M.~W. Haverkort.
+\newblock Efficient real-frequency solver for dynamical mean-field theory.
+\newblock 90(8):085102.
+
+\end{thebibliography}

@@ -1,0 +1,53 @@
+This is BibTeX, Version 0.99e
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: natural_orbitals.aux
+Reallocating 'name_of_file' (item size: 1) to 6 items.
+The style file: unsrt.bst
+Reallocating 'name_of_file' (item size: 1) to 8 items.
+Database file #1: sample_.bib
+Warning--empty journal in lu_natural-orbital_2019
+Warning--empty year in lu_natural-orbital_2019
+Warning--empty journal in lu_efficient_2014
+Warning--empty year in lu_efficient_2014
+You've used 3 entries,
+            1791 wiz_defined-function locations,
+            460 strings with 4002 characters,
+and the built_in function-call counts, 679 in all, are:
+= -- 42
+> -- 45
+< -- 0
++ -- 16
+- -- 13
+* -- 59
+:= -- 115
+add.period$ -- 8
+call.type$ -- 3
+change.case$ -- 3
+chr.to.int$ -- 0
+cite$ -- 7
+duplicate$ -- 23
+empty$ -- 65
+format.name$ -- 13
+if$ -- 138
+int.to.chr$ -- 0
+int.to.str$ -- 3
+missing$ -- 2
+newline$ -- 17
+num.names$ -- 3
+pop$ -- 13
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 13
+stack$ -- 0
+substring$ -- 36
+swap$ -- 1
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 4
+while$ -- 5
+width$ -- 4
+write$ -- 27
+(There were 4 warnings)
