@@ -109,13 +109,12 @@ C =
 \end{pmatrix}
 \end{equation}
 The next step consists of diagonalizing the bath part of the density matrix, $\rho_{\bath}$. We do not diagonalize the full correlation matrix in order to avoid mixing the impurity site with the bath sites and therefore losing the locality of the impurity.\\
-Because of the local interaction on the impurity, the new occupations are not strictly equal to $0$ or $1$. However, most of them remain very close to these values and can therefore be considered as part of a single Slater determinant below a threshold $\epsilon$, a tunable parameter controlling the trade-off between accuracy and computation cost. Furthermore, from the properties of Gaussian states, there exists a single eigenvalue equal to $1-\nu_0$, with $\nu_0=\nu_\imp=C_{00}$ being the impurity occupation {\color{blue}{[MV: still true for interacting calculations ?]}}, which is called the \textit{active site} $\ket{b}$. In ascending order,
+Because of the local interaction on the impurity, the new occupations are not strictly equal to $0$ or $1$. However, most of them remain very close to these values and can therefore be considered as part of a single Slater determinant as we will see later. Furthermore, from the properties of Gaussian states, there exists a single eigenvalue equal to $1-\nu_0$, with $\nu_0=\nu_\imp=C_{00}$ being the impurity occupation, which is called the \textit{active site} $\ket{b}$. In ascending order,
 \begin{equation}
 P^\dagger_\bath \rho_\bath P_\bath =
-\text{diag}(\nu_1, \nu_2, \ldots, \nu_{N_\empti}, \ldots, \nu_\activ, \ldots, \nu_{N_\filled}, \ldots, \nu_{N_\bath})
+\text{diag}(\nu_1, \nu_2, \ldots, \nu_\activ, \ldots, \nu_{N_\bath})
 \end{equation}
-where we define the inactive empty bath part $\mathcal{E}_I$ as $i\in \{1,\ldots, N_\empti\}$, for which $\nu_i < \epsilon$, and the inactive filled bath part $\mathcal{F}_I$ as $j\in \{N_\filled,\ldots, N_\bath\}$, for which $\nu_j > 1-\epsilon$. The active part $\mathcal{A}$ is defined by $k\in \{N_\empti+1,\ldots, N_\filled-1\}$. The first two spaces will eventually be treated as single Slater determinants, once they are fully decoupled from the active and impurity sites at the end of the natural orbital transformation.\\
-For now, we consider the (almost) empty space $\mathcal{E}$ as $m\in \{1,\ldots, N_\activ-1\}$ and the (almost) filled space $\mathcal{F}$ as $n\in \{N_\activ+1,\ldots, N_\bath\}$. Applying this change of basis gives (Fig. \ref{subfig:h_prime_rep})
+where we consider the (almost) empty space $\mathcal{E}$ as $m\in \{1,\ldots, N_\activ-1\}$ and the (almost) filled space $\mathcal{F}$ as $n\in \{N_\activ+1,\ldots, N_\bath\}$. Applying this change of basis gives (Fig. \ref{subfig:h_prime_rep})
 \begin{equation}\label{eq:bath_rotation}
 \hamiltonian' = P^\dagger\hamiltonian_\star^{1B} P, \quad P =
 \begin{pmatrix}
@@ -123,12 +122,11 @@ For now, we consider the (almost) empty space $\mathcal{E}$ as $m\in \{1,\ldots,
 0 & P_\bath
 \end{pmatrix}
 \end{equation}
-After this transformation, the impurity and active states are still strongly hybridized with the empty and filled states. However, the hopping between the empty $\mathcal{E}$ states and the filled $\mathcal{F}$ states is now almost zero (Fig. \ref{subfig:h_prime_rep}). We therefore want to preserve the separation between the empty and filled states while further reducing the hybridization between the impurity and the active site. This is necessary in order to construct an inactive space that is decoupled from the impurity and can therefore be treated trivially as a single Slater determinant. This can be achieved by performing a new unitary rotation within the subspace formed by the impurity and the active site. The goal of this rotation is to further separate $\hamiltonian'$ into two \textit{empty} and \textit{filled} blocks. The resulting rotated states are called the \textit{bonding} and \textit{antibonding} states, with occupations approximately equal to $1$ and $0$, respectively:
+After this transformation, the impurity and active states are still strongly hybridized with all the empty and filled sites. However, the hopping between the empty $\mathcal{E}$ sites and the filled $\mathcal{F}$ sites is now almost zero (Fig. \ref{subfig:h_prime_rep}). We therefore want to preserve the separation between the empty and filled states while further reducing the number of hybridization between the impurity and the conduction / valence bath (and same with the active site). This is necessary in order to construct an inactive space that is decoupled from the impurity and can therefore be treated trivially as a single Slater determinant. This can be achieved by performing a new unitary rotation within the subspace formed by the impurity and the active site. The goal of this rotation is to further separate $\hamiltonian'$ into two \textit{empty} and \textit{filled} blocks. The resulting rotated states are called the \textit{bonding} and \textit{antibonding} states, with occupations approximately equal to $1$ and $0$, respectively:
 \begin{align}
 \ket{B} & = \frac{1}{\sqrt{2}}\ket{\imp} + \frac{1}{\sqrt{2}}\ket{b}\\
 \ket{AB} & = \frac{1}{\sqrt{2}}\ket{\imp} - \frac{1}{\sqrt{2}}\ket{b}
 \end{align}
-{\color{blue}{[MV: $\bra{AB}\rho\ket{B}$ is not necessarily euqal to zero, right ?]}}\\
 We finally reorder the sites such that the Hamiltonian takes a two-block form:
 \begin{equation}
 1, 2, \ldots, N_\activ-1, \text{antibonding}, \text{bonding}, N_\activ+2, \ldots, N_\bath
@@ -202,7 +200,7 @@ Therefore, the natural orbital transformation constructs two chains, one corresp
 \left( \epsilon_m \occupation{m\sigma} + t_{mm+1} \creation{m\sigma}\annihilation{m+1\sigma}\right)
 \end{align*}
 For clarity, the complex conjugate of each off-diagonal term is not explicitly written. For the second line, the sum over the spin corresponds to the hopping between the impurity and the first site of the empty chain, with index $N_\activ-1$ (resp. the first site of the filled chain, with index $N_\activ+1$). For the third line, the first term corresponds to the on-site energy of the active site $b$. The second term describes the hopping between the empty and filled chains, while the last term corresponds to the hopping between the active site and the impurity. Finally, for the last line, the first term corresponds to the on-site energies of the filled chain and to the hopping between nearest-neighbor sites. The same applies to the second term for the empty chain. We can therefore rewrite the one-body matrix in a more compact form:
-\begin{equation*}
+\begin{equation}\label{eq:h_no_matrix}
 \hamiltonian_{NO}^{1B} =
 \begin{pmatrix}
  \epsilon_0 & & & V_{0N_\activ-1} & V_{0b} & V_{0N_\activ+1} & &\\
@@ -214,8 +212,15 @@ For clarity, the complex conjugate of each off-diagonal term is not explicitly w
   & & & & & \ddots & \ddots &t_{N_\bath-1,N_\bath}\\
   & & & & & & t_{N_\bath-1,N_\bath} &\epsilon_{N_\bath}
 \end{pmatrix}
-\end{equation*}
-The computational complexity still grows exponentially with the number of bath sites. As discussed above, by introducing a threshold $\epsilon$, we can truncate the trivial parts of the transformed Hamiltonian. These parts correspond to the operator $\hamiltonian_v$ in Fig. \ref{fig:no_cut} for the inactive filled sites, with $L+1$ analogous to $N_\filled$, and to the operator $\hamiltonian_c$ in Fig. \ref{fig:no_cut} for the inactive empty sites, with $L+1$ analogous to $N_\empti$. Since the occupations of these orbitals are very close to $1$ or $0$, respectively, they can be accurately approximated as fully occupied or empty orbitals and therefore treated as a single Slater determinant. Truncating these inactive parts gives us access to the relevant part of the Hamiltonian, namely the active part represented by $\hamiltonian_I$ in Fig. \ref{fig:no_cut}, which contains the non-trivial many-body physics of the system. In this way, the number of bath sites that needs to be explicitly treated in the many-body calculation can be reduced to only a few sites, with the required number depending on the chosen threshold $\epsilon$ and consequently on the desired accuracy of the calculation. For example, if we have access to the ground state $\ket{\psi_{GS}^I}$ of $\hamiltonian_I$ (DMRG, ED), the total ground-state energy is given by
+\end{equation}
+\subsection{Groundstate calculation}
+The computational complexity still grows exponentially with the number of bath sites. Let's recall the occupations of the bath sites after diagonalize the bath density matrix, 
+\begin{equation}
+P^\dagger_\bath \rho_\bath P_\bath =
+\text{diag}(\nu_1, \nu_2, \ldots, \nu_{N_\empti}, \ldots, \nu_\activ, \ldots, \nu_{N_\filled}, \ldots, \nu_{N_\bath})
+\end{equation}
+where we define the \textit{inactive empty bath part} as $i\in \{1,\ldots, N_\empti\}$, for which occupations $\nu_i$ of the empty chain is lower than $\epsilon$, and the \textit{inactive filled bath part} as $j\in \{N_\filled,\ldots, N_\bath\}$, for which occupations $\nu_j$ of the full chain is greater than $1-\epsilon$. The \textit{active part} is thus defined by $k\in \{N_\empti+1,\ldots, N_\filled-1\}$.\\
+These parts correspond to the operator $\hamiltonian_v$ in Fig. \ref{fig:no_cut} for the inactive filled sites, with $L+1$ analogous to $N_\filled$, and to the operator $\hamiltonian_c$ in Fig. \ref{fig:no_cut} for the inactive empty sites, with $L+1$ analogous to $N_\empti$. Since the occupations of these orbitals are very close to $1$ or $0$, respectively, they can be accurately approximated as fully occupied or empty orbitals and therefore treated as a single Slater determinant. Truncating these inactive parts gives us access to the relevant part of the Hamiltonian, namely the active part represented by $\hamiltonian_I$ in Fig. \ref{fig:no_cut}, which contains the non-trivial many-body physics of the system. In this way, the number of bath sites that needs to be explicitly treated in the many-body calculation can be reduced to only a few sites, with the required number depending on the chosen threshold $\epsilon$ and consequently on the desired accuracy of the calculation. For example, if we have access to the ground state $\ket{\psi_{GS}^I}$ of $\hamiltonian_I$ (DMRG, ED), the total ground-state energy is given by
 \begin{equation}
 E_0(\epsilon) = \bra{\psi_{GS}^I} \hamiltonian_I \ket{\psi_{GS}^I} + \!\!\!
 \sum_{j=N_\filled}^{N_\bath}
@@ -229,10 +234,11 @@ where the second term corresponds to the sum of the on-site energies of the fill
 	\caption{Separating the full Anderson impurity Hamiltonian $\hamiltonian_{NO}$ defined on the natural orbitals into four parts $\hamiltonian_I$, $\hamiltonian_c$, $\hamiltonian_v$, and $V$ . Each Hamiltonian acts on the sites enclosed by its corresponding box. The hybridization operator $V$ (dashed bonds) connects $\hamiltonian_I$ to $\hamiltonian_c$ and $\hamiltonian_v$ \cite{lu_natural-orbital_2019}.}
 	\label{fig:no_cut}
 \end{figure}
-
+\subsection{One Shot Natural Orbital Transformation}
+\subsection{Natural Orbital Transformation at each Lanczos iteration}
 \section{Application on an one band model}
 \subsection{Discretization of the bath and groundstate calculation}
-We test the natural orbital transformation on a one-band model of copper oxide $\dxy$. We first perform an \textit{ab initio} density functional theory (DFT) calculation and wannierize the $\dxy$ orbitals. We then compute the imaginary-frequency hybridization function within dynamical mean field theory (DMFT) using the continuous-time segmentation solver (CTSEG) of \textsc{Triqs}, and analytically continue the hybridization function to real frequencies using the maximum entropy method (MaxENT). We finally discretize the bath following \cite{de_vega_how_2015} (see Fig. \ref{subfig:disc_bath}). Note that the $U$ parameter of the Hubbard model, with a value of $4$ eV, is chosen such that it reproduces the experimental gap of CuO, which is approximately $1-2$ eV (Fig. \ref{subfig:disc_bath}). Fig. \ref{subfig:star_rep_cuo} shows the one-body part of the AIM for 10 bath sites \eqref{eq:star_rep}, with the impurity in the middle at index $5$, the conduction bath sites between indices $0$ and $4$, and the valence states between sites $6$ and $10$. Furthermore, I set $vmin=-2$ and $vmax=2$ in the plot in order to better visualize the hybridization.\\
+We test the natural orbital transformation on a one-band model of copper oxide $\dxy$. We first perform an \textit{ab initio} density functional theory (DFT) calculation and wannierize the $\dxy$ orbitals. We then compute the imaginary-frequency hybridization function within dynamical mean field theory (DMFT) using the continuous-time segmentation solver (CTSEG) of \textsc{Triqs}, and analytically continue the hybridization function to real frequencies using the maximum entropy method (MaxENT). We finally discretize the bath following \cite{de_vega_how_2015} (see Fig. \ref{subfig:disc_bath}). Note that the $U$ parameter of the Hubbard model, with a value of $4$ eV, is chosen such that it reproduces the experimental gap of CuO, which is approximately $1-2$ eV (Fig. \ref{subfig:disc_bath}). Fig. \ref{subfig:star_rep_cuo} shows the one-body part of the AIM for 10 bath sites \eqref{eq:star_rep}, with the impurity in the middle at index $5$, the conduction bath sites between indices $6$ and $10$, and the valence states between sites $0$ and $4$. Furthermore, I set $vmin=-2$ and $vmax=2$ in the plot in order to better visualize the hybridization.\\
 I calculate the ground state of the full Hamiltonian using DMRG. Interestingly, I encounter an error in the SyTen DMRG function when I use a random initial state with zero magnetization at half-filling. I therefore also consider an initial state in which the valence sites are filled, the conduction sites are empty, and the impurity spin is initialized in a superposition, such that
 \begin{align*}
 	\ket{\psi_{init}} = & \frac{1}{\sqrt{2}}\ket{n_6\uparrow=1, n_6\downarrow=1, \ldots, n_{10}\downarrow=1, \mathbf{imp\uparrow=1}, \mathbf{imp\downarrow=0}, n_1\uparrow=0, \ldots, n_5\downarrow=0}\\
@@ -243,7 +249,6 @@ However, the ground states do not have zero magnetization: the impurity is eithe
 	\ket{\psi_{init}} = & \frac{1}{\sqrt{2}}\ket{n_6\uparrow=1, \ldots, \mathbf{n_{10}\uparrow=1}, \mathbf{n_{10}\downarrow=0}, \mathbf{imp\uparrow=0}, \mathbf{imp\downarrow=1}, n_1\uparrow=0, \ldots}\nonumber\\
 & + \frac{1}{\sqrt{2}}\ket{n_6\uparrow=1, \ldots, \mathbf{n_{10}\uparrow=0}, \mathbf{n_{10}\downarrow=1}, \mathbf{imp\uparrow=1}, \mathbf{imp\downarrow=0}, n_1\uparrow=0, \ldots} \label{eq:init_state}
 \end{align}
-
 \begin{figure}[t]
 	\centering
 	\begin{subfigure}[b]{0.38\textwidth}
@@ -264,29 +269,14 @@ However, the ground states do not have zero magnetization: the impurity is eithe
 	\caption{}
 	\label{subfig:dm_N10}
 	\end{subfigure}
-	\caption{(a) Filled curve: continuous bath function in real frequency. Bars: discretization of the bath using 10 bath sites. (b) One-body part of the AIM for 10 bath sites (spin-independent) \eqref{eq:star_rep}, with the impurity at the center (index $5$), the conduction bath sites at indices $0$ to $4$, and the valence states at indices $6$ to $10$. The plot is shown with $vmin=-2$ and $vmax=2$ to better visualize the hybridization. (c) Density matrix $C_{ij\sigma}$ \eqref{eq:dm} of the ground state calculated using DMRG with the initial state \eqref{eq:init_state}. Each site is represented by a $2\times2$ spin matrix.}
+	\caption{(a) Filled curve: continuous bath function in real frequency. Bars: discretization of the bath using 10 bath sites. (b) One-body part of the AIM for 10 bath sites (spin-independent) \eqref{eq:star_rep}, with the impurity at the center (index $5$), the conduction bath sites at indices $0$ to $4$, and the valence states at indices $6$ to $10$. The plot is shown with $vmin=-2$ and $vmax=2$ to better visualize the hybridization. (c) Density matrix $C_{ij\sigma}$ \eqref{eq:dm} of the ground state calculated using DMRG with the initial state \eqref{eq:init_state}. Each site is represented by a $2\times2$ spin matrix. I put the bond dimension of the groundstate at the top of the figure.}
 	\label{fig:hyb}
 \end{figure}
-We show in Fig. \ref{subfig:dm_N10} the density matrix $C_{ij\sigma}$ \eqref{eq:dm} of the ground state. Each site is represented by a $2\times2$ spin matrix. We first note that our system is indeed spin-independent, as expected since there is no spin interaction. Furthermore, the relevant symmetries are respected, with the correct total occupation and magnetization. Interestingly, the last valence site, site $4$, has a slightly larger occupation ($\sim 1.1$) than the impurity ($\sim 0.9$), while both have zero magnetization. We can also observe non-zero off-diagonal terms involving the impurity and the last valence site, indicating that the system is non-trivial (good for our tests!).
+We show in Fig. \ref{subfig:dm_N10} the density matrix $C_{ij\sigma}$ \eqref{eq:dm} of the ground state. Each site is represented by a $2\times2$ spin matrix. We first note that our system is indeed spin-independent, as expected since there is no spin interaction. Furthermore, the relevant symmetries are respected, with the correct total occupation and magnetization. Interestingly, the last valence site, site $4$, has a slightly larger occupation ($\sim 1.1$) than the impurity ($\sim 0.9$), while both have zero magnetization. We can also observe non-zero off-diagonal terms involving the impurity and the last valence site, indicating that the system is non-trivial (in the sense that the occupation matrix is not just diagonal). In the following, we will work with spin up.
 
 \subsection{Natural Orbital Transformation}
-We first need to diagonalize the bath density matrix. In Fig. \ref{subfig:diagonalize_bath}, we show how close the occupations of the different bath orbitals are to $0$ or $1$. We compare, in blue, the diagonal elements of the correlation matrix with the impurity located at index $5$, and, in orange, the eigenvalues of the bath density matrix $\rho_\bath$. Note that the diagonalization mixes the bath states, so the site indices are no longer the same in the two representations. Moreover, the impurity site is not included in the bath space.\\
-As mentioned in the first chapter, some of the occupations are very close to $0$ or $1$ and can therefore be considered inactive. In our case, we choose a threshold of $\epsilon=10^{-6}$, meaning that the first four bath sites are considered empty ($N_\empti = 4)$ and the last three are considered filled ($N_\filled = 8$). The active space then consists of only three bath sites, with indices $5$, $6$, and $7$. Furthermore, following the rule that the active site $b$ must have an occupation $\nu_\activ$ equal to $1-\nu_\imp$, we can identify the state with index $6$ as our active site, with an error of approximately $1 - \nu_\activ - \nu_\imp \sim 10^{-3}$.\\
-In Fig. \ref{subfig:h_prime_cuo}, we present the first rotation $P$ defined by the eigenvectors of the bath density matrix \eqref{eq:bath_rotation} and applied to the hamiltonian. We place the impurity at index $0$ to follow the convention introduced in the theoretical description. However, at the end of the natural orbital transformation, it may be preferable to place the impurity next to the active site in order to reduce entanglement at the MPS level. As expected from the theory, we obtain two blocks with all-to-all hoppings: the first corresponds to the (almost) empty space $\mathcal{E}$, with indices $m\in\{1, \ldots, 5\}$, while the second corresponds to the (almost) filled space $\mathcal{F}$, with indices $n\in\{6,\ldots, 10\}$. We can also observe a strong hybridization between the impurity and the active site, as well as between the impurity and the nearest neighbors of the active site.\\
-In Fig. \ref{subfig:h_prime_prime_cuo}, we show the second rotation $C$ bonding/antibonding \ref{eq:bab_rotation} applied on the hamiltonian $\hamiltonian'$. Strangely, the matrix is not well separated in two blocks (should be at site $6$) with some hybridization between the bonding and anti-bonding sites. Furthermore, when I compute the density matrix of these states, I obtain
-\begin{equation}
-	\rho_{AB/B} =
-	\begin{pmatrix}
-	\bra{AB} C \ket{AB} & \bra{B} C \ket{AB} \\
-	\bra{AB} C \ket{A} & \bra{B} C \ket{B}
-	\end{pmatrix}
-	=
-	\begin{pmatrix}
-	0.243 & -0.043 \\
-	-0.043 & 0.757
-	\end{pmatrix}
-\end{equation}
-so value different of $0$ and $1$ for the occupation of the antibonding and bonding sites. Two come to my mind : either the $C$ rotation is not the correct one
+We first diagonalize the bath density matrix $\rho_\bath$. In Fig. \ref{subfig:diagonalize_bath}, we show how close the occupations of the different bath orbitals are to $0$ or $1$. We compare, in blue, the diagonal elements of the correlation matrix with the impurity located at index $5$, and in orange the eigenvalues of the bath density matrix. Note that the diagonalization mixes the bath states, so the site indices are no longer the same in the two representations. Moreover, the impurity site is not included in the bath space.\\
+As mentioned in the first chapter, some of the occupations are very close to $0$ or $1$ after diagonalization and can therefore be considered inactive. In our case, we choose a threshold of $\epsilon=10^{-6}$, meaning that the first four bath sites are considered empty ($N_\empti = 4)$ and the last three are considered filled ($N_\filled = 8$). The active space then consists of only three bath sites, with indices $5$, $6$, and $7$. Furthermore, following the rule that the active site $b$ must have an occupation $\nu_\activ$ equal to $1-\nu_\imp$, we can identify the state with index $6$ as our active site, with an error of approximately $1 - \nu_\activ - \nu_\imp \sim 10^{-3}$.
 \begin{figure}[t]
 	\centering
 	\begin{subfigure}[b]{0.31\textwidth}
@@ -310,6 +300,178 @@ so value different of $0$ and $1$ for the occupation of the antibonding and bond
 	\caption{(a) Occupations of the different sites, showing how close they are to being empty or fully occupied (y-log scale). In blue: diagonal elements of the correlation matrix. In orange: eigenvalues of the bath density matrix $\rho_\bath$. The threshold $\epsilon=10^{-6}$ is also indicated as an example. (b) New Hamiltonian after the first rotation $P$, defined by the eigenvectors of $\rho_\bath$, applied to the star representation of the AIM. The first site corresponds to the impurity, while the sixth site corresponds to the active site.}
 	\label{fig:first_rotation}
 \end{figure}
+\\In Fig. \ref{subfig:h_prime_cuo}, we present the first rotation $P$ defined by the eigenvectors of the bath density matrix \eqref{eq:bath_rotation} and applied to the hamiltonian. We place the impurity at index $0$ to follow the convention introduced in the theoretical description. However, at the end of the natural orbital transformation, it may be preferable to place the impurity next to the active site in order to reduce entanglement at the MPS level. As expected from the theory, we obtain two blocks with all-to-all hoppings: the first corresponds to the (almost) empty space $\mathcal{E}$, with indices $m\in\{1, \ldots, 5\}$, while the second corresponds to the (almost) filled space $\mathcal{F}$, with indices $n\in\{7,\ldots, 10\}$. We can also observe a strong hybridization between the impurity and the active site, as well as between the impurity and the nearest neighbors of the active site.\\
+In Fig. \ref{subfig:h_prime_prime_cuo}, we show the second bonding/antibonding rotation $C$ in Eq. \ref{eq:bab_rotation} applied to the Hamiltonian $\hamiltonian'$. Surprisingly, the resulting matrix is not clearly separated into two blocks as expected, with the separation occurring at site $6$ : we observe some residual hybridization between the bonding and antibonding sites. Furthermore, when computing the density matrix restricted to these two states, I obtain
+\begin{equation}
+\rho_{AB/B} =
+\begin{pmatrix}
+\bra{AB} C \ket{AB} & \bra{B} C \ket{AB} \\
+\bra{AB} C \ket{A} & \bra{B} C \ket{B}
+\end{pmatrix}
+=
+\begin{pmatrix}
+0.243 & -0.043 \\
+-0.043 & 0.757
+\end{pmatrix}
+\end{equation}
+which gives occupations significantly different from $0$ and $1$ for the antibonding and bonding sites respectively, and non-zero off-diagonal terms. It is unclear whether this is a physical result, in which case I need to understand its origin and determine how to proceed with the subsequent steps, or whether it indicates that the rotation is not the appropriate one. In the latter case, which rotation matrix should be used instead? Any insight on this issue would be welcome.\\
+I nevertheless proceed with the tridiagonalization of each block using a Householder transformation, and then transform back to the impurity--active basis. I show the resulting natural-orbital one-body Hamiltonian in Fig. \ref{subfig:h_no}. It appears to exhibit the expected behavior, with hybridization between the impurity, the active site, and the conduction/valence sites (see \eqref{eq:h_no_matrix}), with typical hopping amplitudes of order $\sim 0.3$ eV. Surprisingly, I do not obtain exactly the same off-diagonal matrix elements for the spin-down Hamiltonian (Fig. \ref{subfig:h_no_dn}). This is unexpected because the star AIM has exactly the same parameters for spin-up and spin-down, and the corresponding density matrices are also approximately identical, with differences of order $\sim 10^{-6}$. There are therefore several possible explanations: either there is an issue in my implementation, the Householder transformation is not unique (although I do not think this is the case), or the finite precision of the density matrix has a larger impact on the Householder transformation than expected. As an additional check, I compare the eigenvalues of $\hamiltonian_\star^{1B}$ and $\hamiltonian_{NO}^{1B}$ and find differences of order $10^{-7}$ for both spin channels. This confirms that the implemented transformations preserve the eigenvalues to high accuracy and are therefore correctly unitary (it does not mean that it is the right transformation tho !). We show in Fig. \ref{subfig:h_no_dm} the density matrix in the ground state (with random initial state) in the NO basis with $2\times2$ spin matrix per site (there is a mistake : the red lines should be at the site $0$ corresponding to the impurity. The active site is still at site 6). We have indeed empty sites between sites 1 and 4 and filed sites between sites 7 and 10. The impurity and active site are half-filled, with some correlation between them, and the impurity and the conduction / valence chains which are lower.
+\begin{figure}[t]
+	\centering
+	\begin{subfigure}[b]{0.31\textwidth}
+	\centering
+	\includegraphics[width=\textwidth]{img/up_H3_tri_N10.png}
+	\caption{}
+	\label{subfig:h_no}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.31\textwidth}
+	\centering
+	\includegraphics[width=\textwidth]{img/dn_H3_tri_N10.png}
+	\caption{}
+	\label{subfig:h_no_dn}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.31\textwidth}
+	\centering
+	\includegraphics[width=\textwidth]{img/density_matrix_N10_NO.png}
+	\caption{}
+	\label{subfig:h_no_dm}
+	\end{subfigure}	
+	\caption{(a) One-body part of the natural-orbital Hamiltonian for the spin-up channel and (b) spin-down channel. (c) Density matrix in the ground state in the NO basis with $2\times2$ spin matrix per site (there is a mistake : the red lines should be at the site $0$ corresponding to the impurity. The active site is still at site 6).}
+	\label{fig:last_rotation}
+\end{figure}
+I also check the ground-state energy of the full star Hamiltonian and that of the full natural-orbital Hamiltonian, including the $U$ interaction. I obtain $E_0^\star = -16.0500632$ eV and $E_0^{NO} = -16.0221970$ eV. This is encouraging, especially since I use a random initial state for the natural-orbital DMRG calculation. I should perform an additional calculation using an initial state similar to the one used for the star representation, with the valence states filled and the conduction states empty, in order to check whether the natural-orbital DMRG calculation converges to the correct ground-state minimum.\\
+
+\begin{figure}[!t]
+    \centering
+
+    %==================== Ligne 1 ====================%
+    \begin{subfigure}[b]{0.32\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{img/big_figure/up_H2_prime_prime_N11.png}
+        \caption{}
+        \label{subfig:image1}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.32\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{img/big_figure/up_H3_tri_N11.png}
+        \caption{}
+        \label{subfig:image2}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.32\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{img/big_figure/density_matrix_N11.png}
+        \caption{$E_0^\star - E_0^{NO} = 0.3564$ eV}
+        \label{subfig:image3}
+    \end{subfigure}
+
+    \vspace{0.3cm}
+
+    %==================== Ligne 2 ====================%
+    \begin{subfigure}[b]{0.32\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{img/big_figure/up_H2_prime_prime_N13.png}
+        \caption{}
+        \label{subfig:image4}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.32\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{img/big_figure/up_H3_tri_N13.png}
+        \caption{}
+        \label{subfig:image5}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.32\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{img/big_figure/density_matrix_N13.png}
+        \caption{$E_0^\star - E_0^{NO} = -0.0564$ eV}
+        \label{subfig:image6}
+    \end{subfigure}
+
+    \vspace{0.3cm}
+
+    %==================== Ligne 3 ====================%
+    \begin{subfigure}[b]{0.32\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{img/big_figure/up_H2_prime_prime_N16.png}
+        \caption{}
+        \label{subfig:image7}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.32\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{img/big_figure/up_H3_tri_N16.png}
+        \caption{}
+        \label{subfig:image8}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.32\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{img/big_figure/density_matrix_N16.png}
+        \caption{$E_0^\star - E_0^{NO} = 1.4614$ eV}
+        \label{subfig:image9}
+    \end{subfigure}
+
+    \vspace{0.3cm}
+
+    %==================== Ligne 4 ====================%
+    \begin{subfigure}[b]{0.32\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{img/big_figure/up_H2_prime_prime_N26.png}
+        \caption{}
+        \label{subfig:image10}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.32\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{img/big_figure/up_H3_tri_N26.png}
+        \caption{}
+        \label{subfig:image11}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.32\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{img/big_figure/density_matrix_N26.png}
+        \caption{$E_0^\star - E_0^{NO} = 2.3269$ eV}
+        \label{subfig:image12}
+    \end{subfigure}
+
+    \caption{Natural-orbital transformation for AIMs with 11, 13, 16, and 26 bath sites (rows, from top to bottom). The three columns show the successive steps of the transformation: (i) diagonalization of the bath density matrix followed by the bonding/antibonding rotation, (ii) tridiagonalization of the resulting empty and filled blocks, and (iii) the density matrix in the final natural-orbital basis with the groundstate calculated with DMRG. We write in caption the difference between the groundstate energies of the star and natural orbital representations. Again for the last, the impurity index is at site 0 and active site at respectively 7, 8, 9 and 14 (ignore the red lines).}
+    \label{fig:four_by_three}
+\end{figure}
+In Fig. \ref{fig:four_by_three}, we show the natural-orbital transformation for AIMs with 11 bath sites (Figs. \ref{subfig:image1}, \ref{subfig:image2}, \ref{subfig:image3}), 13 bath sites (Figs. \ref{subfig:image4}, \ref{subfig:image5}, \ref{subfig:image6}), 16 bath sites (Fig. \ref{subfig:image7}, \ref{subfig:image8}, \ref{subfig:image9}), and 26 bath sites (Figs. \ref{subfig:image10}, \ref{subfig:image11}, \ref{subfig:image12}). The three columns show the successive steps of the transformation: (i) diagonalization of the bath density matrix followed by the bonding/antibonding rotation (Figs. \ref{subfig:image1}, \ref{subfig:image4}, \ref{subfig:image7} and \ref{subfig:image10}), (ii) tridiagonalization of the resulting empty and filled blocks (Figs. \ref{subfig:image2}, \ref{subfig:image5}, \ref{subfig:image8} and \ref{subfig:image11}), and (iii) the density matrix in the final natural-orbital basis using the groundstate calculated by DMRG (Figs. \ref{subfig:image3}, \ref{subfig:image6}, \ref{subfig:image9} and \ref{subfig:image12}). We also write in caption the difference between the groundstate energies of the star and natural orbital representations. Furthermore, the impurity is located at site $0$, while the active site is located at sites $7$, $8$, $9$, and $14$, respectively (the red lines should be ignored).\\
+In all cases, we still observe the problem of residual hybridization between the bonding and antibonding states in the first column (i). For the first and second rows, corresponding to 11 and 13 bath sites, respectively, we obtain the expected natural-orbital matrix pattern in the second column (ii) (Figs. \ref{subfig:image2} and \ref{subfig:image5}), in agreement with the theoretical form given in \eqref{eq:h_no_matrix}. However, the 11-bath-site system (Fig. \ref{subfig:image2}) exhibits an unusually large hybridization between the impurity--conduction chain and the active--conduction chain . This is also reflected in the density matrix (Fig. \eqref{subfig:image3}), where the impurity is almost fully spin-up while the active site is almost fully spin-down. The empty chain is also not sufficiently empty (see site 6). Furthermore, we observe strong correlations between the active site and its second- and third-nearest valence neighbors (sites 8 and 9). The situation becomes even worse for the 16- and 26-bath-site systems : in the one-body natural-orbital Hamiltonian (ii) (Figs \ref{subfig:image8} and \ref{subfig:image11}), the impurity starts to hybridize with other sites of the conduction chain, whereas these terms are expected to vanish in the ideal natural-orbital representation. The density matrices obtained from the DMRG calculations (Figs \ref{subfig:image9} and \ref{subfig:image12}) are also not fully reliable, since these spurious hybridization terms are not included in the Hamiltonian used for the DMRG calculation as they should ideally be zero. The positive and relatively large difference between the ground-state energies of the star and natural-orbital representations for the 11-, 16-, and 26-bath-site systems (Figs. \ref{subfig:image3}, \ref{subfig:image9} and \ref{subfig:image12}) also indicates that something is not working properly.\\
+These problems might again come from the fact that our hamiltonian is not well separeted into empty and filled parts after the second bonding / anti-bonding rotation, and it seems to get worse and worse with the number of bath where the occupation of antibonding and bonding sites are getting closer to $1/2$ each :
+\begin{equation}
+	\rho_{AB/B}(N_\bath=11) =
+	\begin{pmatrix}
+		0.243 & -0.043 \\
+		-0.043 & 0.756 
+	\end{pmatrix}\; ;\quad
+	\rho_{AB/B}(N_\bath=13) =
+	\begin{pmatrix}
+		0.274 & -0.032 \\
+		-0.032 & 0.725 
+	\end{pmatrix}
+\end{equation}
+\begin{equation}
+	\rho_{AB/B}(N_\bath=16) =
+	\begin{pmatrix}
+		0.332 & -0.016 \\
+		-0.016 & 0.668 
+	\end{pmatrix}\; ;\quad
+	\rho_{AB/B}(N_\bath=26) =
+	\begin{pmatrix}
+		0.406 & -0.004 \\
+		-0.004 & 0.594 
+	\end{pmatrix}
+\end{equation}
+
+\section{Summary}
+The bonding/antibonding rotation does not produce the expected occupations of approximately one and zero: residual hybridization remains between these states. Despite this, the subsequent tridiagonalization gives a Hamiltonian with the expected overall structure, and the eigenvalues of the original and transformed one-body Hamiltonians agree within $\sim10^{-7}$, confirming the numerical unitarity of the transformation. For larger baths, the transformation becomes less reliable. Spurious hybridizations appear in the conduction chain, while the expected block structure is only approximately recovered. The ground-state energies of the star and natural-orbital representations for the 10-bath-site system are nevertheless close, $E^\star_0=-16.0501$ eV and $E^{\mathrm{NO}}_0=-16.0222$ eV, although further convergence tests are needed.\\
+Overall, the results confirm that the natural-orbital transformation can identify the relevant active degrees of freedom, but the residual hybridizations and their worsening with bath size indicate that the current implementation still requires further investigation.
 
 \bibliographystyle{unsrt}
 \bibliography{sample_}

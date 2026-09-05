@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.6.10)  27 AUG 2026 17:56
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.6.10)  4 SEP 2026 11:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -948,88 +948,202 @@ pData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rmsc.enc}{C:/Users/33783/AppD
 ata/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Users/33783/AppD
 ata/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Users/33783/AppD
 ata/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc}]
-<img/star_rep.jpg, id=54, 521.95pt x 950.55125pt>
+<img/star_rep.jpg, id=71, 521.95pt x 950.55125pt>
 File: img/star_rep.jpg Graphic file (type jpg)
 <use img/star_rep.jpg>
-Package pdftex.def Info: img/star_rep.jpg  used on input line 161.
+Package pdftex.def Info: img/star_rep.jpg  used on input line 159.
 (pdftex.def)             Requested size: 80.24443pt x 146.13007pt.
-<img/h_prime_rep.jpg, id=55, 915.42pt x 814.04124pt>
+<img/h_prime_rep.jpg, id=72, 915.42pt x 814.04124pt>
 File: img/h_prime_rep.jpg Graphic file (type jpg)
 <use img/h_prime_rep.jpg>
-Package pdftex.def Info: img/h_prime_rep.jpg  used on input line 167.
+Package pdftex.def Info: img/h_prime_rep.jpg  used on input line 165.
 (pdftex.def)             Requested size: 127.45044pt x 113.33151pt.
-<img/h_primeprime_rep.jpg, id=56, 845.1575pt x 1043.9pt>
+<img/h_primeprime_rep.jpg, id=73, 845.1575pt x 1043.9pt>
 File: img/h_primeprime_rep.jpg Graphic file (type jpg)
 <use img/h_primeprime_rep.jpg>
-Package pdftex.def Info: img/h_primeprime_rep.jpg  used on input line 173.
+Package pdftex.def Info: img/h_primeprime_rep.jpg  used on input line 171.
 (pdftex.def)             Requested size: 127.45044pt x 157.40652pt.
-<img/no_rep.jpg, id=57, 909.3975pt x 652.4375pt>
+<img/no_rep.jpg, id=74, 909.3975pt x 652.4375pt>
 File: img/no_rep.jpg Graphic file (type jpg)
 <use img/no_rep.jpg>
-Package pdftex.def Info: img/no_rep.jpg  used on input line 179.
+Package pdftex.def Info: img/no_rep.jpg  used on input line 177.
 (pdftex.def)             Requested size: 127.45044pt x 91.43022pt.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 183.
+(Font)              <5> on input line 181.
  [2]
-Overfull \hbox (4.79147pt too wide) detected at line 217
-[] \OT1/lmr/m/n/10.95 = []
+Overfull \hbox (4.79147pt too wide) detected at line 215
+[][][][] \OT1/lmr/m/n/10.95 = []
  []
 
 [3 <./img/star_rep.jpg> <./img/h_prime_rep.jpg> <./img/h_primeprime_rep.jpg> <.
 /img/no_rep.jpg>]
-<img/no_rep_cut.png, id=81, 960.58875pt x 454.69875pt>
+<img/no_rep_cut.png, id=98, 960.58875pt x 454.69875pt>
 File: img/no_rep_cut.png Graphic file (type png)
 <use img/no_rep_cut.png>
-Package pdftex.def Info: img/no_rep_cut.png  used on input line 228.
+Package pdftex.def Info: img/no_rep_cut.png  used on input line 233.
 (pdftex.def)             Requested size: 212.41261pt x 100.54051pt.
  [4 <./img/no_rep_cut.png>]
-<img/discr_bath_N10.png, id=99, 722.7pt x 433.62pt>
+<img/discr_bath_N10.png, id=115, 722.7pt x 433.62pt>
 File: img/discr_bath_N10.png Graphic file (type png)
 <use img/discr_bath_N10.png>
-Package pdftex.def Info: img/discr_bath_N10.png  used on input line 251.
+Package pdftex.def Info: img/discr_bath_N10.png  used on input line 256.
 (pdftex.def)             Requested size: 179.37416pt x 107.62398pt.
-<img/star_rep_N10.png, id=100, 578.16pt x 459.6372pt>
+<img/star_rep_N10.png, id=116, 578.16pt x 459.6372pt>
 File: img/star_rep_N10.png Graphic file (type png)
 <use img/star_rep_N10.png>
-Package pdftex.def Info: img/star_rep_N10.png  used on input line 257.
+Package pdftex.def Info: img/star_rep_N10.png  used on input line 262.
 (pdftex.def)             Requested size: 136.88588pt x 108.8213pt.
-<img/density_matrix_N10.png, id=101, 578.16pt x 435.7881pt>
+<img/density_matrix_N10.png, id=117, 578.16pt x 435.7881pt>
 File: img/density_matrix_N10.png Graphic file (type png)
 <use img/density_matrix_N10.png>
-Package pdftex.def Info: img/density_matrix_N10.png  used on input line 263.
+Package pdftex.def Info: img/density_matrix_N10.png  used on input line 268.
 (pdftex.def)             Requested size: 136.88588pt x 103.17491pt.
  [5 <./img/discr_bath_N10.png> <./img/star_rep_N10.png> <./img/density_matrix_N
 10.png>]
-<img/occupation_N10.png, id=125, 433.62pt x 361.35pt>
+<img/occupation_N10.png, id=138, 433.62pt x 361.35pt>
 File: img/occupation_N10.png Graphic file (type png)
 <use img/occupation_N10.png>
-Package pdftex.def Info: img/occupation_N10.png  used on input line 298.
+Package pdftex.def Info: img/occupation_N10.png  used on input line 284.
 (pdftex.def)             Requested size: 146.32852pt x 121.9421pt.
-<img/up_H1_prime_N10.png, id=126, 578.16pt x 461.0826pt>
+<img/up_H1_prime_N10.png, id=139, 578.16pt x 461.0826pt>
 File: img/up_H1_prime_N10.png Graphic file (type png)
 <use img/up_H1_prime_N10.png>
-Package pdftex.def Info: img/up_H1_prime_N10.png  used on input line 304.
+Package pdftex.def Info: img/up_H1_prime_N10.png  used on input line 290.
 (pdftex.def)             Requested size: 155.77116pt x 124.22661pt.
-<img/up_H2_prime_prime_N10.png, id=127, 578.16pt x 459.6372pt>
+<img/up_H2_prime_prime_N10.png, id=140, 578.16pt x 459.6372pt>
 File: img/up_H2_prime_prime_N10.png Graphic file (type png)
 <use img/up_H2_prime_prime_N10.png>
-Package pdftex.def Info: img/up_H2_prime_prime_N10.png  used on input line 310.
+Package pdftex.def Info: img/up_H2_prime_prime_N10.png  used on input line 296.
 
 (pdftex.def)             Requested size: 155.77116pt x 123.83719pt.
- (natural_orbitals.bbl
-[6 <./img/occupation_N10.png> <./img/up_H1_prime_N10.png> <./img/up_H2_prime_pr
-ime_N10.png>]) [7] (natural_orbitals.aux)
-Package rerunfilecheck Info: File `natural_orbitals.out' has not changed.
-(rerunfilecheck)             Checksum: 29FE4067B807AFA279760AF0F5BA9312;958.
+ [6 <./img/occupation_N10.png> <./img/up_H1_prime_N10.png> <./img/up_H2_prime_p
+rime_N10.png>]
+<img/up_H3_tri_N10.png, id=158, 578.16pt x 462.528pt>
+File: img/up_H3_tri_N10.png Graphic file (type png)
+<use img/up_H3_tri_N10.png>
+Package pdftex.def Info: img/up_H3_tri_N10.png  used on input line 323.
+(pdftex.def)             Requested size: 146.32852pt x 117.05734pt.
+<img/dn_H3_tri_N10.png, id=159, 578.16pt x 458.9145pt>
+File: img/dn_H3_tri_N10.png Graphic file (type png)
+<use img/dn_H3_tri_N10.png>
+Package pdftex.def Info: img/dn_H3_tri_N10.png  used on input line 329.
+(pdftex.def)             Requested size: 146.32852pt x 116.14284pt.
+<img/density_matrix_N10_NO.png, id=160, 578.16pt x 437.2335pt>
+File: img/density_matrix_N10_NO.png Graphic file (type png)
+<use img/density_matrix_N10_NO.png>
+Package pdftex.def Info: img/density_matrix_N10_NO.png  used on input line 335.
+
+(pdftex.def)             Requested size: 146.32852pt x 110.65576pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 316--343
+
+ []
+
+<img/big_figure/up_H2_prime_prime_N11.png, id=161, 578.16pt x 459.6372pt>
+File: img/big_figure/up_H2_prime_prime_N11.png Graphic file (type png)
+<use img/big_figure/up_H2_prime_prime_N11.png>
+Package pdftex.def Info: img/big_figure/up_H2_prime_prime_N11.png  used on inpu
+t line 350.
+(pdftex.def)             Requested size: 151.05345pt x 120.08496pt.
+<img/big_figure/up_H3_tri_N11.png, id=162, 578.16pt x 461.8053pt>
+File: img/big_figure/up_H3_tri_N11.png Graphic file (type png)
+<use img/big_figure/up_H3_tri_N11.png>
+Package pdftex.def Info: img/big_figure/up_H3_tri_N11.png  used on input line 3
+57.
+(pdftex.def)             Requested size: 151.05345pt x 120.6514pt.
+<img/big_figure/density_matrix_N11.png, id=163, 578.16pt x 439.4016pt>
+File: img/big_figure/density_matrix_N11.png Graphic file (type png)
+<use img/big_figure/density_matrix_N11.png>
+Package pdftex.def Info: img/big_figure/density_matrix_N11.png  used on input l
+ine 364.
+(pdftex.def)             Requested size: 151.05345pt x 114.7982pt.
+<img/big_figure/up_H2_prime_prime_N13.png, id=164, 578.16pt x 452.4102pt>
+File: img/big_figure/up_H2_prime_prime_N13.png Graphic file (type png)
+<use img/big_figure/up_H2_prime_prime_N13.png>
+Package pdftex.def Info: img/big_figure/up_H2_prime_prime_N13.png  used on inpu
+t line 374.
+(pdftex.def)             Requested size: 151.05345pt x 118.19684pt.
+<img/big_figure/up_H3_tri_N13.png, id=165, 578.16pt x 458.9145pt>
+File: img/big_figure/up_H3_tri_N13.png Graphic file (type png)
+<use img/big_figure/up_H3_tri_N13.png>
+Package pdftex.def Info: img/big_figure/up_H3_tri_N13.png  used on input line 3
+81.
+(pdftex.def)             Requested size: 151.05345pt x 119.89615pt.
+<img/big_figure/density_matrix_N13.png, id=166, 578.16pt x 439.4016pt>
+File: img/big_figure/density_matrix_N13.png Graphic file (type png)
+<use img/big_figure/density_matrix_N13.png>
+Package pdftex.def Info: img/big_figure/density_matrix_N13.png  used on input l
+ine 388.
+(pdftex.def)             Requested size: 151.05345pt x 114.7982pt.
+<img/big_figure/up_H2_prime_prime_N16.png, id=167, 578.16pt x 457.4691pt>
+File: img/big_figure/up_H2_prime_prime_N16.png Graphic file (type png)
+<use img/big_figure/up_H2_prime_prime_N16.png>
+Package pdftex.def Info: img/big_figure/up_H2_prime_prime_N16.png  used on inpu
+t line 398.
+(pdftex.def)             Requested size: 151.05345pt x 119.51852pt.
+<img/big_figure/up_H3_tri_N16.png, id=168, 578.16pt x 464.6961pt>
+File: img/big_figure/up_H3_tri_N16.png Graphic file (type png)
+<use img/big_figure/up_H3_tri_N16.png>
+Package pdftex.def Info: img/big_figure/up_H3_tri_N16.png  used on input line 4
+05.
+(pdftex.def)             Requested size: 151.05345pt x 121.40666pt.
+<img/big_figure/density_matrix_N16.png, id=169, 578.16pt x 442.2924pt>
+File: img/big_figure/density_matrix_N16.png Graphic file (type png)
+<use img/big_figure/density_matrix_N16.png>
+Package pdftex.def Info: img/big_figure/density_matrix_N16.png  used on input l
+ine 412.
+(pdftex.def)             Requested size: 151.05345pt x 115.55345pt.
+<img/big_figure/up_H2_prime_prime_N26.png, id=170, 578.16pt x 456.7464pt>
+File: img/big_figure/up_H2_prime_prime_N26.png Graphic file (type png)
+<use img/big_figure/up_H2_prime_prime_N26.png>
+Package pdftex.def Info: img/big_figure/up_H2_prime_prime_N26.png  used on inpu
+t line 422.
+(pdftex.def)             Requested size: 151.05345pt x 119.32971pt.
+<img/big_figure/up_H3_tri_N26.png, id=171, 578.16pt x 464.6961pt>
+File: img/big_figure/up_H3_tri_N26.png Graphic file (type png)
+<use img/big_figure/up_H3_tri_N26.png>
+Package pdftex.def Info: img/big_figure/up_H3_tri_N26.png  used on input line 4
+29.
+(pdftex.def)             Requested size: 151.05345pt x 121.40666pt.
+<img/big_figure/density_matrix_N26.png, id=172, 578.16pt x 437.9562pt>
+File: img/big_figure/density_matrix_N26.png Graphic file (type png)
+<use img/big_figure/density_matrix_N26.png>
+Package pdftex.def Info: img/big_figure/density_matrix_N26.png  used on input l
+ine 436.
+(pdftex.def)             Requested size: 151.05345pt x 114.42058pt.
+[7 <./img/up_H3_tri_N10.png> <./img/dn_H3_tri_N10.png> <./img/density_matrix_N1
+0_NO.png>] [8]
+
+LaTeX Warning: Text page 9 contains only floats.
+
+
+Overfull \vbox (5.26234pt too high) has occurred while \output is active []
+
+
+[9 <./img/big_figure/up_H2_prime_prime_N11.png> <./img/big_figure/up_H3_tri_N11
+.png> <./img/big_figure/density_matrix_N11.png> <./img/big_figure/up_H2_prime_p
+rime_N13.png> <./img/big_figure/up_H3_tri_N13.png> <./img/big_figure/density_ma
+trix_N13.png> <./img/big_figure/up_H2_prime_prime_N16.png> <./img/big_figure/up
+_H3_tri_N16.png> <./img/big_figure/density_matrix_N16.png> <./img/big_figure/up
+_H2_prime_prime_N26.png> <./img/big_figure/up_H3_tri_N26.png> <./img/big_figure
+/density_matrix_N26.png>] (natural_orbitals.bbl) [10] (natural_orbitals.aux)
+
+Package rerunfilecheck Warning: File `natural_orbitals.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `natural_orbitals.out':
+(rerunfilecheck)             Before: A7F9A86D3C177B349FCFA87FC81EBFC3;1835
+(rerunfilecheck)             After:  9B2B514129A3BAC5F47B7CB93B80D0CD;1830.
  ) 
 Here is how much of TeX's memory you used:
- 24915 strings out of 476411
- 468439 string characters out of 5789134
- 1879845 words of memory out of 5000000
- 44796 multiletter control sequences out of 15000+600000
+ 25086 strings out of 476411
+ 473761 string characters out of 5789134
+ 1877845 words of memory out of 5000000
+ 44938 multiletter control sequences out of 15000+600000
  568014 words of font info for 67 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,13n,89p,1390b,592s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 84i,13n,89p,2048b,571s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/33783/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.pf
 b><C:/Users/33783/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pf
 b><C:/Users/33783/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx6.pfb
@@ -1037,19 +1151,21 @@ b><C:/Users/33783/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx6.pfb
 <C:/Users/33783/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmcsc10.pfb
 ><C:/Users/33783/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmex10.pfb
 ><C:/Users/33783/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi10.pfb
-><C:/Users/33783/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi6.pfb>
-<C:/Users/33783/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><
-C:/Users/33783/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C
-:/Users/33783/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:
-/Users/33783/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr6.pfb><C:/U
-sers/33783/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Use
-rs/33783/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/Use
-rs/33783/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Use
-rs/33783/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy6.pfb><C:/User
-s/33783/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy8.pfb>
-Output written on natural_orbitals.pdf (7 pages, 989902 bytes).
+><C:/Users/33783/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi5.pfb>
+<C:/Users/33783/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi6.pfb><
+C:/Users/33783/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><C
+:/Users/33783/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:
+/Users/33783/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/
+Users/33783/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr5.pfb><C:/Us
+ers/33783/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr6.pfb><C:/User
+s/33783/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/
+33783/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/Users/
+33783/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/
+33783/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy6.pfb><C:/Users/3
+3783/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy8.pfb>
+Output written on natural_orbitals.pdf (10 pages, 1610060 bytes).
 PDF statistics:
- 226 PDF objects out of 1000 (max. 8388607)
- 34 named destinations out of 1000 (max. 500000)
- 100 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 345 PDF objects out of 1000 (max. 8388607)
+ 47 named destinations out of 1000 (max. 500000)
+ 207 words of extra memory for PDF output out of 10000 (max. 10000000)
 

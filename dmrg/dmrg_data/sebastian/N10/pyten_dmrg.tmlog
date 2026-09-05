@@ -1,0 +1,95 @@
+2026.08.21T12:15:03.371 3.95476e+00 N  M Initialising worker 1 for segment [0, 10] with 11 sites.
+2026.08.21T12:15:03.373 3.95684e+00 N  M   Debug build:              no
+2026.08.21T12:15:03.373 3.95687e+00 N  M   Time & Date of build:     on Apr 29 2026 at 10:51:22
+2026.08.21T12:15:03.373 3.95689e+00 N  M   Linked to BLAS:           Intel MKL 20250200
+2026.08.21T12:15:03.373 3.95692e+00 N  M   OpenMP enabled:           yes [max. of 2147483647 threads]
+2026.08.21T12:15:03.373 3.95694e+00 N  M   #Dense/MKL threads:       1
+2026.08.21T12:15:03.373 3.95696e+00 N  M   #Tensor-Block threads:    1
+2026.08.21T12:15:03.373 3.95698e+00 N  M   #TPO Threads:             1
+2026.08.21T12:15:03.373 3.95701e+00 N  M   #Super threads:           1
+2026.08.21T12:15:03.373 3.95703e+00 N  M 
+2026.08.21T12:15:03.373 3.95705e+00 N  M   File prefix:              pyten_dmrg__1787307303
+2026.08.21T12:15:03.373 3.95708e+00 N  M   Log files:                true
+2026.08.21T12:15:03.373 3.95710e+00 N  M   HDD caching:              false
+2026.08.21T12:15:03.373 3.95713e+00 N  M 
+2026.08.21T12:15:03.373 3.95718e+00 N  M   Configuration stage    1  ( variant DMRG3S save false save_itself false convMaxSweeps 5 convMinSweeps 1 convMinEnergyDiff 1e-06 convTargetEnergy nan truncTol 0.0001 truncMaxBlocksize 4.295e+09 truncMaxStates 512 truncWeight -1.000e+00 sectruncTol 4.59615e-08 sectruncMaxBlocksize 4.295e+09 sectruncMaxStates 4.295e+09 sectruncWeight -1.000e+00 expandBlocksize 500 expandRatio 5.000e-01 randomFactor 1.000e-02 esConf { minIter 1 maxIter 8 tolError 2.11246e-15 tolInexc 1.49012e-08 mode K submode B } btConfig { s NelderMead r None sa 1.000e+05 uhf false cpl false c Auto i 80 t 1.000e-05 ins 1.000e-02 e 1.000e-04 ot 1.000e-14 eta 0.000e+00 } numExcStates 0 resetAlpha nan )
+2026.08.21T12:15:03.373 3.95723e+00 N  M   Configuration stage    2  ( variant DMRG3S save false save_itself false convMaxSweeps 5 convMinSweeps 1 convMinEnergyDiff 1e-08 convTargetEnergy nan truncTol 1e-08 truncMaxBlocksize 4.295e+09 truncMaxStates 512 truncWeight -1.000e+00 sectruncTol 4.59615e-08 sectruncMaxBlocksize 4.295e+09 sectruncMaxStates 4.295e+09 sectruncWeight -1.000e+00 expandBlocksize 500 expandRatio 5.000e-01 randomFactor 1.000e-02 esConf { minIter 1 maxIter 8 tolError 2.11246e-15 tolInexc 1.49012e-08 mode K submode B } btConfig { s NelderMead r None sa 1.000e+05 uhf false cpl false c Auto i 80 t 1.000e-05 ins 1.000e-02 e 1.000e-04 ot 1.000e-14 eta 0.000e+00 } numExcStates 0 resetAlpha nan )
+2026.08.21T12:15:03.373 3.95728e+00 N  M   Configuration stage    3  ( variant DMRG3S save false save_itself false convMaxSweeps 20 convMinSweeps 2 convMinEnergyDiff 1e-08 convTargetEnergy nan truncTol 1e-10 truncMaxBlocksize 4.295e+09 truncMaxStates 1024 truncWeight -1.000e+00 sectruncTol 4.59615e-08 sectruncMaxBlocksize 4.295e+09 sectruncMaxStates 4.295e+09 sectruncWeight -1.000e+00 expandBlocksize 500 expandRatio 5.000e-01 randomFactor 1.000e-02 esConf { minIter 1 maxIter 8 tolError 2.11246e-15 tolInexc 1.49012e-08 mode K submode B } btConfig { s NelderMead r None sa 1.000e+05 uhf false cpl false c Auto i 80 t 1.000e-05 ins 1.000e-02 e 1.000e-04 ot 1.000e-14 eta 0.000e+00 } numExcStates 0 resetAlpha nan )
+2026.08.21T12:15:03.373 3.95730e+00 N  M 
+2026.08.21T12:15:03.373 3.95731e+00 N  M   Contraction Sequence:     Default
+2026.08.21T12:15:03.373 3.95733e+00 N  M   Initial stage:            1
+2026.08.21T12:15:03.373 3.95734e+00 N  M   Current sweeps @ stage:   0
+2026.08.21T12:15:03.373 3.95737e+00 N  M   α value:                  1
+2026.08.21T12:15:03.373 3.95738e+00 N  M   Last recorded energy:     nan
+2026.08.21T12:15:03.373 3.95740e+00 N  M   Sweep initial energy:     nan
+2026.08.21T12:15:03.373 3.95742e+00 N  M   Last sweep init. energy:  nan
+2026.08.21T12:15:03.373 3.95748e+00 N  M Starting stage 1…
+2026.08.21T12:15:03.373 3.95750e+00 N  M Unconverged: Minimum number of sweeps not reached.
+2026.08.21T12:15:03.382 3.96586e+00 N  M Unconverged: Worker 1 is not converged.
+2026.08.21T12:15:03.409 3.99309e+00 N  M Unconverged: Worker 1 is not converged.
+2026.08.21T12:15:03.457 4.04148e+00 N  M Unconverged: Worker 1 is not converged.
+2026.08.21T12:15:03.505 4.08953e+00 N  M Unconverged: Worker 1 is not converged.
+2026.08.21T12:15:03.546 4.12981e+00 N  M Converged: Maximum number of sweeps reached.
+2026.08.21T12:15:03.546 4.12991e+00 N  M Completed stage 1…
+2026.08.21T12:15:03.546 4.12994e+00 N  M Copying state & right-normalising…
+2026.08.21T12:15:03.565 4.14955e+00 N  M   Debug build:              no
+2026.08.21T12:15:03.565 4.14960e+00 N  M   Time & Date of build:     on Apr 29 2026 at 10:51:22
+2026.08.21T12:15:03.565 4.14963e+00 N  M   Linked to BLAS:           Intel MKL 20250200
+2026.08.21T12:15:03.566 4.14965e+00 N  M   OpenMP enabled:           yes [max. of 2147483647 threads]
+2026.08.21T12:15:03.566 4.14967e+00 N  M   #Dense/MKL threads:       1
+2026.08.21T12:15:03.566 4.14969e+00 N  M   #Tensor-Block threads:    1
+2026.08.21T12:15:03.566 4.14971e+00 N  M   #TPO Threads:             1
+2026.08.21T12:15:03.566 4.14972e+00 N  M   #Super threads:           1
+2026.08.21T12:15:03.566 4.14973e+00 N  M 
+2026.08.21T12:15:03.566 4.14975e+00 N  M   File prefix:              pyten_dmrg__1787307303
+2026.08.21T12:15:03.566 4.14977e+00 N  M   Log files:                true
+2026.08.21T12:15:03.566 4.14980e+00 N  M   HDD caching:              false
+2026.08.21T12:15:03.566 4.14983e+00 N  M 
+2026.08.21T12:15:03.566 4.14989e+00 N  M   Configuration stage    1  ( variant DMRG3S save false save_itself false convMaxSweeps 5 convMinSweeps 1 convMinEnergyDiff 1e-06 convTargetEnergy nan truncTol 0.0001 truncMaxBlocksize 4.295e+09 truncMaxStates 512 truncWeight -1.000e+00 sectruncTol 4.59615e-08 sectruncMaxBlocksize 4.295e+09 sectruncMaxStates 4.295e+09 sectruncWeight -1.000e+00 expandBlocksize 500 expandRatio 5.000e-01 randomFactor 1.000e-02 esConf { minIter 1 maxIter 8 tolError 2.11246e-15 tolInexc 1.49012e-08 mode K submode B } btConfig { s NelderMead r None sa 1.000e+05 uhf false cpl false c Auto i 80 t 1.000e-05 ins 1.000e-02 e 1.000e-04 ot 1.000e-14 eta 0.000e+00 } numExcStates 0 resetAlpha nan )
+2026.08.21T12:15:03.566 4.14994e+00 N  M   Configuration stage    2  ( variant DMRG3S save false save_itself false convMaxSweeps 5 convMinSweeps 1 convMinEnergyDiff 1e-08 convTargetEnergy nan truncTol 1e-08 truncMaxBlocksize 4.295e+09 truncMaxStates 512 truncWeight -1.000e+00 sectruncTol 4.59615e-08 sectruncMaxBlocksize 4.295e+09 sectruncMaxStates 4.295e+09 sectruncWeight -1.000e+00 expandBlocksize 500 expandRatio 5.000e-01 randomFactor 1.000e-02 esConf { minIter 1 maxIter 8 tolError 2.11246e-15 tolInexc 1.49012e-08 mode K submode B } btConfig { s NelderMead r None sa 1.000e+05 uhf false cpl false c Auto i 80 t 1.000e-05 ins 1.000e-02 e 1.000e-04 ot 1.000e-14 eta 0.000e+00 } numExcStates 0 resetAlpha nan )
+2026.08.21T12:15:03.566 4.14998e+00 N  M   Configuration stage    3  ( variant DMRG3S save false save_itself false convMaxSweeps 20 convMinSweeps 2 convMinEnergyDiff 1e-08 convTargetEnergy nan truncTol 1e-10 truncMaxBlocksize 4.295e+09 truncMaxStates 1024 truncWeight -1.000e+00 sectruncTol 4.59615e-08 sectruncMaxBlocksize 4.295e+09 sectruncMaxStates 4.295e+09 sectruncWeight -1.000e+00 expandBlocksize 500 expandRatio 5.000e-01 randomFactor 1.000e-02 esConf { minIter 1 maxIter 8 tolError 2.11246e-15 tolInexc 1.49012e-08 mode K submode B } btConfig { s NelderMead r None sa 1.000e+05 uhf false cpl false c Auto i 80 t 1.000e-05 ins 1.000e-02 e 1.000e-04 ot 1.000e-14 eta 0.000e+00 } numExcStates 0 resetAlpha nan )
+2026.08.21T12:15:03.566 4.15001e+00 N  M 
+2026.08.21T12:15:03.566 4.15004e+00 N  M   Contraction Sequence:     Default
+2026.08.21T12:15:03.566 4.15006e+00 N  M   Initial stage:            2
+2026.08.21T12:15:03.566 4.15009e+00 N  M   Current sweeps @ stage:   5
+2026.08.21T12:15:03.566 4.15012e+00 N  M   α value:                  1
+2026.08.21T12:15:03.566 4.15014e+00 N  M   Last recorded energy:     nan
+2026.08.21T12:15:03.566 4.15017e+00 N  M   Sweep initial energy:     nan
+2026.08.21T12:15:03.566 4.15020e+00 N  M   Last sweep init. energy:  nan
+2026.08.21T12:15:03.566 4.15025e+00 N  M Starting stage 2…
+2026.08.21T12:15:03.566 4.15027e+00 N  M Unconverged: Minimum number of sweeps not reached.
+2026.08.21T12:15:03.653 4.23727e+00 N  M Unconverged: Worker 1 is not converged.
+2026.08.21T12:15:03.746 4.33013e+00 N  M Unconverged: Worker 1 is not converged.
+2026.08.21T12:15:03.837 4.42117e+00 N  M All workers converged.
+2026.08.21T12:15:03.837 4.42123e+00 N  M Completed stage 2…
+2026.08.21T12:15:03.837 4.42125e+00 N  M Copying state & right-normalising…
+2026.08.21T12:15:03.866 4.45012e+00 N  M   Debug build:              no
+2026.08.21T12:15:03.866 4.45017e+00 N  M   Time & Date of build:     on Apr 29 2026 at 10:51:22
+2026.08.21T12:15:03.866 4.45019e+00 N  M   Linked to BLAS:           Intel MKL 20250200
+2026.08.21T12:15:03.866 4.45020e+00 N  M   OpenMP enabled:           yes [max. of 2147483647 threads]
+2026.08.21T12:15:03.866 4.45022e+00 N  M   #Dense/MKL threads:       1
+2026.08.21T12:15:03.866 4.45024e+00 N  M   #Tensor-Block threads:    1
+2026.08.21T12:15:03.866 4.45026e+00 N  M   #TPO Threads:             1
+2026.08.21T12:15:03.866 4.45029e+00 N  M   #Super threads:           1
+2026.08.21T12:15:03.866 4.45030e+00 N  M 
+2026.08.21T12:15:03.866 4.45033e+00 N  M   File prefix:              pyten_dmrg__1787307303
+2026.08.21T12:15:03.866 4.45036e+00 N  M   Log files:                true
+2026.08.21T12:15:03.866 4.45038e+00 N  M   HDD caching:              false
+2026.08.21T12:15:03.866 4.45041e+00 N  M 
+2026.08.21T12:15:03.866 4.45047e+00 N  M   Configuration stage    1  ( variant DMRG3S save false save_itself false convMaxSweeps 5 convMinSweeps 1 convMinEnergyDiff 1e-06 convTargetEnergy nan truncTol 0.0001 truncMaxBlocksize 4.295e+09 truncMaxStates 512 truncWeight -1.000e+00 sectruncTol 4.59615e-08 sectruncMaxBlocksize 4.295e+09 sectruncMaxStates 4.295e+09 sectruncWeight -1.000e+00 expandBlocksize 500 expandRatio 5.000e-01 randomFactor 1.000e-02 esConf { minIter 1 maxIter 8 tolError 2.11246e-15 tolInexc 1.49012e-08 mode K submode B } btConfig { s NelderMead r None sa 1.000e+05 uhf false cpl false c Auto i 80 t 1.000e-05 ins 1.000e-02 e 1.000e-04 ot 1.000e-14 eta 0.000e+00 } numExcStates 0 resetAlpha nan )
+2026.08.21T12:15:03.866 4.45052e+00 N  M   Configuration stage    2  ( variant DMRG3S save false save_itself false convMaxSweeps 5 convMinSweeps 1 convMinEnergyDiff 1e-08 convTargetEnergy nan truncTol 1e-08 truncMaxBlocksize 4.295e+09 truncMaxStates 512 truncWeight -1.000e+00 sectruncTol 4.59615e-08 sectruncMaxBlocksize 4.295e+09 sectruncMaxStates 4.295e+09 sectruncWeight -1.000e+00 expandBlocksize 500 expandRatio 5.000e-01 randomFactor 1.000e-02 esConf { minIter 1 maxIter 8 tolError 2.11246e-15 tolInexc 1.49012e-08 mode K submode B } btConfig { s NelderMead r None sa 1.000e+05 uhf false cpl false c Auto i 80 t 1.000e-05 ins 1.000e-02 e 1.000e-04 ot 1.000e-14 eta 0.000e+00 } numExcStates 0 resetAlpha nan )
+2026.08.21T12:15:03.867 4.45057e+00 N  M   Configuration stage    3  ( variant DMRG3S save false save_itself false convMaxSweeps 20 convMinSweeps 2 convMinEnergyDiff 1e-08 convTargetEnergy nan truncTol 1e-10 truncMaxBlocksize 4.295e+09 truncMaxStates 1024 truncWeight -1.000e+00 sectruncTol 4.59615e-08 sectruncMaxBlocksize 4.295e+09 sectruncMaxStates 4.295e+09 sectruncWeight -1.000e+00 expandBlocksize 500 expandRatio 5.000e-01 randomFactor 1.000e-02 esConf { minIter 1 maxIter 8 tolError 2.11246e-15 tolInexc 1.49012e-08 mode K submode B } btConfig { s NelderMead r None sa 1.000e+05 uhf false cpl false c Auto i 80 t 1.000e-05 ins 1.000e-02 e 1.000e-04 ot 1.000e-14 eta 0.000e+00 } numExcStates 0 resetAlpha nan )
+2026.08.21T12:15:03.867 4.45059e+00 N  M 
+2026.08.21T12:15:03.867 4.45062e+00 N  M   Contraction Sequence:     Default
+2026.08.21T12:15:03.867 4.45065e+00 N  M   Initial stage:            3
+2026.08.21T12:15:03.867 4.45067e+00 N  M   Current sweeps @ stage:   3
+2026.08.21T12:15:03.867 4.45070e+00 N  M   α value:                  1
+2026.08.21T12:15:03.867 4.45073e+00 N  M   Last recorded energy:     nan
+2026.08.21T12:15:03.867 4.45075e+00 N  M   Sweep initial energy:     nan
+2026.08.21T12:15:03.867 4.45078e+00 N  M   Last sweep init. energy:  nan
+2026.08.21T12:15:03.867 4.45083e+00 N  M Starting stage 3…
+2026.08.21T12:15:03.867 4.45085e+00 N  M Unconverged: Minimum number of sweeps not reached.
+2026.08.21T12:15:04.017 4.60150e+00 N  M Unconverged: Minimum number of sweeps not reached.
+2026.08.21T12:15:04.257 4.83537e+00 N  M All workers converged.
+2026.08.21T12:15:04.257 4.83544e+00 N  M Completed stage 3…
+2026.08.21T12:15:04.257 4.83546e+00 N  M Copying state & right-normalising…

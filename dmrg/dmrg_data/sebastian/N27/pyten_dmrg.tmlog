@@ -1,0 +1,169 @@
+2026.08.21T12:15:42.884 4.32610e+01 N  1 Initialising worker object 1/1 on segment [0,27]…
+2026.08.21T12:15:42.884 4.32610e+01 N  1 Dropping unmatched blocks…
+2026.08.21T12:15:42.884 4.32611e+01 N  1 Left-normalising entire state…
+2026.08.21T12:15:42.884 4.32616e+01 N  1 Right-normalising up to right boundary of worker…
+2026.08.21T12:15:42.884 4.32616e+01 N  1 Initialising to start at position 27
+2026.08.21T12:15:42.884 4.32616e+01 N  1 Calculating contractions…
+2026.08.21T12:15:42.884 4.32616e+01 N  1   Right-contractions from 27 to 27
+2026.08.21T12:15:42.884 4.32617e+01 N  1   Left-contractions from 0 to 27
+2026.08.21T12:15:42.884 4.32617e+01 N  1     Position 0…
+2026.08.21T12:15:42.884 4.32618e+01 N  1     Position 1…
+2026.08.21T12:15:42.884 4.32619e+01 N  1     Position 2…
+2026.08.21T12:15:42.885 4.32620e+01 N  1     Position 3…
+2026.08.21T12:15:42.885 4.32621e+01 N  1     Position 4…
+2026.08.21T12:15:42.885 4.32622e+01 N  1     Position 5…
+2026.08.21T12:15:42.885 4.32622e+01 N  1     Position 6…
+2026.08.21T12:15:42.885 4.32623e+01 N  1     Position 7…
+2026.08.21T12:15:42.885 4.32624e+01 N  1     Position 8…
+2026.08.21T12:15:42.885 4.32624e+01 N  1     Position 9…
+2026.08.21T12:15:42.885 4.32625e+01 N  1     Position 10…
+2026.08.21T12:15:42.885 4.32625e+01 N  1     Position 11…
+2026.08.21T12:15:42.885 4.32626e+01 N  1     Position 12…
+2026.08.21T12:15:42.885 4.32627e+01 N  1     Position 13…
+2026.08.21T12:15:42.885 4.32628e+01 N  1     Position 14…
+2026.08.21T12:15:42.885 4.32628e+01 N  1     Position 15…
+2026.08.21T12:15:42.885 4.32629e+01 N  1     Position 16…
+2026.08.21T12:15:42.885 4.32629e+01 N  1     Position 17…
+2026.08.21T12:15:42.886 4.32630e+01 N  1     Position 18…
+2026.08.21T12:15:42.886 4.32631e+01 N  1     Position 19…
+2026.08.21T12:15:42.886 4.32632e+01 N  1     Position 20…
+2026.08.21T12:15:42.886 4.32632e+01 N  1     Position 21…
+2026.08.21T12:15:42.886 4.32633e+01 N  1     Position 22…
+2026.08.21T12:15:42.886 4.32634e+01 N  1     Position 23…
+2026.08.21T12:15:42.886 4.32635e+01 N  1     Position 24…
+2026.08.21T12:15:42.886 4.32635e+01 N  1     Position 25…
+2026.08.21T12:15:42.886 4.32636e+01 N  1     Position 26…
+2026.08.21T12:15:42.886 4.32637e+01 N  1 Destroying unneeded tensors in PDMRG…
+2026.08.21T12:15:42.887 4.32647e+01 N  1 Starting  right-to-left (←) sweep 1 of stage 1 at position 27 using DMRG3S.
+2026.08.21T12:15:42.909 4.32860e+01 T  1 Timing information:
+Timing; Total:    2.10500e+01ms CPU       	2.11684e+01ms Real
+   Caching        1.99000e-01ms CPU (  0.9%) 	2.21031e-01ms Real (  1.0%) ⇒  90.0% CPU
+   Solving        5.20400e+00ms CPU ( 24.7%) 	5.21049e+00ms Real ( 24.6%) ⇒  99.9% CPU
+   Expectations   1.50000e-02ms CPU (  0.1%) 	2.18830e-02ms Real (  0.1%) ⇒  68.5% CPU
+   Expanding      3.92900e+00ms CPU ( 18.7%) 	3.94957e+00ms Real ( 18.7%) ⇒  99.5% CPU
+   Normalising    2.72400e+00ms CPU ( 12.9%) 	2.74347e+00ms Real ( 13.0%) ⇒  99.3% CPU
+   Contracting    5.93000e+00ms CPU ( 28.2%) 	5.95535e+00ms Real ( 28.1%) ⇒  99.6% CPU
+   Energy         3.04900e+00ms CPU ( 14.5%) 	3.06665e+00ms Real ( 14.5%) ⇒  99.4% CPU
+2026.08.21T12:15:42.909 4.32860e+01 N  1 Completed right-to-left (←) sweep 1 of stage 1.
+2026.08.21T12:15:42.909 4.32861e+01 N  1 Convergence: Undecided: Energy gain threshold not reached: nan > 1e-06
+2026.08.21T12:15:42.909 4.32861e+01 N  1 Convergence: Unconverged by default.
+2026.08.21T12:15:42.909 4.32861e+01 N  1 Starting  left-to-right (→) sweep 2 of stage 1 at position 0 using DMRG3S.
+2026.08.21T12:15:42.971 4.33488e+01 T  1 Timing information:
+Timing; Total:    6.24440e+01ms CPU       	6.25841e+01ms Real
+   Caching        2.46000e-01ms CPU (  0.4%) 	2.74267e-01ms Real (  0.4%) ⇒  89.7% CPU
+   Solving        3.16940e+01ms CPU ( 50.8%) 	3.17102e+01ms Real ( 50.7%) ⇒  99.9% CPU
+   Expectations   1.90000e-02ms CPU (  0.0%) 	2.47540e-02ms Real (  0.0%) ⇒  76.8% CPU
+   Expanding      9.06200e+00ms CPU ( 14.5%) 	9.08604e+00ms Real ( 14.5%) ⇒  99.7% CPU
+   Normalising    4.93600e+00ms CPU (  7.9%) 	4.96094e+00ms Real (  7.9%) ⇒  99.5% CPU
+   Contracting    1.01340e+01ms CPU ( 16.2%) 	1.01584e+01ms Real ( 16.2%) ⇒  99.8% CPU
+   Energy         6.35300e+00ms CPU ( 10.2%) 	6.36946e+00ms Real ( 10.2%) ⇒  99.7% CPU
+2026.08.21T12:15:42.971 4.33488e+01 N  1 Completed left-to-right (→) sweep 2 of stage 1.
+2026.08.21T12:15:42.971 4.33489e+01 N  1 Convergence: Undecided: Energy gain threshold not reached: 0.00199242 > 1e-06
+2026.08.21T12:15:42.971 4.33489e+01 N  1 Convergence: Unconverged by default.
+2026.08.21T12:15:42.971 4.33489e+01 N  1 Starting  right-to-left (←) sweep 3 of stage 1 at position 27 using DMRG3S.
+2026.08.21T12:15:43.068 4.34457e+01 T  1 Timing information:
+Timing; Total:    9.65610e+01ms CPU       	9.68777e+01ms Real
+   Caching        3.20000e-01ms CPU (  0.3%) 	3.45087e-01ms Real (  0.4%) ⇒  92.7% CPU
+   Solving        4.80970e+01ms CPU ( 49.8%) 	4.82126e+01ms Real ( 49.8%) ⇒  99.8% CPU
+   Expectations   1.90000e-02ms CPU (  0.0%) 	2.39840e-02ms Real (  0.0%) ⇒  79.2% CPU
+   Expanding      1.31870e+01ms CPU ( 13.7%) 	1.32151e+01ms Real ( 13.6%) ⇒  99.8% CPU
+   Normalising    6.52000e+00ms CPU (  6.8%) 	6.54274e+00ms Real (  6.8%) ⇒  99.7% CPU
+   Contracting    1.86990e+01ms CPU ( 19.4%) 	1.87298e+01ms Real ( 19.3%) ⇒  99.8% CPU
+   Energy         9.71900e+00ms CPU ( 10.1%) 	9.80837e+00ms Real ( 10.1%) ⇒  99.1% CPU
+2026.08.21T12:15:43.068 4.34458e+01 N  1 Completed right-to-left (←) sweep 3 of stage 1.
+2026.08.21T12:15:43.069 4.34458e+01 N  1 Convergence: Undecided: Energy gain threshold not reached: 0.000102681 > 1e-06
+2026.08.21T12:15:43.069 4.34458e+01 N  1 Convergence: Unconverged by default.
+2026.08.21T12:15:43.069 4.34459e+01 N  1 Starting  left-to-right (→) sweep 4 of stage 1 at position 0 using DMRG3S.
+2026.08.21T12:15:43.158 4.35351e+01 T  1 Timing information:
+Timing; Total:    8.89930e+01ms CPU       	8.91209e+01ms Real
+   Caching        2.80000e-01ms CPU (  0.3%) 	3.02022e-01ms Real (  0.3%) ⇒  92.7% CPU
+   Solving        4.00110e+01ms CPU ( 45.0%) 	4.00228e+01ms Real ( 44.9%) ⇒ 100.0% CPU
+   Expectations   2.10000e-02ms CPU (  0.0%) 	2.60310e-02ms Real (  0.0%) ⇒  80.7% CPU
+   Expanding      1.56320e+01ms CPU ( 17.6%) 	1.56580e+01ms Real ( 17.6%) ⇒  99.8% CPU
+   Normalising    6.83400e+00ms CPU (  7.7%) 	6.85683e+00ms Real (  7.7%) ⇒  99.7% CPU
+   Contracting    1.40970e+01ms CPU ( 15.8%) 	1.41248e+01ms Real ( 15.8%) ⇒  99.8% CPU
+   Energy         1.21180e+01ms CPU ( 13.6%) 	1.21304e+01ms Real ( 13.6%) ⇒  99.9% CPU
+2026.08.21T12:15:43.158 4.35351e+01 N  1 Completed left-to-right (→) sweep 4 of stage 1.
+2026.08.21T12:15:43.158 4.35352e+01 N  1 Convergence: Undecided: Energy gain threshold not reached: 1.07876e-05 > 1e-06
+2026.08.21T12:15:43.158 4.35352e+01 N  1 Convergence: Unconverged by default.
+2026.08.21T12:15:43.158 4.35352e+01 N  1 Starting  right-to-left (←) sweep 5 of stage 1 at position 27 using DMRG3S.
+2026.08.21T12:15:43.240 4.36177e+01 T  1 Timing information:
+Timing; Total:    8.22140e+01ms CPU       	8.23668e+01ms Real
+   Caching        2.86000e-01ms CPU (  0.3%) 	3.14342e-01ms Real (  0.4%) ⇒  91.0% CPU
+   Solving        3.73300e+01ms CPU ( 45.4%) 	3.73387e+01ms Real ( 45.3%) ⇒ 100.0% CPU
+   Expectations   1.30000e-02ms CPU (  0.0%) 	2.60220e-02ms Real (  0.0%) ⇒  50.0% CPU
+   Expanding      1.36760e+01ms CPU ( 16.6%) 	1.37041e+01ms Real ( 16.6%) ⇒  99.8% CPU
+   Normalising    6.44800e+00ms CPU (  7.8%) 	6.47475e+00ms Real (  7.9%) ⇒  99.6% CPU
+   Contracting    1.34960e+01ms CPU ( 16.4%) 	1.35263e+01ms Real ( 16.4%) ⇒  99.8% CPU
+   Energy         1.09650e+01ms CPU ( 13.3%) 	1.09825e+01ms Real ( 13.3%) ⇒  99.8% CPU
+2026.08.21T12:15:43.240 4.36177e+01 N  1 Completed right-to-left (←) sweep 5 of stage 1.
+2026.08.21T12:15:43.241 4.36178e+01 N  1 Report: (Converged) Energy gain threshold reached at 2.85654e-07 < 1e-06
+2026.08.21T12:15:43.241 4.36178e+01 N  1 Extrapolation info (minimal energy, maximal truncation):
+2026.08.21T12:15:43.241 4.36178e+01 N  1 Energy/Trunc: -40.508323068712869 0.038698841342784493
+2026.08.21T12:15:43.283 4.36606e+01 N  1 Starting  left-to-right (→) sweep 1 of stage 2 at position 0 using DMRG3S.
+2026.08.21T12:15:43.442 4.38190e+01 T  1 Timing information:
+Timing; Total:    1.58165e+02ms CPU       	1.58304e+02ms Real
+   Caching        3.69000e-01ms CPU (  0.2%) 	3.90919e-01ms Real (  0.2%) ⇒  94.4% CPU
+   Solving        9.32420e+01ms CPU ( 59.0%) 	9.32553e+01ms Real ( 58.9%) ⇒ 100.0% CPU
+   Expectations   2.30000e-02ms CPU (  0.0%) 	2.71610e-02ms Real (  0.0%) ⇒  84.7% CPU
+   Expanding      1.76230e+01ms CPU ( 11.1%) 	1.76488e+01ms Real ( 11.1%) ⇒  99.9% CPU
+   Normalising    8.24900e+00ms CPU (  5.2%) 	8.27004e+00ms Real (  5.2%) ⇒  99.7% CPU
+   Contracting    2.51060e+01ms CPU ( 15.9%) 	2.51397e+01ms Real ( 15.9%) ⇒  99.9% CPU
+   Energy         1.35530e+01ms CPU (  8.6%) 	1.35716e+01ms Real (  8.6%) ⇒  99.9% CPU
+2026.08.21T12:15:43.442 4.38191e+01 N  1 Completed left-to-right (→) sweep 1 of stage 2.
+2026.08.21T12:15:43.442 4.38191e+01 N  1 Convergence: Undecided: Energy gain threshold not reached: 9.37477e-08 > 1e-08
+2026.08.21T12:15:43.442 4.38191e+01 N  1 Convergence: Unconverged by default.
+2026.08.21T12:15:43.442 4.38192e+01 N  1 Starting  right-to-left (←) sweep 2 of stage 2 at position 27 using DMRG3S.
+2026.08.21T12:15:43.626 4.40033e+01 T  1 Timing information:
+Timing; Total:    1.83863e+02ms CPU       	1.84053e+02ms Real
+   Caching        4.64000e-01ms CPU (  0.3%) 	4.82954e-01ms Real (  0.3%) ⇒  96.1% CPU
+   Solving        8.76490e+01ms CPU ( 47.7%) 	8.76732e+01ms Real ( 47.6%) ⇒ 100.0% CPU
+   Expectations   1.70000e-02ms CPU (  0.0%) 	2.53660e-02ms Real (  0.0%) ⇒  67.0% CPU
+   Expanding      2.67410e+01ms CPU ( 14.5%) 	2.67896e+01ms Real ( 14.6%) ⇒  99.8% CPU
+   Normalising    1.35610e+01ms CPU (  7.4%) 	1.35903e+01ms Real (  7.4%) ⇒  99.8% CPU
+   Contracting    3.45830e+01ms CPU ( 18.8%) 	3.46225e+01ms Real ( 18.8%) ⇒  99.9% CPU
+   Energy         2.08480e+01ms CPU ( 11.3%) 	2.08691e+01ms Real ( 11.3%) ⇒  99.9% CPU
+2026.08.21T12:15:43.626 4.40033e+01 N  1 Completed right-to-left (←) sweep 2 of stage 2.
+2026.08.21T12:15:43.626 4.40034e+01 N  1 Convergence: Undecided: Energy gain threshold not reached: 2.16111e-08 > 1e-08
+2026.08.21T12:15:43.626 4.40034e+01 N  1 Convergence: Unconverged by default.
+2026.08.21T12:15:43.626 4.40034e+01 N  1 Starting  left-to-right (→) sweep 3 of stage 2 at position 0 using DMRG3S.
+2026.08.21T12:15:43.858 4.42350e+01 T  1 Timing information:
+Timing; Total:    2.31355e+02ms CPU       	2.31544e+02ms Real
+   Caching        4.11000e-01ms CPU (  0.2%) 	4.32757e-01ms Real (  0.2%) ⇒  95.0% CPU
+   Solving        1.21938e+02ms CPU ( 52.7%) 	1.21960e+02ms Real ( 52.7%) ⇒ 100.0% CPU
+   Expectations   2.00000e-02ms CPU (  0.0%) 	2.71250e-02ms Real (  0.0%) ⇒  73.7% CPU
+   Expanding      3.32750e+01ms CPU ( 14.4%) 	3.33100e+01ms Real ( 14.4%) ⇒  99.9% CPU
+   Normalising    1.53480e+01ms CPU (  6.6%) 	1.53768e+01ms Real (  6.6%) ⇒  99.8% CPU
+   Contracting    3.44650e+01ms CPU ( 14.9%) 	3.45181e+01ms Real ( 14.9%) ⇒  99.8% CPU
+   Energy         2.58980e+01ms CPU ( 11.2%) 	2.59191e+01ms Real ( 11.2%) ⇒  99.9% CPU
+2026.08.21T12:15:43.858 4.42351e+01 N  1 Completed left-to-right (→) sweep 3 of stage 2.
+2026.08.21T12:15:43.858 4.42351e+01 N  1 Convergence: Converged: Energy gain threshold reached: 4.51766e-09 < 1e-08
+2026.08.21T12:15:43.858 4.42351e+01 N  1 Report: (Converged) Energy gain threshold reached at 4.51766e-09 < 1e-08
+2026.08.21T12:15:43.858 4.42352e+01 N  1 Extrapolation info (minimal energy, maximal truncation):
+2026.08.21T12:15:43.858 4.42352e+01 N  1 Energy/Trunc: -40.508323908154054 8.4841535964845306e-06
+2026.08.21T12:15:43.929 4.43059e+01 N  1 Starting  right-to-left (←) sweep 1 of stage 3 at position 27 using DMRG3S.
+2026.08.21T12:15:44.315 4.46926e+01 T  1 Timing information:
+Timing; Total:    3.86433e+02ms CPU       	3.86641e+02ms Real
+   Caching        5.64000e-01ms CPU (  0.1%) 	5.92726e-01ms Real (  0.2%) ⇒  95.2% CPU
+   Solving        2.34200e+02ms CPU ( 60.6%) 	2.34216e+02ms Real ( 60.6%) ⇒ 100.0% CPU
+   Expectations   2.40000e-02ms CPU (  0.0%) 	2.71240e-02ms Real (  0.0%) ⇒  88.5% CPU
+   Expanding      4.28220e+01ms CPU ( 11.1%) 	4.28633e+01ms Real ( 11.1%) ⇒  99.9% CPU
+   Normalising    2.20700e+01ms CPU (  5.7%) 	2.21340e+01ms Real (  5.7%) ⇒  99.7% CPU
+   Contracting    5.60170e+01ms CPU ( 14.5%) 	5.60551e+01ms Real ( 14.5%) ⇒  99.9% CPU
+   Energy         3.07360e+01ms CPU (  8.0%) 	3.07530e+01ms Real (  8.0%) ⇒  99.9% CPU
+2026.08.21T12:15:44.315 4.46926e+01 N  1 Completed right-to-left (←) sweep 1 of stage 3.
+2026.08.21T12:15:44.316 4.46927e+01 N  1 Starting  left-to-right (→) sweep 2 of stage 3 at position 0 using DMRG3S.
+2026.08.21T12:15:44.764 4.51411e+01 T  1 Timing information:
+Timing; Total:    4.48188e+02ms CPU       	4.48515e+02ms Real
+   Caching        5.21000e-01ms CPU (  0.1%) 	5.43419e-01ms Real (  0.1%) ⇒  95.9% CPU
+   Solving        2.63604e+02ms CPU ( 58.8%) 	2.63779e+02ms Real ( 58.8%) ⇒  99.9% CPU
+   Expectations   1.70000e-02ms CPU (  0.0%) 	2.83800e-02ms Real (  0.0%) ⇒  59.9% CPU
+   Expanding      5.44640e+01ms CPU ( 12.2%) 	5.44990e+01ms Real ( 12.2%) ⇒  99.9% CPU
+   Normalising    3.36640e+01ms CPU (  7.5%) 	3.36972e+01ms Real (  7.5%) ⇒  99.9% CPU
+   Contracting    5.43710e+01ms CPU ( 12.1%) 	5.44049e+01ms Real ( 12.1%) ⇒  99.9% CPU
+   Energy         4.15470e+01ms CPU (  9.3%) 	4.15627e+01ms Real (  9.3%) ⇒ 100.0% CPU
+2026.08.21T12:15:44.764 4.51412e+01 N  1 Completed left-to-right (→) sweep 2 of stage 3.
+2026.08.21T12:15:44.764 4.51412e+01 N  1 Convergence: Converged: Energy gain threshold reached: 1.44602e-11 < 1e-08
+2026.08.21T12:15:44.764 4.51412e+01 N  1 Report: (Converged) Energy gain threshold reached at 1.44602e-11 < 1e-08
+2026.08.21T12:15:44.764 4.51413e+01 N  1 Extrapolation info (minimal energy, maximal truncation):
+2026.08.21T12:15:44.764 4.51413e+01 N  1 Energy/Trunc: -40.508323908739911 0
