@@ -59,8 +59,8 @@ def occ_mag_plot(occ, mag):
 
 N_bain_tab = np.arange(4, 30)
 # N_bain_tab = [10]
-init_state_method = "random"    # up, down, singlet, triplet, 
-hamitlonian_type  = "_NO"    # empty = star rep, _ch = chaine rep, _ch_v2 = chaine rep with numpy (faster), _NO = natural orbitals
+init_state_method = "lc_updown"    # up, down, singlet, triplet, 
+hamitlonian_type  = ""    # empty = star rep, _ch = chaine rep, _ch_v2 = chaine rep with numpy (faster), _NO = natural orbitals
 
 #######################################################
 ##################      Main       ####################

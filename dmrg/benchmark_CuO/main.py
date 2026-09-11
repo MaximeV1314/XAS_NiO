@@ -479,7 +479,7 @@ def hamiltonian_CH_v2(lat, U, mu, ed, V_l, e_l):
 
 
 
-def hamiltonian_NO(lat, U, mu, ed, V_l, e_l, dm, imp_index):
+def hamiltonian_NO(lat, U, mu, ed, V_l, e_l, dm, imp_index, epsilon = 1e-5, tridiag_method = "HH", truncate=False, verbosity = True):
 
     """Transform the star Anderson impurity Hamiltonian to chain representation.
     This function performs a unitary transformation from the star representation
@@ -495,9 +495,11 @@ def hamiltonian_NO(lat, U, mu, ed, V_l, e_l, dm, imp_index):
         e_l: array of bath energy levels (star representation).
         dm : density_matrix of the system (calculated previously using DMRG)
         imp_index : index of the impurity in the dm (be careful, it is 2*imp_index because of spin)
+        epsilon : threshold defining the active sites
+        tridiag_method : method used to tridiagonalize the empty and full parts of the hamiltonian 
+                        HH = Householder, LA = Lanczos algorithm
+        truncate : truncate or not the off diagonal blocks of H''
     """
-
-    verbosity = True
 
     ###########################################################
     # Check real part of density matrix and put imp at site 0 #
@@ -506,28 +508,23 @@ def hamiltonian_NO(lat, U, mu, ed, V_l, e_l, dm, imp_index):
     if np.max(dm.imag) > 1e-8 :
         print("Warning : density_matrix has imaginary part greater than 1e-8. We discard them anyway.")
     dm = dm.real
+    # density_matrix_plot(dm, imp_index, spin=True)
 
     dm = np.roll(np.roll(dm, -2*imp_index, axis=0), -2*imp_index, axis=1) # put imp in first index
 
     ###################################################################
-    # exctract spin up an down part of the dm + exctract the bath dm  #
+    #     exctract spin up part of the dm + exctract the bath dm      #     # down should be same
     ###################################################################
 
-    ########## up ###########
+    rho = dm[::2, ::2]       # spin up dm
+    # density_matrix_plot(rho, 0, spin=False)
 
-    rho_up = dm[::2, ::2]       # spin up dm
-    rho_bath_up = rho_up[1:, 1:]    # spin up bath dm
-    nu_up, P_bath_up = np.linalg.eigh(rho_bath_up)  # diag spin up bath dm
+    rho_bath = rho[1:, 1:]    # spin up bath dm
+    nu, P_bath = np.linalg.eigh(rho_bath)  # diag spin up bath dm
 
-    ######### dn ############
+    # density_matrix_plot(rho_bath, 0)
 
-    rho_dn = dm[1::2, 1::2]     # spin down dm
-    rho_bath_dn = rho_dn[1:, 1:]    # spin down bath dm
-    nu_dn, P_bath_dn = np.linalg.eigh(rho_bath_dn)  # diag spin down bath dm
-
-    #########################
-
-    N_bath = len(nu_up)
+    N_bath = len(V_l)
 
     ###########################################################
     # Construction of the 1-body part of the hamiltonian      #
@@ -539,31 +536,30 @@ def hamiltonian_NO(lat, U, mu, ed, V_l, e_l, dm, imp_index):
     H_1B[1:, 0] = np.roll(V_l, -imp_index)
     for i in range(1, N_bath+1) : H_1B[i, i] = np.roll(e_l, -imp_index)[i-1]
 
+    # hamiltonian_plot(H_1B, {0:"imp"}, title="", file="")
+
     ###################################################################
-    # find the b active site, such that Tr(rho_imp) + Tr(rho_b) = 1   #
+    # find the b active sites shuch that   min(1-occ, occ) > epsilon  #
     ###################################################################
 
-    ########## up ###########
+    active_states = []
+    active_occs   = []
+    active_index  = []
 
-    error_up = np.zeros(N_bath)
-    for i in range(N_bath): 
-        error_up[i] = np.abs(rho_up[0,0] + nu_up[i] - 1)    # erreur = |Tr(rho_imp) + Tr(rho_b) - 1|
+    empty_index = np.where(nu < epsilon)[0]
+    active_index = np.where((nu >= epsilon) & (nu <= (1 - epsilon)))[0]
+    filled_index = np.where(nu > 1 - epsilon)[0]
 
-    bup_idx = np.argmin(error_up)           # active site = the one that minimize the error
-    state_bup = np.zeros(N_bath+1)
-    state_bup[1:] = P_bath_up[:, bup_idx]   # state of the active site in the full basis (imp+bath)
-    rho_bup = nu_up[bup_idx]                # occupation of the active site (already ev of rho_bath)
+    for i in active_index:
 
-    ########## dn ###########
+        state_bi     = np.zeros(N_bath+1)
+        state_bi[1:] = P_bath[:, i]
+        active_states.append(state_bi)
+        active_occs.append(nu[i])   
 
-    error_dn = np.zeros(N_bath)
-    for i in range(N_bath): 
-        error_dn[i] = np.abs(rho_dn[0,0] + nu_dn[i] - 1)    # erreur = |Tr(rho_imp) + Tr(rho_b) - 1|
-
-    bdn_idx = np.argmin(error_dn)           # active site = the one that minimize the error
-    state_bdn = np.zeros(N_bath+1)
-    state_bdn[1:] = P_bath_dn[:, bdn_idx]   # state of the active site in the full basis (imp+bath)
-    rho_bdn = nu_dn[bdn_idx]                # occupation of the active site (already ev of rho_bath)
+    n_empty = len(empty_index)
+    n_active = len(active_index)
+    n_filled = len(filled_index)
 
     ######################################################################
     #                   define imp vector basis                          #
@@ -573,258 +569,177 @@ def hamiltonian_NO(lat, U, mu, ed, V_l, e_l, dm, imp_index):
     state_imp[0] = 1.
 
     ######################################################################
-    # OUTDATED (not used anymore) : basis and imp + b basis. Then, calculate rho_ib  #
+    # basis and imp + b basis. Then, calculate rho_ib  #
     ######################################################################
 
-    ########## up ###########
-
-    # ibup_basis = np.column_stack([state_imp, state_bup])
-    # rho_ib_up = ibup_basis.T @ rho_up @ ibup_basis          # density matrix of rho_ib
-
-    ########## dn ###########
-
-    # ibdn_basis = np.column_stack([state_imp, state_bdn])
-    # rho_ib_dn = ibdn_basis.T @ rho_dn @ ibdn_basis
+    imp_act_basis = np.column_stack([state_imp] + active_states)
+    rho_imp_act   = imp_act_basis.T @ rho @ imp_act_basis          # density matrix of rho_ib
 
     ###########################################################
-    # OUTDATED (not used anymore) : construct AB and B state, st rho_B = 0 and rho_AB = 1   #
+    # construct AB and B state, st rho_B = 0 and rho_AB = 1   #
     ###########################################################
 
-    ########## up ###########
-
-    # Diagonalize rho_ib --> give the anti-bonding and bonding change of basis P_ib
-    # nu_ibup, P_ibup = np.linalg.eigh(rho_ib_up)
-    # state_AB_up = ibup_basis @ P_ibup[:, 0]   # # come back to initial basis. occupation ~ 0
-    # state_B_up  = ibup_basis @ P_ibup[:, 1]   # occupation ~ 1
-
-    ########## dn ###########
-
-    # nu_ibdn, P_ibdn = np.linalg.eigh(rho_ib_dn)
-    # state_AB_dn = ibdn_basis @ P_ibdn[:, 0]   # occupation ~ 0
-    # state_B_dn  = ibdn_basis @ P_ibdn[:, 1]   # occupation ~ 1
-
-    # print("\nB occupation  =", state_B_up.T @ rho_up @ state_B_up)
-    # print("AB occupation =", state_AB_up.T @ rho_up @ state_AB_up)
-    # print("B norm  =", np.linalg.norm(state_B_up))
-    # print("AB norm =", np.linalg.norm(state_AB_up))
-    # print("<B|AB>  =", state_B_up.T @ state_AB_up)
-    
+    # Diagonalize rho_ib --> give the anti-bonding and bonding occupations nu_b_ab and the change of basis C_b_ab
+    nu_b_ab, C_b_ab = np.linalg.eigh(rho_imp_act)
 
     ############################################################################
     # construct the first two rotation basis (diag bath dm + AB/B) before Lanczos  #
     ############################################################################
 
-    ########## up ###########
 
-    P_bath_up_upfold = np.zeros((N_bath+1, N_bath+1))   # rotation of bath diag in full space (imp+bath)
-    P_bath_up_upfold[0,0]   = 1
-    P_bath_up_upfold[1:,1:] = P_bath_up                 
+    P_bath_upfold = np.zeros((N_bath+1, N_bath+1))   # rotation of bath diag in full space (imp+bath)
+    P_bath_upfold[0,0]   = 1
+    P_bath_upfold[1:,1:] = P_bath               
 
-    H_prime_up = P_bath_up_upfold.T @ H_1B @ P_bath_up_upfold   # first rotation on H_star
+    H_prime = P_bath_upfold.T @ H_1B @ P_bath_upfold   # first rotation on H_star
+    # hamiltonian_plot(H_prime, {0:"imp", active_index[0]+1:"1st active", active_index[-1]+1:"last active"}, title="", file="")
 
-    C_up = np.zeros((N_bath+1, N_bath+1))    # second rotation to define bonding / anti-bonding state (see notes of Jason Kaye)
-    C_up[0, bup_idx] = 1/np.sqrt(2)             
-    C_up[bup_idx+1, bup_idx] = -1/np.sqrt(2)    
-    C_up[0, bup_idx+1] = 1/np.sqrt(2)         
-    C_up[bup_idx+1, bup_idx+1] = 1/np.sqrt(2) 
+    C = np.zeros((N_bath+1, N_bath+1))              # bonding / antibonding rotation
 
-    # C_up[0, bup_idx] = P_ibup[0,0]
-    # C_up[bup_idx+1, bup_idx] = P_ibup[1,0]  
-    # C_up[0, bup_idx+1] = P_ibup[0,1]
-    # C_up[bup_idx+1, bup_idx+1] =  P_ibup[1,1]
+    for j, i in enumerate(empty_index): C[1+i, j] = 1.  # bonding / antibonding states in the middle
 
-    for i in range(bup_idx): C_up[i+1, i] = 1
-    for i in range(bup_idx+2, N_bath+1) : C_up[i, i] = 1
+    for j in range(1 + n_active):                       # rotation for bonding and antibonding. +1 because of imp
+        C[0, n_empty + j] = C_b_ab[0, j]
+        for k, i in enumerate(active_index):
+            C[1+i, n_empty + j] = C_b_ab[1+k, j]
 
-    state_AB_up = (P_bath_up_upfold @ C_up).T[bup_idx]       # anti-bonding state (only for debuguing)
-    state_B_up  = (P_bath_up_upfold @ C_up).T[bup_idx+1]     # bonding state (only for debuguing)
-    occ_AB_up = state_AB_up.T @ rho_up @ state_AB_up         # anti-bonding occupation (only for debuguing)
-    occ_B_up  = state_B_up.T @ rho_up @ state_B_up           # bonding occupation (only for debuguing)
-    occ_outdiag_up = state_AB_up.T @ rho_up @ state_B_up     # <AB|rho|B> occ
-
-    H_prime_prime_up = C_up.T @ H_prime_up @ C_up   # second rotation
-
-    ########## dn ###########
-
-    P_bath_dn_upfold = np.zeros((N_bath+1, N_bath+1))   # rotation of bath diag in full space (imp+bath)
-    P_bath_dn_upfold[0,0]   = 1
-    P_bath_dn_upfold[1:,1:] = P_bath_dn
-
-    H_prime_dn = P_bath_dn_upfold.T @ H_1B @ P_bath_dn_upfold   # first rotation on H_star
-
-    C_dn = np.zeros((N_bath+1, N_bath+1))     # second rotation to define bonding / anti-bonding state (see notes of Jason Kaye)
-    C_dn[0, bdn_idx] = 1/np.sqrt(2)             
-    C_dn[bdn_idx+1, bdn_idx] = -1/np.sqrt(2)    
-    C_dn[0, bdn_idx+1] = 1/np.sqrt(2)         
-    C_dn[bdn_idx+1, bdn_idx+1] = 1/np.sqrt(2) 
-
-    # C_dn[0, bup_idx] = P_ibdn[0,0]
-    # C_dn[bup_idx+1, bup_idx] = P_ibdn[1,0]  
-    # C_dn[0, bup_idx+1] = P_ibdn[0,1]
-    # C_dn[bup_idx+1, bup_idx+1] =  P_ibdn[1,1]
-    for i in range(bdn_idx): C_dn[i+1, i] = 1
-    for i in range(bdn_idx+2, N_bath+1) : C_dn[i, i] = 1    
-
-    state_AB_dn = (P_bath_up_upfold @ C_dn).T[bdn_idx]      # anti-bonding state (only for debuguing)
-    state_B_dn  = (P_bath_up_upfold @ C_dn).T[bdn_idx+1]    # bonding state (only for debuguing)
-    occ_AB_dn = state_AB_dn.T @ rho_dn @ state_AB_dn        # anti-bonding occupation (only for debuguing)
-    occ_B_dn = state_B_dn.T @ rho_dn @ state_B_dn           # bonding occupation (only for debuguing)
-    occ_outdiag_dn = state_AB_dn.T @ rho_dn @ state_B_dn
-
-    H_prime_prime_dn = C_dn.T @ H_prime_dn @ C_dn   # second rotation
-
+    for j, i in enumerate(filled_index): C[1+i, n_empty + 1 + n_active + j] = 1.
+    
+    H_prime_prime = C.T @ H_prime @ C   # second rotation
+    #hamiltonian_plot(H_prime_prime, {active_index[0]:"bonding", active_index[-1]+1:"antibonding"}, title="", file="")
+    #hamiltonian_plot(C@H_prime_prime@C.T, {0:"imp", active_index[0]+1:"first active site", active_index[-1]+1:"last active site"}, title="", file="")
 
     ############################################################################
     #         Tridiag of the two block and go back so imp-active basis         #
     ############################################################################
 
-    ########## up ###########
+    n_empty_bond = n_empty + np.sum(nu_b_ab<0.4)
+    H_empty = H_prime_prime[:n_empty_bond, :n_empty_bond]     # first block (empty states)
+    H_full  = H_prime_prime[n_empty_bond:, n_empty_bond:]       # first block (filledstates)
 
-    H_empty_up = H_prime_prime_up[0:bup_idx+1, 0:bup_idx+1]     # first block (empty states)
-    _, Q_empty_up = hessenberg(H_empty_up, calc_q=True)         # Q_empty = rotation to tridiag H_empty
+    if tridiag_method == "HH":
+        _, Q_empty = hessenberg(H_empty[::-1, ::-1], calc_q=True)         # Q_empty = rotation to tridiag H_empty
+        Q_empty = Q_empty[::-1, ::-1]
+        #hamiltonian_plot(H_empty, {0:"bonding"})
+        _, Q_full = hessenberg(H_full, calc_q=True)           # Q_full = rotation to tridiag H_full
+        #hamiltonian_plot(H_full, {1:"anti_bonding"})
 
-    H_full_up  = H_prime_prime_up[bup_idx+1:, bup_idx+1:]       # first block (filledstates)
-    _, Q_full_up = hessenberg(H_full_up, calc_q=True)           # Q_full = rotation to tridiag H_full
+    elif tridiag_method == "LA":
+        init_vector_empty = np.zeros(len(H_empty))
+        init_vector_empty[0] = 1
+        _, Q_empty = lanczos_full(init_vector_empty, H_empty[::-1, ::-1])
+        Q_empty = Q_empty[::-1, ::-1]
 
-    Q = np.block([[Q_empty_up, np.zeros((len(Q_empty_up), len(Q_full_up)))], 
-                  [np.zeros((len(Q_full_up), len(Q_empty_up))), Q_full_up]])    # tridiag rotation in the full space
+        init_vector_full = np.zeros(len(H_full))
+        init_vector_full[0] = 1
+        _, Q_full = lanczos_full(init_vector_full, H_full)
 
-    H_tri_up = C_up @ Q.T @ H_prime_prime_up @ Q @ C_up.T   #third and fourth rotation
+    else :
+        raise NameError("'%s' tridiag method doesn't exist. You can try 'HH' (Householder) or 'LA' (Lanczos algorithm)."
+                        %tridiag_method)
 
-    ########## dn ###########
+    Q = np.block([[Q_empty, np.zeros((len(Q_empty), len(Q_full)))], 
+                  [np.zeros((len(Q_full), len(Q_empty))), Q_full]])    # tridiag rotation in the full space
 
-    H_empty_dn = H_prime_prime_dn[0:bdn_idx+1, 0:bdn_idx+1]     # first block (empty states)
-    _, Q_empty_dn = hessenberg(H_empty_dn, calc_q=True)         # Q_empty = rotation to tridiag H_empty
+    if truncate :
+        H_prime_prime_trunc = H_prime_prime.copy()
+        H_prime_prime_trunc[n_empty_bond:, :n_empty_bond] = np.zeros_like(H_prime_prime_trunc[n_empty_bond:, :n_empty_bond])
+        H_prime_prime_trunc[:n_empty_bond, n_empty_bond:] = np.zeros_like(H_prime_prime_trunc[:n_empty_bond, n_empty_bond:])
+        # hamiltonian_plot(H_prime_prime, {active_index[0]:"bonding", active_index[-1]+1:"antibonding"}, title="", file="")
 
-    H_full_dn  = H_prime_prime_dn[bdn_idx+1:, bdn_idx+1:]       # first block (filledstates)
-    _, Q_full_dn = hessenberg(H_full_dn, calc_q=True)           # Q_full = rotation to tridiag H_full
-
-    Q = np.block([[Q_empty_dn, np.zeros((len(Q_empty_dn), len(Q_full_dn)))], 
-                  [np.zeros((len(Q_full_dn), len(Q_empty_dn))), Q_full_dn]])    # tridiag rotation in the full space
-
-    H_tri_dn = C_dn @ Q.T @ H_prime_prime_dn @ Q @ C_dn.T   #third and fourth rotation
-
-    ############################################################################
-    #         Construction of the Hamiltonian (MPO)         #
-    ############################################################################
-
-    list_op = []
-
-    # bath on site energy
-    for i in range(1, N_bath+1):
-        list_op.append(H_tri_up[i, i] * lat.get("cu", i) * lat.get("chu", i))
-        list_op.append(H_tri_dn[i, i] * lat.get("cd", i) * lat.get("chd", i))
-
-    # hopping between bath site (with the active site)
-    for i in range(1, N_bath):
-        list_op.append(H_tri_up[i+1, i] * lat.get("cu", i+1) * lat.get("chu", i))
-        list_op.append(H_tri_up[i, i+1] * lat.get("cu", i) * lat.get("chu", i+1))
-        list_op.append(H_tri_dn[i+1, i] * lat.get("cd", i+1) * lat.get("chd", i))
-        list_op.append(H_tri_dn[i, i+1] * lat.get("cd", i) * lat.get("chd", i+1))
-
-    # Impurity Hubbard interaction
-    list_op.append(U * lat.get("cu", 0) * lat.get("chu", 0)
-                    * lat.get("cd", 0) * lat.get("chd", 0))
-
-    # Impurity on-site energy, shifted by chemical potential
-    list_op.append((ed - mu) * lat.get("cu", 0) * lat.get("chu", 0))
-    list_op.append((ed - mu) * lat.get("cd", 0) * lat.get("chd", 0))
-
-    # hybridation between the impurity and -empty chain, -active site and -filled chain.
-    for i in range(bup_idx, bup_idx+3):
-        list_op.append(H_tri_up[0, i] * lat.get("cu", i) * lat.get("chu", 0))
-        list_op.append(H_tri_up[i, 0] * lat.get("cu", 0) * lat.get("chu", i))
-    for i in range(bdn_idx, bdn_idx+3):
-        list_op.append(H_tri_dn[0, i] * lat.get("cd", i) * lat.get("chd", 0))
-        list_op.append(H_tri_dn[i, 0] * lat.get("cd", 0) * lat.get("chd", i))
-
-    # Construct the final chain-representation Hamiltonian and store it in the lattice
-    H_NO = ptn.mp.addLog(list_op)
-    lat.add("H", "Hamiltonian in natural orbital rep", H_NO, True)
+        H_tri = C @ Q.T @ H_prime_prime_trunc @ Q @ C.T   #third and fourth rotation
+        # hamiltonian_plot(H_tri, {0:"imp", active_index[0]+1:"1st active", active_index[-1]+1:"last active"}, title="", file="")
+    
+    else :
+        H_tri = C @ Q.T @ H_prime_prime @ Q @ C.T   #third and fourth rotation
 
 
     if verbosity :
-        calcdir = "img/hamiltonian_NO/sebastian_dm/N%d_NO"%N_bath
+        calcdir = "img/hamiltonian_NO/dm_up_down/N%d_NO"%N_bath
         os.makedirs(calcdir, exist_ok=True)
+
+        print("\n-------------------------------------------------")
+        print("---------------    N_bath = %d     --------------"%N_bath)
+        print("-------------------------------------------------\n")
+        print("Epsilon : %E"%epsilon)
+        print("Tridiag method : %s"%tridiag_method)
+        print("Truncation : %s"%truncate)
+
+        # diag of up dm
+        print("\nDiagonal of the density matrix in ascending order : \n", np.sort(np.diag(dm)))
+        print("\nEigenvalues of the bath density matrix : \n", np.min([nu, 1-nu], axis=0))
+        print("\nImpurity occupation : ", dm[0,0], dm[1,1])
+
+        # find b active site
+        print("\nb_idx = ", active_index)
+        print("bstate occupation : ", active_occs)
+        print("bstate : \n", active_states)
+
+        print("\noccupation AB, B = ", nu_b_ab)
+        print("\nchange of basis AB, B (transpose to see better the vectors.) = \n", C_b_ab.T)
+
+        if truncate:
+            print("\nMax truncated value in H'' = ", np.max(np.abs(H_prime_prime[n_empty_bond:, :n_empty_bond])))
+
+        print("Eigenvalue of H_star - H_NO=",  np.linalg.norm(np.linalg.eigh(H_1B)[0] - np.linalg.eigh(H_tri)[0]))
+        print("Onsite imp star vs Onsite imp NO = ", H_1B[0,0], H_tri[0,0])
+
+        NO_transfo =  C @ Q.T @ C.T @ P_bath_upfold.T
+        print("\nNO transfo orthogonality error =", np.linalg.norm(NO_transfo @ NO_transfo.T  - np.eye(NO_transfo.shape[0])))
+        print("|imp> = \n", state_imp)
+        print("P_bath^T |imp> = \n", P_bath_upfold.T @ state_imp)
+        print("C^T P_bath^T |imp> = \n", C.T @ P_bath_upfold.T @ state_imp)
+        print("Q^T C^T P_bath^T |imp> = \n", Q.T @ C.T @ P_bath_upfold.T @ state_imp)
+        state_imp_end = C @ Q.T @ C.T @ P_bath_upfold.T @ state_imp
+        print("C Q^T C^T P_bath^T |imp> = \n", state_imp_end)
+
+
+
+        ############        plot        ###############
+
+        if len(active_index) > 0 :
+            dict1 = {0:"imp", active_index[0]+1:"1st active", active_index[-1]+1:"last active"}
+            dict3 = {active_index[0]:"bonding", active_index[-1]+1:"antibonding"}
+
+            k = n_empty_bond
+            indices = np.r_[np.arange(1, k+1), 0, np.arange(k+1, len(H_prime))]
+            dict2 = {k:"imp", active_index[0]:"1st active", active_index[-1]+1:"last active"}
+            H_prime_new = H_prime[np.ix_(indices, indices)]
+
+        else:
+            dict1 = {0:"imp"}
+            dict3 = {n_empty_bond :"imp"}
+            dict2 = {0:"imp"}
+            H_prime_new = H_prime.copy()
+
 
         # plot initial hamiltonian (in * rep)
         dict0 = {imp_index:"imp"}
-        hamiltonian_plot(np.roll(np.roll(H_1B, imp_index, axis=0), imp_index, axis=1), 
-                         dict0, title=r"$H_{\star}^{1B}$", file=calcdir+"/star_rep_N%d.png"%N_bath)
+        hamiltonian_plot(np.roll(np.roll(H_1B, imp_index, axis=0), imp_index, axis=1)
+                         , dict0, title=r"$H_{\star}^{1B}$", file=calcdir+"/star_rep_N%d"%N_bath)
+        
+        hamiltonian_plot(H_prime, dict1, title=r"$H' = P^T H_{\star}^{1B} P$", 
+                        file=calcdir+"/H1_prime_N%d"%N_bath) # first rotation (diag dm)
 
-        print("\n############# up #############\n")
+        
+        hamiltonian_plot(H_prime_new, dict2, 
+                         title=r"$H' = P^T H_{\star}^{1B} P$, close to the active sites", file=calcdir+"/H1_prime_close_N%d"%N_bath)
+            
+        hamiltonian_plot(H_prime_prime, dict3, title=r"$H'' = C^TP^T H_{\star} PC$", 
+                        file=calcdir+"/H2_prime_prime_N%d"%N_bath) # second rotation (A / AB)
+        if truncate:
+            hamiltonian_plot(H_prime_prime_trunc, dict3, title=r"$H'' = C^TP^T H_{\star} PC$, TRUNCATED (!)", 
+                            file=calcdir+"/H2_prime_prime_trunc_N%d"%N_bath) # second rotation (A / AB), après troncation
 
-        # diag of up dm
-        print("Diagonal of the density matrix in ascending order : \n", np.sort(np.diag(rho_up)))
-        print("Eigenvalues of the bath density matrix : \n", nu_up)
-        print("Impurity occupation : \n", rho_up[0,0])
+            hamiltonian_plot(Q.T@H_prime_prime_trunc@Q, dict3, title=r"$T^TC^TP^T H_{\star} PCT$, before going back", 
+                                    file=calcdir+"/H3_tri_N%d"%N_bath)       # last rotation ((A / AB)^T @ tridiag)
+        else :
+            hamiltonian_plot(Q.T@H_prime_prime@Q, dict3, title=r"$T^TC^TP^T H_{\star} PCT$, before going back", 
+                        file=calcdir+"/H3_tri_N%d"%N_bath)       # last rotation ((A / AB)^T @ tridiag)
+        
+        hamiltonian_plot(H_tri, dict1, title=r"$H_{NO}^{1B} = CT^TH'' TC^T$, Imp=%E"%state_imp_end[0], 
+                        file=calcdir+"/H4_tri_N%d"%N_bath)       # last rotation ((A / AB)^T @ tridiag)
 
-        # find b active site
-        print("\nerror = | Tr(rho_imp) + Tr(rho_b) - 1 | = ", np.min(error_up))
-        print("b_idx = ", bup_idx)
-        print("bstate occupation : \n", rho_bup)
-        print("bstate : \n", state_bup)
-
-        # construction of the ibup basis
-        # print("\nrho_ib =")
-        # print(rho_ib_up)
-
-        # bonding and anto-bonding states
-        #print("\nEigenvalues of rho_ib:")
-        #print(nu_ibup)
-        #print("\nEigenvectors:")
-        #print(P_ibup)
-        print("\noccupation AB, B = ", occ_AB_up, occ_B_up)
-        print("\n<AB|rho|B> =",  occ_outdiag_up)
-
-        print("\nEigenvalue of H_star - H_NO=",  np.linalg.norm(np.linalg.eigh(H_1B)[0] - np.linalg.eigh(H_tri_up)[0]))
-
-        dict1 = {0:"imp", (bup_idx+1):"active"}
-        dict2 = {bup_idx:"AB", (bup_idx+1):"B"}
-
-        hamiltonian_plot(H_prime_up, dict1, title=r"$H' = P^T H_{\star}^{1B} P$", 
-                        file=calcdir+"/up_H1_prime_N%d.png"%N_bath) # first rotation (diag dm)
-        hamiltonian_plot(H_prime_prime_up, dict2, title=r"$H'' = C^TP^T H_{\star} PC$", 
-                        file=calcdir+"/up_H2_prime_prime_N%d.png"%N_bath) # second rotation (A / AB)
-        hamiltonian_plot(H_tri_up, dict1, title=r"$H_{NO}^{1B} = CT^TC^TP^T H_{\star} PCTC^T$", 
-                        file=calcdir+"/up_H3_tri_N%d.png"%N_bath)       # last rotation ((A / AB)^T @ tridiag)
-
-
-        print("\n############# down #############\n")
-
-        # diag of up dm
-        print("Diagonal of the density matrix in ascending order : \n", np.sort(np.diag(rho_dn)))
-        print("Eigenvalues of the bath density matrix : \n", nu_dn)
-        print("Impurity occupation : \n", rho_dn[0,0])
-
-        # find b active site
-        print("\nerror = | Tr(rho_imp) + Tr(rho_b) - 1 | = ", np.min(error_dn))
-        print("b_idx = ", bdn_idx)
-        print("bstate occupation : \n", rho_bdn)
-        print("bstate : \n", state_bdn)
-
-        # construction of the ibup basis
-        # print("\nrho_ib =")
-        # print(rho_ib_dn)
-
-        # bonding and anto-bonding states
-        #print("\nEigenvalues of rho_ib:")
-        #print(nu_ibdn)
-        #print("\nEigenvectors:")
-        #print(P_ibdn)
-        print("\noccupation AB, B = ", occ_AB_dn, occ_B_dn)
-        print("\n<AB|rho|B> =", occ_outdiag_dn)
-
-        print("\nEigenvalue of H_star - H_NO=",  np.linalg.norm(np.linalg.eigh(H_1B)[0] - np.linalg.eigh(H_tri_dn)[0]))
-
-        dict1 = {0:"imp", (bdn_idx+1):"active"}
-        dict2 = {bdn_idx:"AB", (bdn_idx+1):"B"}
-        hamiltonian_plot(H_prime_dn, dict1, title=r"$H' = P^T H_{\star}^{1B} P$", 
-                         file=calcdir+"/dn_H1_prime_N%d.png"%N_bath)   # first rotation (diag dm)
-        hamiltonian_plot(H_prime_prime_dn, dict2, title=r"$H'' = C^TP^T H_{\star} PC$", 
-                         file=calcdir+"/dn_H2_prime_prime_N%d.png"%N_bath) # second rotation (A / AB)
-        hamiltonian_plot(H_tri_dn, dict1, title=r"$H_{NO}^{1B} = CT^TC^TP^T H_{\star} PCTC^T$", 
-                         file=calcdir+"/dn_H3_tri_N%d.png"%N_bath)       # last rotation ((A / AB)^T @ tridiag)
 
 
 
@@ -893,6 +808,8 @@ def init_state_naive(lat, e_l, imp_index, init_state_method="random", occ_deriv 
             remp = L - 1
         else:
             remp = L
+        print("L = ", L)
+        print(remp)
         state = ptn.mp.generateCompleteState(lat, "%d, %.1f" % (remp - occ_deriv, mag))
 
     return state
