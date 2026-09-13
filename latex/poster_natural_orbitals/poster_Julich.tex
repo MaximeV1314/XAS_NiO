@@ -210,7 +210,7 @@ Resonant Inelastic X-ray Scattering (RIXS) is a two process spectroscopy techniq
 
 \vspace{0.5em}
 
-$(|i\rangle, E_i)$ is the groundstate, $(|m\rangle\!\!=\!\!T_a^\mathbf{q}|i\rangle, E_m)$ the intermediate absorption state and $(|f\rangle\!\!=\!\!T_e^\mathbf{q}|m\rangle, E_f)$ the final emission state. $\Gamma$ is the quasiparticle lifetime.
+The quantity of main interest is the cross section $\sigma$, where the groundstate $(|i\rangle, E_i)$ appears, as well as the intermediate absorption state $(|m\rangle\!\!=\!\!T_a^\mathbf{q}|i\rangle, E_m)$ and the final emission state $(|f\rangle\!\!=\!\!T_e^\mathbf{q}|m\rangle, E_f)$. $\Gamma$ is the quasiparticle lifetime.
 \end{beamercolorbox}
 \end{block}
 \end{column}
@@ -218,18 +218,20 @@ $(|i\rangle, E_i)$ is the groundstate, $(|m\rangle\!\!=\!\!T_a^\mathbf{q}|i\rang
 \begin{column}{.02\textwidth}
 \end{column}	%Empty spacer column in the middle
 \begin{column}{.47\textwidth}
-\begin{block}{\color{ta2orange!0} Augmented Anderson Impurity Model\vphantom{Dy)}}
+\begin{block}{\color{ta2orange!0} Augmented Anderson Impurity Model (AAIM)}
 \setbeamercolor{coloredboxstuff}{bg=ta2orange!0}
 \begin{beamercolorbox}[wd=\textwidth]{coloredboxstuff}
+The model of interest is the AAIM, corresponding to an impurity with \textcolor[rgb]{0.25,0.46,0.02}{core} and \textcolor[rgb]{0,0.32,0.69}{valence} states, the latter hybridizing with a \textcolor[rgb]{0.75,0.47,0}{non-interacting bath}.
+
+\vspace{0.1em}
+
 \begin{minipage}[c]{0.96\textwidth}
 \centering
 
 
-
-
 \tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
 
-\begin{tikzpicture}[x=2.2pt,y=2.pt,yscale=-1,xscale=1]
+\begin{tikzpicture}[x=2.5pt,y=2.3pt,yscale=-1,xscale=1]
 %uncomment if require: \path (0,330); %set diagram left start at 0, and has height of 330
 
 %Shape: Chord [id:dp25440956650596025] 
@@ -325,6 +327,22 @@ bath
 
 \end{minipage}
 
+\vspace{0.7em}
+
+\begin{minipage}{0.45 \textwidth}
+\textbf{Building the model}
+\begin{itemize}
+\item Density Functional Theory
+\item Dynamical Mean Field Theory
+\end{itemize}
+\end{minipage}
+\begin{minipage}{0.45 \textwidth}
+\textbf{Solving the model}
+\begin{itemize}
+\item Matrix Product State formalism
+\item Exact Diagonalization (Lanczos)
+\end{itemize}
+\end{minipage}
 
 \end{beamercolorbox}
 \end{block}
@@ -347,34 +365,27 @@ bath
 \begin{column}{.03\textwidth}
 \end{column} % Empty spacer column
 
-\begin{column}{.53\textwidth} % The first column
+\begin{column}{.40\textwidth} % The first column
 \begin{block}{\color{cyan!40} Density Functional Theory (DFT)}
 \setbeamercolor{coloredboxstuff}{bg=cyan!5}
 \begin{beamercolorbox}[wd=\textwidth]{coloredboxstuff}
 
-DFT+U is a mean-field, ground-state theory. It allows to compute the Bloch states (BS), the bands and the density of state (DOS) of CuO with projected Cu-3s/3d and O-2p.
+We do a one band model benchmark with copper oxide CuO
 
 \vspace{0.15em}
 
-	\begin{minipage}{0.42\textwidth}
+\begin{minipage}{0.96\textwidth}
 	\centering
-	\includegraphics[width=1.2\textwidth]{imgs/dos_vs_bands_AF_bax.pdf}
+	\includegraphics[width=0.95\textwidth]{imgs/dos_vs_bands_PM.pdf}
    \end{minipage}
    \hspace{3em}
-\begin{minipage}{0.46\textwidth}
-\begin{itemize}
-\item A supercell was used to model the antiferromagnetic (AF) phase. Using constrained DFT, we computed the Hubbard $3d$ interaction $U=6.9$ eV. AF+U opens a 1.33 eV gap, in good agreement with experiment \cite{Tahir, Marabelli}.
-\vspace{0.7cm}
-\item Hole states are found between 0 and 2 eV, with dominant Cu-$3d_{x^2-y^2}$ character hybridized with O-$2p$ orbitals.
-\end{itemize}
-\end{minipage}
 \end{beamercolorbox}
 \end{block}
 \end{column} % End of the middle column
 \begin{column}{.017\textwidth}
 \end{column}	%Empty spacer column in the middle
 
-\begin{column}{.40\textwidth}
+\begin{column}{.56\textwidth}
 	\begin{block}{\color{cyan!40} Wannier Functions (WF)}
 	\setbeamercolor{coloredboxstuff}{bg=cyan!5}
 	\begin{beamercolorbox}[wd=\textwidth]{coloredboxstuff}
