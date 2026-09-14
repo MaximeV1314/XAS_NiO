@@ -89,7 +89,7 @@ $^*$ Corresponding author: \href{mailto:maxime.vinteler@sorbonne-universite.fr}{
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%MOTIVATION & HUBBARD MODEL
+%MOTIVATION ON RIXS AND AAIM
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \vspace{-0.75em}
 
@@ -100,10 +100,10 @@ $^*$ Corresponding author: \href{mailto:maxime.vinteler@sorbonne-universite.fr}{
 \end{column} % Empty spacer column
 
 \begin{column}{.47\textwidth} % The first column
-\begin{block}{\color{ta2orange!0}Resonant Inelastic X-ray Scattering}
+\begin{block}{\color{ta2orange!0}Resonant Inelastic X-ray Scattering (RIXS)}
 \setbeamercolor{coloredboxstuff}{bg=ta2orange!0}
 \begin{beamercolorbox}[wd=\textwidth]{coloredboxstuff}
-Resonant Inelastic X-ray Scattering (RIXS) is a two process spectroscopy technique with core absorption and emission. It allows to probe a lot of different excitations (phonons, magnons, $d$-$d$, charge transfer).
+RIXS is a two process spectroscopy technique with core \textcolor[rgb]{0.82,0.01,0.11}{\textbf{absorption}} and \textcolor[rgb]{0,0.27,0.58}{\textbf{emission}}. It allows to probe a lot of different excitations (phonons, magnons, $d$-$d$, charge transfer) via the cross section $\sigma$.
 \vspace{0.5em}
 
 \begin{minipage}[c]{0.96\textwidth}
@@ -112,7 +112,12 @@ Resonant Inelastic X-ray Scattering (RIXS) is a two process spectroscopy techniq
 
 \tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
 
-\begin{tikzpicture}[x=2.pt,y=2.,yscale=-1,xscale=1]
+
+
+
+\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+
+\begin{tikzpicture}[x=2pt,y=2pt,yscale=-1,xscale=1]
 %uncomment if require: \path (0,300); %set diagram left start at 0, and has height of 300
 
 %Straight Lines [id:da1682050496037556] 
@@ -187,30 +192,52 @@ Resonant Inelastic X-ray Scattering (RIXS) is a two process spectroscopy techniq
 \draw  [fill={rgb, 255:red, 255; green, 255; blue, 255 }  ,fill opacity=1 ] (204.85,112.8) .. controls (204.85,108.96) and (208.21,105.85) .. (212.35,105.85) .. controls (216.49,105.85) and (219.84,108.96) .. (219.84,112.8) .. controls (219.84,116.64) and (216.49,119.75) .. (212.35,119.75) .. controls (208.21,119.75) and (204.85,116.64) .. (204.85,112.8) -- cycle ;
 
 % Text Node
-\draw (21.39,159.77) node [anchor=north west][inner sep=0.75pt]  [rotate=-5.19]  {$\textcolor[rgb]{0.82,0.01,0.11}{\omega _{in} ,\mathbf{k}_{in}}$};
+\draw (21.39,159.77) node [anchor=north west][inner sep=0.75pt]  [rotate=-5.19]  {$\textcolor[rgb]{0.82,0.01,0.11}{\omega }\textcolor[rgb]{0.82,0.01,0.11}{_{in}}\textcolor[rgb]{0.82,0.01,0.11}{,}\mathbf{\textcolor[rgb]{0.82,0.01,0.11}{k}}\textcolor[rgb]{0.82,0.01,0.11}{_{in}}$};
 % Text Node
-\draw (222.51,129.84) node [anchor=north west][inner sep=0.75pt]  [rotate=-4.49]  {$\textcolor[rgb]{0,0.27,0.58}{\omega _{out} ,\mathbf{k}_{out}}$};
+\draw (222.51,129.84) node [anchor=north west][inner sep=0.75pt]  [rotate=-4.49]  {$\textcolor[rgb]{0,0.27,0.58}{\omega }\textcolor[rgb]{0,0.27,0.58}{_{out}}\textcolor[rgb]{0,0.27,0.58}{,}\mathbf{\textcolor[rgb]{0,0.27,0.58}{k}}\textcolor[rgb]{0,0.27,0.58}{_{out}}$};
 % Text Node
 \draw (59.06,38.09) node [anchor=north west][inner sep=0.75pt]    {$E$};
 % Text Node
 \draw (175.09,38.89) node [anchor=north west][inner sep=0.75pt]    {$E$};
 % Text Node
-\draw (259.5,60.4) node [anchor=north west][inner sep=0.75pt]    {$ \begin{array}{l}
-\frac{d^{2} \sigma }{d\Omega d\omega } \varpropto \sum _{f}\left| \sum _{m} \ \frac{\textcolor[rgb]{0,0.24,0.53}{\langle f|T_{e}^{\mathbf{q}} |m\rangle }\textcolor[rgb]{0.82,0.01,0.11}{\langle m|T_{a}^{\mathbf{q}} |i\rangle }}{\omega _{in} +E_{i} -E_{m} +i\Gamma }\right| ^{2}\\
+\draw (265.5,40.4) node [anchor=north west][inner sep=0.75pt]    {$ \begin{array}{l}
+\frac{d^{2} \sigma }{d\Omega d\omega } \varpropto \sum _{f}\left| \sum _{m} \ \frac{\textcolor[rgb]{0,0.24,0.53}{\langle f|T}\textcolor[rgb]{0,0.24,0.53}{_{e}^{\mathbf{q}}}\textcolor[rgb]{0,0.24,0.53}{|m\rangle }\textcolor[rgb]{0.82,0.01,0.11}{\langle m|T}\textcolor[rgb]{0.82,0.01,0.11}{_{a}^{\mathbf{q}}}\textcolor[rgb]{0.82,0.01,0.11}{|i\rangle }}{\omega _{in} +E_{i} -E_{m} +i\Gamma }\right| ^{2}\\
 \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \times \delta ( \omega _{in} +E_{i} -E_{f} -\omega _{out})
 \end{array}$};
+% Text Node
+\draw (315.5,137) node[
+    anchor=north west,
+    inner sep=0.75pt,
+    align=left
+] {
+    \begin{minipage}{14cm}
+        \begin{itemize}
+            \item $\displaystyle \textcolor[rgb]{0.82,0.01,0.11}{T}\textcolor[rgb]{0.82,0.01,0.11}{_{a}^{\mathbf{q}}}$ : absorption operator
+            \item $\displaystyle \textcolor[rgb]{0,0.24,0.53}{T}\textcolor[rgb]{0,0.24,0.53}{_{e}^{\mathbf{q}}}$ : emission operator
+        \end{itemize}
+    \end{minipage}
+};
 
 
 \end{tikzpicture}
-
-
 
 
 \end{minipage}
 
 \vspace{0.5em}
 
-The quantity of main interest is the cross section $\sigma$, where the groundstate $(|i\rangle, E_i)$ appears, as well as the intermediate absorption state $(|m\rangle\!\!=\!\!T_a^\mathbf{q}|i\rangle, E_m)$ and the final emission state $(|f\rangle\!\!=\!\!T_e^\mathbf{q}|m\rangle, E_f)$. $\Gamma$ is the quasiparticle lifetime.
+\begin{minipage}{0.39\textwidth}
+\begin{itemize}
+\item $E_i, |i\rangle$ : ground state
+\item $\Gamma$ : quasiparticle lifetime
+\end{itemize}
+\end{minipage}
+\begin{minipage}{0.53\textwidth}
+\begin{itemize}
+\item $E_m, |m\rangle$ : intermediate state (left Fig.)
+\item $E_f, |f\rangle$ : final state (right Fig.)
+\end{itemize}
+\end{minipage}
 \end{beamercolorbox}
 \end{block}
 \end{column}
@@ -221,7 +248,7 @@ The quantity of main interest is the cross section $\sigma$, where the groundsta
 \begin{block}{\color{ta2orange!0} Augmented Anderson Impurity Model (AAIM)}
 \setbeamercolor{coloredboxstuff}{bg=ta2orange!0}
 \begin{beamercolorbox}[wd=\textwidth]{coloredboxstuff}
-The model of interest is the AAIM, corresponding to an impurity with \textcolor[rgb]{0.25,0.46,0.02}{core} and \textcolor[rgb]{0,0.32,0.69}{valence} states, the latter hybridizing with a \textcolor[rgb]{0.75,0.47,0}{non-interacting bath}.
+The model of interest is the AAIM, corresponding to an impurity with \textcolor[rgb]{0.25,0.46,0.02}{\textbf{core}} and \textcolor[rgb]{0,0.32,0.69}{\textbf{valence}} states, the latter hybridizing with a \textcolor[rgb]{0.75,0.47,0}{\textbf{non-interacting bath}}.
 
 \vspace{0.1em}
 
@@ -356,7 +383,7 @@ bath
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% DFT & WANNIER
+% DFT & DMFT
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
@@ -365,61 +392,59 @@ bath
 \begin{column}{.03\textwidth}
 \end{column} % Empty spacer column
 
-\begin{column}{.40\textwidth} % The first column
+\begin{column}{.34\textwidth} % The first column
 \begin{block}{\color{cyan!40} Density Functional Theory (DFT)}
 \setbeamercolor{coloredboxstuff}{bg=cyan!5}
 \begin{beamercolorbox}[wd=\textwidth]{coloredboxstuff}
-
-We do a one band model benchmark with copper oxide CuO
+One band model benchmark with copper oxide CuO.
 
 \vspace{0.15em}
 
 \begin{minipage}{0.96\textwidth}
 	\centering
 	\includegraphics[width=0.95\textwidth]{imgs/dos_vs_bands_PM.pdf}
-   \end{minipage}
-   \hspace{3em}
+\end{minipage}
+
+\vspace{0.15em}
+
+\begin{itemize}
+	\item \textbf{Metallic phase} altought experiments measure a gap.
+	\item Copper $d_{x^2-y^2}$'s hybridize with oxygen $2p$'s at $E_f$.
+\end{itemize}
+   
 \end{beamercolorbox}
 \end{block}
 \end{column} % End of the middle column
 \begin{column}{.017\textwidth}
 \end{column}	%Empty spacer column in the middle
 
-\begin{column}{.56\textwidth}
-	\begin{block}{\color{cyan!40} Wannier Functions (WF)}
+\begin{column}{.60\textwidth}
+	\begin{block}{\color{cyan!40} Dynamical Mean Field THeory (DMFT)}
 	\setbeamercolor{coloredboxstuff}{bg=cyan!5}
 	\begin{beamercolorbox}[wd=\textwidth]{coloredboxstuff}
-WF are Fourier transform of BS: $\left| \textbf{R}n \right> = \int_{\text{BZ}}\!\!\!\! \text{d}\textbf{k} \; e^{-i\textbf{k}\textbf{R}} \sum_m U^{(\mathbf{k})}_{mn}\left| \phi_{n,\textbf{k}} \right>$
+DMFT maps the lattice problem self-consistently onto an impurity model, solved with Monte-Carlo.
 
-\vspace{-0.5em}
+\vspace{0.15em}
 
-\begin{minipage}{0.4\textwidth}
-\raisebox{-1.5cm}{%
-    \includegraphics[width=0.75\textwidth,
-                     trim=0.cm 0.cm 0.cm 0.1cm,
-                     clip]{imgs/Cu1_WF.png}
-\hspace{-2.5cm}
-\raisebox{4cm}{\textbf{Plaquette 1}}
-}
-\hspace*{0cm}
-\raisebox{0.cm}{
-\raisebox{3.7cm}{\textbf{Plaquette 2}}
-\hspace{-2.5cm}
-\includegraphics[width=0.75\textwidth]{imgs/Cu3_WF.png}
-}
+\hspace{0.02\textwidth}
+\begin{minipage}{0.48\textwidth}
+	\centering
+    \includegraphics[width=0.95\textwidth]{imgs/SE_iwn.pdf}
 \end{minipage}
-\hfill
-\begin{minipage}{0.52\textwidth}
-\vspace{1.em}
+\hspace{-0.05\textwidth}
+\begin{minipage}{0.48\textwidth}
+	\centering
+	\includegraphics[width=0.92\textwidth]{imgs/discr_bath_N12.pdf}
+\end{minipage}
+
+\vspace{0.15em}
+
 \begin{itemize}
-\item We maximally localize them with respect to the $U^{(\mathbf{k})}$ gauge.
-\vspace{0.5cm}
-\item These WFs are localized Cu-$3d_{x^2-y^2}$ orbitals centered on each Cu site $\mathbf{R}$, hybridized with nearest O-$2p$ orbitals.
-\vspace{0.5cm}
-\item The $3s$ orbital is a core state (see DOS), we use an atomic wavefunction.
+\item Extract the converged self-energy $\Sigma(i\omega_n)$ and \textbf{continuate it analytically} to real frequencies.
+\item Compute the continuous bath $|V(\omega)|^2 \propto \Im(\Delta(\omega))=G^{-1}(\omega)+\Sigma(\omega)$ and \textbf{discretize it}.
 \end{itemize}
-\end{minipage}
-\vspace{0.7cm}
+
+
 	\end{beamercolorbox}
 	\end{block}
 \end{column}
@@ -431,7 +456,7 @@ WF are Fourier transform of BS: $\left| \textbf{R}n \right> = \int_{\text{BZ}}\!
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Results
+% MPS & LANCZOS
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
@@ -440,56 +465,151 @@ WF are Fourier transform of BS: $\left| \textbf{R}n \right> = \int_{\text{BZ}}\!
 \begin{column}{.03\textwidth}
 \end{column} % Empty spacer column
 
-\begin{column}{.95\textwidth} % The first column
-\begin{block}{\color{cyan!40} Numerical Results and Comparison with Experimental Data\vphantom{Dy)}}
-\setbeamercolor{coloredboxstuff}{bg=cyan!5}
+\begin{column}{.33\textwidth} % The first column
+\begin{block}{\color{ta2orange!0} Matrix Product States (MPS)}
+\setbeamercolor{coloredboxstuff}{bg=ta2orange!0}
 \begin{beamercolorbox}[wd=\textwidth]{coloredboxstuff}
-\begin{minipage}{0.38\textwidth}
-\begin{itemize}
-\item Two inequivalent copper atoms
-\item One $3d^{(i)}_{x^2-y^2}$ hole on each ineq. copper atom
-\end{itemize}
+A many-body state $| \psi \rangle$ on a basis $|\mathbf{n}=n_1\ldots n_L\rangle$:
 \begin{equation*}
-\longrightarrow I(\mathbf{q})=\sum_i | \left< \right. 3d^{(i)}_{x^2-y^2} | e^{i\mathbf{qr}} | 3s^{(i)} \left.\right> |^2
+|\psi \rangle = \sum_\mathbf{n}c_\mathbf{n} |\mathbf{n}\rangle = \sum_\mathbf{n} \!\!\sum_{a_1\ldots a_{L-1}} \!\! M^{n_1}_{1,a_1}M^{n_2}_{a_1,a_2}\ldots M^{n_L}_{a_{L-1},1} |\mathbf{n}\rangle
 \end{equation*}
 
-\begin{itemize}
-\item \textbf{Left:} non-orthogonal plaquettes $\rightarrow$ mixing of NRIXS contributions from inequivalent atoms.
-\item \textbf{Middle:} probe of the $\left[110\right]$ plane, nearly parallel to one plaquette. Asymmetry between $q_x$ and $q_y$.
-\item \textbf{Right:} polar plot compared with experiment (red and black dots) \cite{Baledent}, showing good agreement. We observe a small contribution from the second plaquette.
-\end{itemize}
-\end{minipage}
-\hspace{-3cm}
-\begin{minipage}{0.2\textwidth}
+
+\begin{minipage}{0.96\textwidth}
+
 \centering
-Full angular dependance
-\includegraphics[width=1.\textwidth, trim=2.5cm 2.5cm 2.5cm 2.5cm, clip]{imgs/Cu1_p_Cu3_skimage.pdf}
-\end{minipage}
-\hspace{-1.5cm}
-\begin{minipage}{0.2\textwidth}
-\centering
-\hspace{2cm}[110] plane
-\includegraphics[width=1.2\textwidth]{imgs/nrixs_plaq.pdf}
-\end{minipage}
-\hspace{3.cm}
-\begin{minipage}{0.2\textwidth}
-\centering
-Polar plot of [110] $q=9.57\,\mathring{A}^{-1}$
-\includegraphics[width=1.\textwidth, trim=0.0cm 0.0cm 0.0cm 1.0cm, clip]{imgs/polar_cuo.png}
+
+\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+
+\begin{tikzpicture}[x=2pt,y=2pt,yscale=-1,xscale=1]
+%uncomment if require: \path (0,300); %set diagram left start at 0, and has height of 300
+
+%Shape: Circle [id:dp49379703017958154] 
+\draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (130.33,130.33) .. controls (130.33,122.23) and (136.9,115.67) .. (145,115.67) .. controls (153.1,115.67) and (159.67,122.23) .. (159.67,130.33) .. controls (159.67,138.43) and (153.1,145) .. (145,145) .. controls (136.9,145) and (130.33,138.43) .. (130.33,130.33) -- cycle ;
+%Shape: Circle [id:dp9873366652044924] 
+\draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (191.33,130.33) .. controls (191.33,122.23) and (197.9,115.67) .. (206,115.67) .. controls (214.1,115.67) and (220.67,122.23) .. (220.67,130.33) .. controls (220.67,138.43) and (214.1,145) .. (206,145) .. controls (197.9,145) and (191.33,138.43) .. (191.33,130.33) -- cycle ;
+%Shape: Circle [id:dp07435353778901121] 
+\draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (251.33,131.33) .. controls (251.33,123.23) and (257.9,116.67) .. (266,116.67) .. controls (274.1,116.67) and (280.67,123.23) .. (280.67,131.33) .. controls (280.67,139.43) and (274.1,146) .. (266,146) .. controls (257.9,146) and (251.33,139.43) .. (251.33,131.33) -- cycle ;
+%Shape: Circle [id:dp9202175168993141] 
+\draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (312.33,131.33) .. controls (312.33,123.23) and (318.9,116.67) .. (327,116.67) .. controls (335.1,116.67) and (341.67,123.23) .. (341.67,131.33) .. controls (341.67,139.43) and (335.1,146) .. (327,146) .. controls (318.9,146) and (312.33,139.43) .. (312.33,131.33) -- cycle ;
+%Straight Lines [id:da17544117308797003] 
+\draw    (159.67,130.33) -- (191.33,130.33) ;
+%Straight Lines [id:da07579848649183252] 
+\draw    (219.67,131.33) -- (251.33,131.33) ;
+%Straight Lines [id:da7874903524216095] 
+\draw    (280.67,131.33) -- (312.33,131.33) ;
+%Straight Lines [id:da25077476691990674] 
+\draw    (115.67,130.33) -- (130.33,130.33) ;
+%Straight Lines [id:da16899996766266256] 
+\draw    (341.67,131.33) -- (355,131.33) ;
+%Straight Lines [id:da6652772583485322] 
+\draw    (145,115.67) -- (145,101.67) ;
+%Straight Lines [id:da1663153379537442] 
+\draw    (206,115.67) -- (206,101.67) ;
+%Straight Lines [id:da82257179464055] 
+\draw    (266,116.67) -- (266,102.67) ;
+%Straight Lines [id:da9267417672421946] 
+\draw    (327,116.67) -- (327,102.67) ;
+
+% Text Node
+\draw (133.33,120.4) node [anchor=north west][inner sep=0.75pt]    {$\textcolor[rgb]{1,1,1}{M^{1}}$};
+% Text Node
+\draw (193.67,120.73) node [anchor=north west][inner sep=0.75pt]    {$\textcolor[rgb]{1,1,1}{M}\textcolor[rgb]{1,1,1}{^{2}}$};
+% Text Node
+\draw (253.67,120.07) node [anchor=north west][inner sep=0.75pt]    {$\textcolor[rgb]{1,1,1}{M}\textcolor[rgb]{1,1,1}{^{3}}$};
+% Text Node
+\draw (314,120.73) node [anchor=north west][inner sep=0.75pt]    {$\textcolor[rgb]{1,1,1}{M}\textcolor[rgb]{1,1,1}{^{4}}$};
+% Text Node
+\draw (168,136.4) node [anchor=north west][inner sep=0.75pt]    {$a_{1}$};
+% Text Node
+\draw (227.67,136.4) node [anchor=north west][inner sep=0.75pt]    {$a_{2}$};
+% Text Node
+\draw (288.33,136.4) node [anchor=north west][inner sep=0.75pt]    {$a_{3}$};
+% Text Node
+\draw (136.33,86.73) node [anchor=north west][inner sep=0.75pt]    {$n_{1}$};
+% Text Node
+\draw (197.67,86.4) node [anchor=north west][inner sep=0.75pt]    {$n_{2}$};
+% Text Node
+\draw (258,86.4) node [anchor=north west][inner sep=0.75pt]    {$n_{3}$};
+% Text Node
+\draw (318.67,86.4) node [anchor=north west][inner sep=0.75pt]    {$n_{4}$};
+
+
+\end{tikzpicture}
+
 \end{minipage}
 
+\vspace{0.8em}
+
+\begin{itemize}
+	\item MPS $=$ chain of rank-3 tensors $M^i$ with dimension that grows exponentially with $L$.
+	\item \textbf{Truncating the singular values:} $L{\chi}^2$ complexity while keeping (hopefully) the interesting physics!
+	\item $\chi$, that is the number of singular values kept, controll this compression.
+\end{itemize}
 \end{beamercolorbox}
 \end{block}
 \end{column} % End of the middle column
 
+\begin{column}{.017\textwidth}
+\end{column}	%Empty spacer column in the middle
+
+\begin{column}{.38\textwidth}
+	\begin{block}{\color{cyan!40}Density Matrix Renormalization Group}
+	\setbeamercolor{coloredboxstuff}{bg=cyan!5}
+	\begin{beamercolorbox}[wd=\textwidth]{coloredboxstuff}
+Density Matrix Renormalisation Group (DMRG) is a variational method using MPS that allows to compute the ground state.
+
+\vspace{0.5em}
+
+\begin{minipage}{0.60\textwidth}
+	\includegraphics[width=1.05\textwidth, trim={0 1.7cm 0 1.6cm},clip]{imgs/dm.pdf}
+\end{minipage}
+\hspace{-0.1cm}
+\begin{minipage}{0.38\textwidth}
+\centering
+	\begin{itemize}
+		\item Benchmark with \textbf{no core states}.
+		\item $\chi \sim 150$
+		\item Bath sites $0-5$: valence sites.
+		\item Bath sites $7-12$: conduction sites.
+		\item \textbf{Impurity:} half-filled, correlated with all other bath sites.
+	\end{itemize}
+\end{minipage}
+
+
+	\end{beamercolorbox}
+	\end{block}
+\end{column}
+
+\begin{column}{.017\textwidth}
+\end{column}	%Empty spacer column in the middle
+
+\begin{column}{.23\textwidth}
+	\begin{block}{\color{ta2orange!0}Lanczos Algorithm}
+	\setbeamercolor{coloredboxstuff}{bg=ta2orange!0}
+	\begin{beamercolorbox}[wd=\textwidth]{coloredboxstuff}
+Projection of $\hat{H}$ in the Krylov subspace:
+\begin{equation*}
+\mathcal{K}_k(\hat{H}, v) = \text{span}(v, \hat{H}v, \ldots, \hat{H}^kv)
+\end{equation*}
+
+\begin{itemize}
+	\item $v=T_a^\mathbf{q}|i\rangle$ the initial state
+	\item $k\sim10^6$ the dimension of the subspace where diagonalisation is still manageable.
+	\item Lanczos orthogonalizes the states iteratively.
+\end{itemize}
+\textbf{Problem}: applying $\hat{H}$ on a state increases the bond dimension $\chi$ significantly and thus the computational complexity...
+	\end{beamercolorbox}
+	\end{block}
+\end{column}
+
 \begin{column}{.03\textwidth}
 \end{column} % Empty spacer column
-
 \end{columns} % End of all the columns in the poster
 \vspace{-0.75em}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%PHASE DIAGRAM & ONGOING DEVELOPMENTS
+% Natural orbitals and ongoing
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
@@ -498,23 +618,11 @@ Polar plot of [110] $q=9.57\,\mathring{A}^{-1}$
 \begin{column}{.03\textwidth}
 \end{column} % Empty spacer column
 
-\begin{column}{.52\textwidth} % The first column
-\begin{block}{\color{cyan!40} Where does the Asymmetry come from ?\vphantom{Xy}}
+\begin{column}{.58\textwidth} % The first column
+\begin{block}{\color{cyan!40}Natural Orbitals\vphantom{Xy}}
 \setbeamercolor{coloredboxstuff}{bg=cyan!5}
 \begin{beamercolorbox}[wd=\textwidth]{coloredboxstuff}
-Since the second plaquette contributes only weakly to the previous figure, the asymmetry mainly originates from the fact that the probed plane is not exactly aligned with the plaquette plane. Does a plane parallel to a plaquette still exhibit such an asymmetry? 
-
-\hspace{1cm}
-\begin{minipage}{0.47\textwidth}
-We present calculations for a plane parallel to one plaquette, with $q=9.57\,\mathring{A}^{-1}$.
-\vspace{0.7cm}
-\begin{itemize}
-\item The second plaquette now contributes significantly to the overall asymmetry.
-\item It slightly tilts the angular distribution.
-\item A residual asymmetry remains in the first plaquette due to inequivalent Cu-O bonds.
-\end{itemize}
-\end{minipage}
-\hspace{0.5em}
+salut
 
 \end{beamercolorbox}
 \end{block}
@@ -523,20 +631,12 @@ We present calculations for a plane parallel to one plaquette, with $q=9.57\,\ma
 \begin{column}{.02\textwidth}
 \end{column}	%Empty spacer column in the middle
 
-\begin{column}{.40\textwidth} % The first column
+\begin{column}{.36\textwidth} % The first column
 \begin{block}{\color{ta2orange!30!tabutter!30} Conclusion and Outlook\vphantom{Xy}}
 \setbeamercolor{coloredboxstuff}{bg=ta2orange!10!tabutter!10}
 \begin{beamercolorbox}[wd=\textwidth]{coloredboxstuff}
-We developed a first-principles framework combining DFT+U and Wannier functions to compute the angular dependence of NRIXS spectra. Applied to CuO, the method reproduces the main experimental features and identifies the microscopic origin of the observed asymmetry.
+coucou
 
-\vspace{0.7em}
-\textbf{Outlook:}
-\begin{itemize}
-\item Future work will focus on correlated materials requiring the explicit inclusion of the density matrix in Eq. (1). We welcome suggestions of candidate systems.
-\item Fully self-consistent DFT+DMFT calculations also constitute also a promising extension, allowing electronic correlations to enter the Wannier functions via the feedback loop.
-\end{itemize}
-
-\vspace{0.7em}
 \end{beamercolorbox}
 \end{block}
 \end{column}
